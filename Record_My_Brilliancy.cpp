@@ -4,6 +4,7 @@
 #include <vector>
 #include <curl/curl.h>
 #include <nlohmann/json.hpp>
+#include <regex>
 
 using namespace std;
 using json = nlohmann::json;
@@ -146,7 +147,6 @@ private:
                     black = j["players"]["top"]["username"];
                     result = j["game"]["resultMessage"];
                     date = j["game"]["pgnHeaders"]["Date"];
-                    userId = j["players"]["bottom"]["username"];
                     moveList = j["game"]["moveList"];
                 } catch (json::exception& e) {
                     cerr << "JSON parsing error: " << e.what() << endl;
@@ -156,6 +156,24 @@ private:
             curl_easy_cleanup(curl);
         }
         return;
+    }
+
+    // live, daily 둘 다 가능
+    string extractGameId(const string& url) {
+        size_t start = url.find("live/");
+        if (start != string::npos) {
+            start += 5; // "live/" 길이만큼 이동
+            size_t end = url.find("?move", start);
+            if (end == string::npos) return url.substr(start);
+            return url.substr(start, end - start);
+        } else {
+            start = url.find("daily/");
+            if (start == string::npos) return "";
+            start += 6; // "daily/" 길이만큼 이동
+            size_t end = url.find("?move", start);
+            if (end == string::npos) return url.substr(start);
+            return url.substr(start, end - start);
+        }
     }
 public:
     explicit ChessFetcher(const string& _url) : url(_url) {
@@ -179,7 +197,7 @@ public:
         if (start != string::npos)  {
             start += 5; // "live/" 길이만큼 이동
             size_t end = s.find("?move", start);
-            if (end == string::npos) return "";
+            if (end == string::npos) return "https://www.chess.com/callback/live/game/" + s.substr(start);
             string gameId = s.substr(start, end - start);
             return "https://www.chess.com/callback/live/game/" + gameId;
         } else {
@@ -187,7 +205,7 @@ public:
             if (start != string::npos) {
                 start += 6; // "daily/" 길이만큼 이동
                 size_t end = s.find("?move", start);
-                if (end == string::npos) return "";
+                if (end == string::npos) return "https://www.chess.com/callback/daily/game/" + s.substr(start);
                 string gameId = s.substr(start, end - start);
                 return "https://www.chess.com/callback/daily/game/" + gameId;
             }
@@ -196,22 +214,78 @@ public:
     }
 
     // string을 https://api.chess.com/pub/player/ibottledo/games/2025/05 같은 API 형식으로
-    string getMonthGameAPI() {
+    string getMonthGameAPI(const int& brilliantMoveIndex) {
+        userId = (brilliantMoveIndex % 2 == 0) ? white : black;
         return "https://api.chess.com/pub/player/" + userId + "/games/" + date.substr(0, 4) + "/" + date.substr(5, 2);
     }
 
     string getMoveList() const {
         return moveList;
     }
+
+    string getBrilliantPGN(const string& Brilliant_url) {
+        CURL* curl;
+        CURLcode res;
+        string readBuffer;
+        string url = getMonthGameAPI(getBrilliantMoveIndex(Brilliant_url));
+        string gameId = extractGameId(Brilliant_url); // URL에서 게임 ID 추출
+        string target_url = "https://www.chess.com/game/live/" + gameId;
+        string result;
+
+        curl = curl_easy_init();
+        if (curl) {
+            curl_easy_setopt(curl, CURLOPT_URL, url.c_str());
+            curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, WriteCallback);
+            curl_easy_setopt(curl, CURLOPT_WRITEDATA, &readBuffer);
+            curl_easy_setopt(curl, CURLOPT_USERAGENT, "Mozilla/5.0");
+
+            res = curl_easy_perform(curl);
+
+            if (res != CURLE_OK) {
+                cerr << "curl_easy_perform() failed: " << curl_easy_strerror(res) << endl;
+            } else {
+                try {
+                    json j = json::parse(readBuffer);
+
+                    for (const auto& game : j["games"]) {
+                        if (game.contains("url") && game["url"] == target_url) {
+                            if (game.contains("pgn")) {
+                                string s = game["pgn"];
+                                s = regex_replace(s, regex(R"(\\n)"), "\n");  // "\\n" → "\n" ('\n' 적용)
+                                result = s; // PGN 저장
+                                break;
+                            } else {    // 예외 처리
+                                cout << "PGN not found in this game." << '\n';
+                            }
+                        } else {
+                            // else 처리 (uuid로 주어지는 경우)
+                        }
+                    }
+                } catch (json::exception& e) {
+                    cerr << "JSON parsing error: " << e.what() << '\n';
+                }
+            }
+
+            curl_easy_cleanup(curl);
+        }
+
+        curl_global_cleanup();
+
+        int brilliantMoveIndex = getBrilliantMoveIndex(Brilliant_url) + 3;
+        size_t start = result.find(to_string(brilliantMoveIndex / 2) + (brilliantMoveIndex % 2 == 0 ? "... " : ". "));
+        if (start != string::npos) {
+            size_t end = result.find(" {[", start);
+            if (end == string::npos) end = result.length(); // " {["가 없으면 문자열 끝까지
+            result = result.substr(start, end - start); // 해당 부분만 추출
+        } else {
+            cout << "Brilliant move not found in PGN." << '\n';
+        }
+
+        return result;
+    }
 };
 
 int main() {
-    // string moveList = "lBZJcD2Ugv6Lmu5Qks0Sdr45fH9RDw1TblUMeg3NpFMEveRwnwWOfLSLHQXQry7RyO!0et8!tD5jlr0UDURwUDwughuDOQDCagEw";
-    // int brilliantMoveIndex = 40;
-    // ChessBoard chessBoard;
-    // // 탁월수 직전의 보드를 출력
-    // chessBoard.printChessBoard(moveList, brilliantMoveIndex - 1);
-
     string Brilliant_url;
     cout << "Enter: Brilliant URL: ";
     getline(cin, Brilliant_url);
@@ -221,12 +295,12 @@ int main() {
     ChessFetcher fetcher(gameAPI);
     string moveList = fetcher.getMoveList();
 
-    // cout << "Brilliant Move Index: " << brilliantMoveIndex << endl;
-    // cout << "Game API: " << gameAPI << endl;
-    // cout << "Move List: " << moveList << endl;
-
     ChessBoard chessBoard;
     chessBoard.printChessBoard(moveList, brilliantMoveIndex);
+
+    cout << "Brilliant Move:\n";
+    string pgn = fetcher.getBrilliantPGN(Brilliant_url);
+    cout << pgn << "!!" << '\n';
 
     return 0;
 }
