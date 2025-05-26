@@ -175,6 +175,10 @@ private:
             return url.substr(start, end - start);
         }
     }
+
+    bool isNumeric(const string& str) {
+        return all_of(str.begin(), str.end(), ::isdigit);
+    }
 public:
     explicit ChessFetcher(const string& _url) : url(_url) {
         fetchGame();
@@ -223,14 +227,24 @@ public:
         return moveList;
     }
 
+    // Brilliant URL의 gameId가 numeric, UUID 둘 다 가능
     string getBrilliantPGN(const string& Brilliant_url) {
         CURL* curl;
         CURLcode res;
         string readBuffer;
         string url = getMonthGameAPI(getBrilliantMoveIndex(Brilliant_url));
         string gameId = extractGameId(Brilliant_url); // URL에서 게임 ID 추출
-        string target_url = "https://www.chess.com/game/live/" + gameId;
+        string target_url;
+        string uuid;
+        if (isNumeric(gameId)) {
+            target_url = "https://www.chess.com/game/live/" + gameId;
+        } else {
+            uuid = gameId;
+        }
         string result;
+
+        // test
+        cout << "url: " << url << " target_url: " << target_url << '\n';
 
         curl = curl_easy_init();
         if (curl) {
@@ -248,7 +262,7 @@ public:
                     json j = json::parse(readBuffer);
 
                     for (const auto& game : j["games"]) {
-                        if (game.contains("url") && game["url"] == target_url) {
+                        if ((game.contains("url") && game["url"] == target_url) || (game.contains("uuid") && game["uuid"] == uuid)) {
                             if (game.contains("pgn")) {
                                 string s = game["pgn"];
                                 s = regex_replace(s, regex(R"(\\n)"), "\n");  // "\\n" → "\n" ('\n' 적용)
@@ -267,14 +281,13 @@ public:
                     cerr << "JSON parsing error: " << e.what() << '\n';
                 }
             }
-
             curl_easy_cleanup(curl);
         }
 
         curl_global_cleanup();
 
-        int brilliantMoveIndex = getBrilliantMoveIndex(Brilliant_url) + 3;
-        size_t start = result.find(to_string(brilliantMoveIndex / 2) + (brilliantMoveIndex % 2 == 0 ? "... " : ". "));
+        int brilliantMoveIndex = getBrilliantMoveIndex(Brilliant_url) + 2;
+        size_t start = result.find(to_string(brilliantMoveIndex / 2) + (brilliantMoveIndex % 2 == 0 ? ". " : "... "));
         if (start != string::npos) {
             size_t end = result.find(" {[", start);
             if (end == string::npos) end = result.length(); // " {["가 없으면 문자열 끝까지
