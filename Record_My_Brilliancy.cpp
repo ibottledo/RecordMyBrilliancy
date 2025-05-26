@@ -215,7 +215,7 @@ public:
 
     // string을 https://api.chess.com/pub/player/ibottledo/games/2025/05 같은 API 형식으로
     string getMonthGameAPI(const int& brilliantMoveIndex) {
-        userId = (brilliantMoveIndex % 2 == 0) ? white : black;
+        userId = (brilliantMoveIndex % 2 == 0) ? white : black; // 왜인지 모르겠는데 탁월수를 띄운 사람의 API로 접근해야 PGN을 가져올 수 있음
         return "https://api.chess.com/pub/player/" + userId + "/games/" + date.substr(0, 4) + "/" + date.substr(5, 2);
     }
 
@@ -256,6 +256,8 @@ public:
                                 break;
                             } else {    // 예외 처리
                                 cout << "PGN not found in this game." << '\n';
+                                // test
+                                cout << "url: " << url << " target_url: " << target_url << '\n';
                             }
                         } else {
                             // else 처리 (uuid로 주어지는 경우)
