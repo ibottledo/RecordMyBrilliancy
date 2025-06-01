@@ -4,10 +4,30 @@
 #include <vector>
 #include <curl/curl.h>
 #include <nlohmann/json.hpp>
-#include <regex>
+#include <fstream>
+#include <cstdlib>
 
 using namespace std;
 using json = nlohmann::json;
+
+void writeMarkdown(const string& filename, const string& title, const string& content) {
+    ofstream file("_posts/" + filename);
+    if (file.is_open()) {
+        file << "---\n";
+        file << "title: \"" << title << "\"\n";
+        file << "date: " << __DATE__ << " " << __TIME__ << "\n";
+        file << "layout: post\n";
+        file << "---\n\n";
+        file << content << "\n";
+        file.close();
+    }
+}
+
+void pushToGitHub() {
+    system("git add _posts/*.md");
+    system("git commit -m \"Add new brilliant move post\"");
+    system("git push");
+}
 
 // 콜백 함수: 서버 응답을 문자열로 저장
 static size_t WriteCallback(void* contents, size_t size, size_t nmemb, string* output) {
@@ -75,6 +95,7 @@ private:
             cout << '\n';
         }
     }
+
     // moveList에서 move를 decode한 후, board에 적용
     // 앙파상 구현 필요?
     void applyMove(const MoveDecoder::Move& move, bool isWhiteTurn) {
@@ -243,9 +264,6 @@ public:
         }
         string result;
 
-        // test
-        cout << "url: " << url << " target_url: " << target_url << '\n';
-
         curl = curl_easy_init();
         if (curl) {
             curl_easy_setopt(curl, CURLOPT_URL, url.c_str());
@@ -265,16 +283,11 @@ public:
                         if ((game.contains("url") && game["url"] == target_url) || (game.contains("uuid") && game["uuid"] == uuid)) {
                             if (game.contains("pgn")) {
                                 string s = game["pgn"];
-                                s = regex_replace(s, regex(R"(\\n)"), "\n");  // "\\n" → "\n" ('\n' 적용)
                                 result = s; // PGN 저장
                                 break;
-                            } else {    // 예외 처리
+                            } else {    // 예외 처리지만 이런 경우 없음
                                 cout << "PGN not found in this game." << '\n';
-                                // test
-                                cout << "url: " << url << " target_url: " << target_url << '\n';
                             }
-                        } else {
-                            // else 처리 (uuid로 주어지는 경우)
                         }
                     }
                 } catch (json::exception& e) {
@@ -298,6 +311,10 @@ public:
 
         return result;
     }
+
+    string getDate() const {
+        return date;
+    }
 };
 
 int main() {
@@ -316,6 +333,17 @@ int main() {
     cout << "Brilliant Move:\n";
     string pgn = fetcher.getBrilliantPGN(Brilliant_url);
     cout << pgn << "!!" << '\n';
+
+    cout << "Brilliant Move day:\n";
+    cout << fetcher.getDate() << '\n';
+
+    // publish
+    string title = "brilliant-" + fetcher.getDate();
+    string content = "## " + fetcher.getDate() + "\n\n**Brilliant Move:**\n\n" + pgn + "!!";
+    string filename = title + ".md";
+
+    writeMarkdown(filename, title, content);
+    pushToGitHub();
 
     return 0;
 }
