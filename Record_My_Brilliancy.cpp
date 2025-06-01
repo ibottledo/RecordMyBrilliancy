@@ -1,4 +1,6 @@
 // 최종 보고서로 제출할 완성 코드
+// make로 컴파일
+// ./Record_My_Brilliancy 로 실행
 #include <iostream> 
 #include <string>
 #include <vector>
