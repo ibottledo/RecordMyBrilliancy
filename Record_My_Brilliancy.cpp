@@ -35,11 +35,7 @@ void pushToGitHub() {
 }
 
 void appendToBrilliantsMd(const string& date, const string& move, const string& postPath) {
-<<<<<<< HEAD
-    ofstream file("brilliants.md", ios::app); // 누적 추가
-=======
     ofstream file("brilliants.md", ios::app);
->>>>>>> feature/publish
     if (file.is_open()) {
         file << "## 🗓 " << date << "\n";
         file << "**Brilliant Move:** " << move << "!!\n\n";
