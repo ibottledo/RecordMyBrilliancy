@@ -1,6 +1,6 @@
 ---
-title: "Brilliant Moves"
-layout: page
+layout: default
+title: Brilliant Moves
 ---
 
 # 💡 Brilliant Move Archive
