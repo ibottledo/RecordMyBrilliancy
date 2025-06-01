@@ -19,3 +19,10 @@ layout: page
 
 ---
 
+## 🗓 2025.03.23
+**Brilliant Move:** 27. Rxb7+!!
+
+[→ 전체 보기](_posts/brilliant-2025.03.23.md)
+
+---
+
