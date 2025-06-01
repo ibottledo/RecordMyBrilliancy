@@ -1,4 +1,6 @@
 // 최종 보고서로 제출할 완성 코드
+// make로 컴파일
+// ./Record_My_Brilliancy 로 실행
 #include <iostream> 
 #include <string>
 #include <vector>
@@ -6,9 +8,11 @@
 #include <nlohmann/json.hpp>
 #include <fstream>
 #include <cstdlib>
+#include <filesystem>
 
 using namespace std;
 using json = nlohmann::json;
+namespace fs = std::filesystem;
 
 void writeMarkdown(const string& filename, const string& title, const string& content) {
     ofstream file("_posts/" + filename);
@@ -24,13 +28,14 @@ void writeMarkdown(const string& filename, const string& title, const string& co
 }
 
 void pushToGitHub() {
-    system("git add _posts/*.md");
-    system("git commit -m \"Add new brilliant move post\"");
-    system("git push");
+    system("git add .");
+    system("git commit -m \"Auto: brilliant move update\"");
+    system("git pull --rebase origin main");
+    system("git push origin main");
 }
 
 void appendToBrilliantsMd(const string& date, const string& move, const string& postPath) {
-    ofstream file("brilliants.md", ios::app); // 누적 추가
+    ofstream file("brilliants.md", ios::app);
     if (file.is_open()) {
         file << "## 🗓 " << date << "\n";
         file << "**Brilliant Move:** " << move << "!!\n\n";
@@ -349,16 +354,24 @@ int main() {
     cout << fetcher.getDate() << '\n';
 
     // publish
-    string title = "brilliant-" + fetcher.getDate();
-    string filename = title + ".md";
+    string titleBase = "brilliant-" + fetcher.getDate();
+    string filename = titleBase + ".md";
     string postPath = "_posts/" + filename;
+    int suffix = 2;
+
+    while (fs::exists(postPath)) {
+        filename = titleBase + "-" + to_string(suffix) + ".md";
+        postPath = "_posts/" + filename;
+        ++suffix;
+    }
+
     string content = "## " + fetcher.getDate() + "\n\n"
-                   + "![](images/" + title + ".png)\n\n"
+                   + "![](images/" + filename.substr(0, filename.size() - 3) + ".png)\n\n"
                    + "**Brilliant Move:**\n\n" + pgn + "!!";
 
-    writeMarkdown(filename, title, content); // 상세글 생성
-    appendToBrilliantsMd(fetcher.getDate(), pgn, postPath); // 아카이브 갱신
-    pushToGitHub(); // GitHub로 푸시
+    writeMarkdown(filename, filename.substr(0, filename.size() - 3), content);
+    appendToBrilliantsMd(fetcher.getDate(), pgn, postPath);
+    pushToGitHub();
 
     return 0;
 }
