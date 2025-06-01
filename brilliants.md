@@ -41,3 +41,10 @@ layout: page
 
 ---
 
+## 🗓 2025.05.05
+**Brilliant Move:** 9. Bxf7+!!
+
+[→ 전체 보기](_posts/brilliant-2025.05.05.md)
+
+---
+
