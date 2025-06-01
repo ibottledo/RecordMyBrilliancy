@@ -29,6 +29,17 @@ void pushToGitHub() {
     system("git push");
 }
 
+void appendToBrilliantsMd(const string& date, const string& move, const string& postPath) {
+    ofstream file("brilliants.md", ios::app); // 누적 추가
+    if (file.is_open()) {
+        file << "## 🗓 " << date << "\n";
+        file << "**Brilliant Move:** " << move << "!!\n\n";
+        file << "[→ 전체 보기](" << postPath << ")\n\n";
+        file << "---\n\n";
+        file.close();
+    }
+}
+
 // 콜백 함수: 서버 응답을 문자열로 저장
 static size_t WriteCallback(void* contents, size_t size, size_t nmemb, string* output) {
     size_t totalSize = size * nmemb;
@@ -339,11 +350,15 @@ int main() {
 
     // publish
     string title = "brilliant-" + fetcher.getDate();
-    string content = "## " + fetcher.getDate() + "\n\n**Brilliant Move:**\n\n" + pgn + "!!";
     string filename = title + ".md";
+    string postPath = "_posts/" + filename;
+    string content = "## " + fetcher.getDate() + "\n\n"
+                   + "![](images/" + title + ".png)\n\n"
+                   + "**Brilliant Move:**\n\n" + pgn + "!!";
 
-    writeMarkdown(filename, title, content);
-    pushToGitHub();
+    writeMarkdown(filename, title, content); // 상세글 생성
+    appendToBrilliantsMd(fetcher.getDate(), pgn, postPath); // 아카이브 갱신
+    pushToGitHub(); // GitHub로 푸시
 
     return 0;
 }
