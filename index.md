@@ -40,3 +40,10 @@ title: Brilliant Moves
 
 ---
 
+## 🗓 2025.04.23
+**Brilliant Move:** 34. Nxb3!!
+
+[→ 전체 보기](_posts/brilliant-2025.04.23-2.md)
+
+---
+
