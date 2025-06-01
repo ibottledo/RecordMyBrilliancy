@@ -26,9 +26,10 @@ void writeMarkdown(const string& filename, const string& title, const string& co
 }
 
 void pushToGitHub() {
-    system("git add _posts/*.md");
-    system("git commit -m \"Add new brilliant move post\"");
-    system("git push");
+    system("git add .");
+    system("git commit -m \"Auto: brilliant move update\"");
+    system("git pull --rebase origin main");
+    system("git push origin main");
 }
 
 void appendToBrilliantsMd(const string& date, const string& move, const string& postPath) {
