@@ -8,9 +8,11 @@
 #include <nlohmann/json.hpp>
 #include <fstream>
 #include <cstdlib>
+#include <filesystem>
 
 using namespace std;
 using json = nlohmann::json;
+namespace fs = std::filesystem;
 
 void writeMarkdown(const string& filename, const string& title, const string& content) {
     ofstream file("_posts/" + filename);
@@ -33,7 +35,11 @@ void pushToGitHub() {
 }
 
 void appendToBrilliantsMd(const string& date, const string& move, const string& postPath) {
+<<<<<<< HEAD
     ofstream file("brilliants.md", ios::app); // 누적 추가
+=======
+    ofstream file("brilliants.md", ios::app);
+>>>>>>> feature/publish
     if (file.is_open()) {
         file << "## 🗓 " << date << "\n";
         file << "**Brilliant Move:** " << move << "!!\n\n";
@@ -352,16 +358,24 @@ int main() {
     cout << fetcher.getDate() << '\n';
 
     // publish
-    string title = "brilliant-" + fetcher.getDate();
-    string filename = title + ".md";
+    string titleBase = "brilliant-" + fetcher.getDate();
+    string filename = titleBase + ".md";
     string postPath = "_posts/" + filename;
+    int suffix = 2;
+
+    while (fs::exists(postPath)) {
+        filename = titleBase + "-" + to_string(suffix) + ".md";
+        postPath = "_posts/" + filename;
+        ++suffix;
+    }
+
     string content = "## " + fetcher.getDate() + "\n\n"
-                   + "![](images/" + title + ".png)\n\n"
+                   + "![](images/" + filename.substr(0, filename.size() - 3) + ".png)\n\n"
                    + "**Brilliant Move:**\n\n" + pgn + "!!";
 
-    writeMarkdown(filename, title, content); // 상세글 생성
-    appendToBrilliantsMd(fetcher.getDate(), pgn, postPath); // 아카이브 갱신
-    pushToGitHub(); // GitHub로 푸시
+    writeMarkdown(filename, filename.substr(0, filename.size() - 3), content);
+    appendToBrilliantsMd(fetcher.getDate(), pgn, postPath);
+    pushToGitHub();
 
     return 0;
 }
