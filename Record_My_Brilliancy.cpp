@@ -388,20 +388,6 @@ int main() {
     string postPath = "_posts/" + filename;
     int suffix = 2;
 
-    while (fs::exists(postPath)) {
-        filename = titleBase + "-" + to_string(suffix) + ".md";
-        postPath = "_posts/" + filename;
-        ++suffix;
-    }
-
-    string content = "## " + fetcher.getDate() + "\n\n"
-                   + "![](images/" + filename.substr(0, filename.size() - 3) + ".png)\n\n"
-                   + "**Brilliant Move:**\n\n" + pgn + "!!";
-
-    writeMarkdown(filename, filename.substr(0, filename.size() - 3), content);
-    appendToBrilliantsMd(fetcher.getDate(), pgn, postPath);
-    pushToGitHub();
-
     // 탁월수 직전의 체스판을 텍스트 파일로 저장
     chessBoard.saveAsTextFile("images/brilliant-" + fetcher.getDate() + ".txt");
     string base = "brilliant-" + date;
@@ -413,6 +399,20 @@ int main() {
     // Python 명령 실행
     string cmd = "python3 txt_to_png.py " + txtPath + " " + pngPath;
     system(cmd.c_str());
+
+    while (fs::exists(postPath)) {
+        filename = titleBase + "-" + to_string(suffix) + ".md";
+        postPath = "_posts/" + filename;
+        ++suffix;
+    }
+
+    string content = "## " + fetcher.getDate() + "\n\n"
+               + "![](images/" + filename.substr(0, filename.size() - 3) + ".png)\n\n"
+               + "**Brilliant Move:**\n\n" + pgn + "!!";
+
+    writeMarkdown(filename, filename.substr(0, filename.size() - 3), content);
+    appendToBrilliantsMd(fetcher.getDate(), pgn, postPath);
+    pushToGitHub();
 
     return 0;
 }
