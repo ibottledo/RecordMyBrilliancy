@@ -14,47 +14,53 @@ using namespace std;
 using json = nlohmann::json;
 namespace fs = std::filesystem;
 
-void writeMarkdown(const string& filename, const string& title, const string& content) {
-    ofstream file("_posts/" + filename);
-    if (file.is_open()) {
-        file << "---\n";
-        file << "title: \"" << title << "\"\n";
-        file << "date: " << __DATE__ << " " << __TIME__ << "\n";
-        file << "layout: post\n";
-        file << "---\n\n";
-        file << content << "\n";
-        file.close();
-    }
-}
-
-void pushToGitHub() {
-    system("git add .");
-    system("git commit -m \"Auto: brilliant move update\"");
-    system("git pull --rebase origin main");
-    system("git push origin main");
-}
-
-void appendToBrilliantsMd(const string& date, const string& move, const string& postPath) {
-    ofstream file("index.md", ios::app);
-    if (file.is_open()) {
-        file << "## 🗓 " << date << "\n";
-        file << "**Brilliant Move:** " << move << "!!\n\n";
-        file << "[→ 전체 보기](" << postPath << ")\n\n";
-        file << "---\n\n";
-        file.close();
-    }
-}
-
-bool isAlreadyInIndex(const string& pgn) {
-    ifstream file("index.md");
-    string line;
-    while (getline(file, line)) {
-        if (line.find(pgn) != string::npos) {
-            return true;
+class PostManager {
+public:
+    static void writeMarkdown(const string& filename, const string& title, const string& content) {
+        ofstream file("_posts/" + filename);
+        if (file.is_open()) {
+            file << "---\n";
+            file << "title: \"" << title << "\"\n";
+            file << "date: " << __DATE__ << " " << __TIME__ << "\n";
+            file << "layout: post\n";
+            file << "---\n\n";
+            file << content << "\n";
+            file.close();
         }
     }
-    return false;
-}
+
+    static void appendToBrilliantsMd(const string& date, const string& move, const string& postPath) {
+        ofstream file("index.md", ios::app);
+        if (file.is_open()) {
+            file << "## 🗓 " << date << "\n";
+            file << "**Brilliant Move:** " << move << "!!\n\n";
+            file << "[→ 전체 보기](" << postPath << ")\n\n";
+            file << "---\n\n";
+            file.close();
+        }
+    }
+
+    static bool isAlreadyInIndex(const string& pgn) {
+        ifstream file("index.md");
+        string line;
+        while (getline(file, line)) {
+            if (line.find(pgn) != string::npos) {
+                return true;
+            }
+        }
+        return false;
+    }
+};
+
+class GitManager {
+public:
+    static void pushToGitHub() {
+        system("git add .");
+        system("git commit -m \"Auto: brilliant move update\"");
+        system("git pull --rebase origin main");
+        system("git push origin main");
+    }
+};
 
 // 콜백 함수: 서버 응답을 문자열로 저장
 static size_t WriteCallback(void* contents, size_t size, size_t nmemb, string* output) {
@@ -378,7 +384,7 @@ int main() {
     cout << date << '\n';
 
     // publish
-    if (isAlreadyInIndex(pgn)) {
+    if (PostManager::isAlreadyInIndex(pgn)) {
         cout << "이미 index.md에 포함된 brilliant입니다.\n";
         return 0;
     }
@@ -410,9 +416,9 @@ int main() {
                + "![](/images/" + filename.substr(0, filename.size() - 3) + ".png)\n\n"
                + "**Brilliant Move:**\n\n" + pgn + "!!";
 
-    writeMarkdown(filename, filename.substr(0, filename.size() - 3), content);
-    appendToBrilliantsMd(fetcher.getDate(), pgn, postPath);
-    pushToGitHub();
+    PostManager::writeMarkdown(filename, filename.substr(0, filename.size() - 3), content);
+    PostManager::appendToBrilliantsMd(fetcher.getDate(), pgn, postPath);
+    GitManager::pushToGitHub();
 
     return 0;
 }
