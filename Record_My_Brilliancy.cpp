@@ -369,15 +369,13 @@ int main() {
     ChessBoard chessBoard;
     chessBoard.printChessBoard(moveList, brilliantMoveIndex);
 
-    // 탁월수 직전의 체스판을 텍스트 파일로 저장
-    chessBoard.saveAsTextFile("images/brilliant-" + fetcher.getDate() + ".txt");
-
     cout << "Brilliant Move:\n";
     string pgn = fetcher.getBrilliantPGN(Brilliant_url);
     cout << pgn << "!!" << '\n';
 
     cout << "Brilliant Move day:\n";
-    cout << fetcher.getDate() << '\n';
+    string date = fetcher.getDate();
+    cout << date << '\n';
 
     // publish
     if (isAlreadyInIndex(pgn)) {
@@ -403,6 +401,18 @@ int main() {
     writeMarkdown(filename, filename.substr(0, filename.size() - 3), content);
     appendToBrilliantsMd(fetcher.getDate(), pgn, postPath);
     pushToGitHub();
+
+    // 탁월수 직전의 체스판을 텍스트 파일로 저장
+    chessBoard.saveAsTextFile("images/brilliant-" + fetcher.getDate() + ".txt");
+    string base = "brilliant-" + date;
+    string txtPath = "images/" + base + ".txt";
+    string pngPath = "images/" + base + ".png";
+
+    chessBoard.saveAsTextFile(txtPath);
+
+    // Python 명령 실행
+    string cmd = "python3 txt_to_png.py " + txtPath + " " + pngPath;
+    system(cmd.c_str());
 
     return 0;
 }
