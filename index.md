@@ -47,17 +47,3 @@ title: Brilliant Moves
 
 ---
 
-## 🗓 2025.01.22
-**Brilliant Move:** 24... Re1!!
-
-[→ 전체 보기](_posts/brilliant-2025.01.22-2.md)
-
----
-
-## 🗓 2025.02.22
-**Brilliant Move:** 38... Qf1+!!
-
-[→ 전체 보기](_posts/brilliant-2025.02.22-2.md)
-
----
-
