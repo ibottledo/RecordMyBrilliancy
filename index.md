@@ -152,3 +152,10 @@ title: RecordMyBrilliancy
 
 ---
 
+## 🗓 2025.03.27
+**Brilliant Move:** 17... Rxd4!!
+
+[→ 전체 보기](_posts/brilliant-2025.03.27.md)
+
+---
+
