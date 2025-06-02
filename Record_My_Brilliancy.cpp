@@ -407,7 +407,7 @@ int main() {
     }
 
     string content = "## " + fetcher.getDate() + "\n\n"
-               + "![](images/" + filename.substr(0, filename.size() - 3) + ".png)\n\n"
+               + "![](/images/" + filename.substr(0, filename.size() - 3) + ".png)\n\n"
                + "**Brilliant Move:**\n\n" + pgn + "!!";
 
     writeMarkdown(filename, filename.substr(0, filename.size() - 3), content);

@@ -103,3 +103,10 @@ title: Brilliant Moves
 
 ---
 
+## 🗓 2025.04.27
+**Brilliant Move:** 23. Qe8+!!
+
+[→ 전체 보기](_posts/brilliant-2025.04.27.md)
+
+---
+
