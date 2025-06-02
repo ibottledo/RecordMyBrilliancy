@@ -40,3 +40,10 @@ title: RecordMyBrilliancy
 
 ---
 
+## 🗓 2025.03.22
+**Brilliant Move:** 11... Nxb4!!
+
+[→ 전체 보기](_posts/brilliant-2025.03.22.md)
+
+---
+
