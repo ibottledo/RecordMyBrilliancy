@@ -147,3 +147,10 @@ title: RecordMyBrilliancy
 
 ---
 
+## 🗓 2025.03.28
+**Brilliant Move:** 20. Nxc6!!
+
+[→ 전체 보기](_posts/brilliant-2025.03.28.md)
+
+---
+
