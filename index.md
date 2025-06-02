@@ -8,6 +8,24 @@ title: RecordMyBrilliancy
 
 # 🧠 My Brilliancy Streak
 
+<style>
+  .streak-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 20px);
+    gap: 4px;
+    margin-top: 20px;
+  }
+  .day {
+    width: 20px;
+    height: 20px;
+    background-color: #ebedf0;
+    border-radius: 3px;
+  }
+  .day.active {
+    background-color: #1c7ed6;
+  }
+</style>
+
 <div class="streak-grid">
   <div class="day active" title="2025-05-20"></div>
   <div class="day"></div>
@@ -17,26 +35,6 @@ title: RecordMyBrilliancy
   <div class="day"></div>
   <div class="day active" title="2025-05-25"></div>
 </div>
-
-<style>
-  .streak-grid {
-    display: grid;
-    grid-template-columns: repeat(7, 20px); /* 7일 한 주 */
-    gap: 4px;
-    margin-top: 20px;
-  }
-
-  .day {
-    width: 20px;
-    height: 20px;
-    background-color: #ebedf0; /* 회색 (없음) */
-    border-radius: 3px;
-  }
-
-  .day.active {
-    background-color: #1c7ed6; /* 파란색 (있음) */
-  }
-</style>
 
 ---
 
