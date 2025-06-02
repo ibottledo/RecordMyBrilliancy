@@ -45,6 +45,17 @@ void appendToBrilliantsMd(const string& date, const string& move, const string& 
     }
 }
 
+bool isAlreadyInIndex(const string& pgn) {
+    ifstream file("index.md");
+    string line;
+    while (getline(file, line)) {
+        if (line.find(pgn) != string::npos) {
+            return true;
+        }
+    }
+    return false;
+}
+
 // 콜백 함수: 서버 응답을 문자열로 저장
 static size_t WriteCallback(void* contents, size_t size, size_t nmemb, string* output) {
     size_t totalSize = size * nmemb;
@@ -354,6 +365,12 @@ int main() {
     cout << fetcher.getDate() << '\n';
 
     // publish
+    if (isAlreadyInIndex(pgn)) {
+        cout << "이미 index.md에 포함된 brilliant입니다.\n";
+        return 0;
+    }
+
+
     string titleBase = "brilliant-" + fetcher.getDate();
     string filename = titleBase + ".md";
     string postPath = "_posts/" + filename;
