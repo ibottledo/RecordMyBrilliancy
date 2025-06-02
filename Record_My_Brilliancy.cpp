@@ -35,7 +35,7 @@ void pushToGitHub() {
 }
 
 void appendToBrilliantsMd(const string& date, const string& move, const string& postPath) {
-    ofstream file("index.md", ios::app);
+    ofstream file("brilliants.md", ios::app);
     if (file.is_open()) {
         file << "## 🗓 " << date << "\n";
         file << "**Brilliant Move:** " << move << "!!\n\n";
@@ -43,6 +43,17 @@ void appendToBrilliantsMd(const string& date, const string& move, const string& 
         file << "---\n\n";
         file.close();
     }
+}
+
+bool isAlreadyInIndex(const string& pgn) {
+    ifstream file("index.md");
+    string line;
+    while (getline(file, line)) {
+        if (line.find(pgn) != string::npos) {
+            return true;
+        }
+    }
+    return false;
 }
 
 // 콜백 함수: 서버 응답을 문자열로 저장
@@ -354,6 +365,11 @@ int main() {
     cout << fetcher.getDate() << '\n';
 
     // publish
+    if (isAlreadyInIndex(pgn)) {
+        cout << "이미 index.md에 포함된 brilliant입니다.\n";
+        return 0;
+    }
+
     string titleBase = "brilliant-" + fetcher.getDate();
     string filename = titleBase + ".md";
     string postPath = "_posts/" + filename;
