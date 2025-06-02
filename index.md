@@ -89,3 +89,10 @@ title: Brilliant Moves
 
 ---
 
+## 🗓 2025.05.17
+**Brilliant Move:** 12. Bxh7+!!
+
+[→ 전체 보기](_posts/brilliant-2025.05.17.md)
+
+---
+
