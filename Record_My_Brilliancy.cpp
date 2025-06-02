@@ -160,6 +160,18 @@ public:
         }
         printBoard();
     }
+
+    void saveAsTextFile(const string& filename) const {
+        ofstream out(filename);
+        if (!out.is_open()) return;
+
+        for (int i = 0; i < 8; ++i) {
+            for (int j = 0; j < 8; ++j) {
+                out << board[i][j] << ' ';
+            }
+            out << '\n';
+        }
+    }
 };
 
 // 입력받은 string으로 작동
@@ -356,6 +368,9 @@ int main() {
 
     ChessBoard chessBoard;
     chessBoard.printChessBoard(moveList, brilliantMoveIndex);
+
+    // 탁월수 직전의 체스판을 텍스트 파일로 저장
+    chessBoard.saveAsTextFile("images/brilliant-" + fetcher.getDate() + ".txt");
 
     cout << "Brilliant Move:\n";
     string pgn = fetcher.getBrilliantPGN(Brilliant_url);
