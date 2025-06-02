@@ -35,7 +35,7 @@ void pushToGitHub() {
 }
 
 void appendToBrilliantsMd(const string& date, const string& move, const string& postPath) {
-    ofstream file("brilliants.md", ios::app);
+    ofstream file("index.md", ios::app);
     if (file.is_open()) {
         file << "## 🗓 " << date << "\n";
         file << "**Brilliant Move:** " << move << "!!\n\n";
