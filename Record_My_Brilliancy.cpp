@@ -391,7 +391,6 @@ int main() {
 
     string base = "brilliant-" + date;
     string filename = base + ".md";
-    string postPath = "_posts/" + filename;
 
     // 탁월수 직전의 체스판을 텍스트 파일로 저장
     string txtPath = "images/" + base + ".txt";
@@ -409,6 +408,7 @@ int main() {
         base += "-" + to_string(suffix - 1);
     }
     chessBoard.saveAsTextFile(txtPath);
+    string postPath = "_posts/" + filename;
 
     // Python 명령 실행
     string cmd = "python3 txt_to_png.py " + txtPath + " " + pngPath;
