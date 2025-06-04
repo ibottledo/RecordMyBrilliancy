@@ -1,3 +1,5 @@
 title: Record My Brilliancy
 theme: minima
 markdown: kramdown
+plugins:
+  - jekyll-feed
