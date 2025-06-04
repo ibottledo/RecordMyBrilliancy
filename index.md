@@ -2,9 +2,6 @@
 layout: default
 title: Brilliant Moves
 ---
-layout: default
-title: RecordMyBrilliancy
----
 
 # My Brilliancy Streak
 
@@ -65,6 +62,13 @@ title: RecordMyBrilliancy
 **Brilliant Move:** 17... Qe1+!!
 
 [→ 탁월수 보기](_posts/brilliant-2025.03.23-2.md)
+
+---
+
+## 🗓 2025.03.22.
+**Brilliant Move:** 11... Nxb4!!
+
+[→ 탁월수 보기](_posts/brilliant-2025.03.22.md)
 
 ---
 
