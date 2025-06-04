@@ -47,3 +47,10 @@ title: RecordMyBrilliancy
 
 ---
 
+## 🗓 2025.02.22
+**Brilliant Move:** 38... Qf1+!!
+
+[→ 전체 보기](_posts/brilliant-2025.02.22.md)
+
+---
+
