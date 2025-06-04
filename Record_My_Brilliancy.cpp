@@ -34,7 +34,7 @@ public:
         if (file.is_open()) {
             file << "## 🗓 " << date << ".\n";
             file << "**Brilliant Move:** " << move << "!!\n\n";
-            file << "[→ 전체 보기](" << postPath << ")\n\n";
+            file << "[→ 탁월수 보기](" << postPath << ")\n\n";
             file << "---\n\n";
             file.close();
         }
