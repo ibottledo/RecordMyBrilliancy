@@ -414,7 +414,7 @@ int main() {
     string cmd = "python3 txt_to_png.py " + txtPath + " " + pngPath;
     system(cmd.c_str());
 
-    string contentDate = fetcher.getDate();
+    string contentDate = date;
     if (suffix > 2) contentDate += "-" + to_string(suffix - 1);
 
     string content = "## " + contentDate + "\n\n"
@@ -422,7 +422,7 @@ int main() {
                + "**Brilliant Move:**\n\n" + pgn + "!!";
 
     PostManager::writeMarkdown(filename, filename.substr(0, filename.size() - 3), content);
-    PostManager::appendToBrilliantsMd(fetcher.getDate(), pgn, postPath);
+    PostManager::appendToBrilliantsMd(contentDate, pgn, postPath);
     GitManager::pushToGitHub();
 
     return 0;
