@@ -6,11 +6,11 @@ layout: default
 title: RecordMyBrilliancy
 ---
 
-# 🧠 My Brilliancy Streak
+# My Brilliancy Streak
 
 ---
 
-# 💡 Brilliant Move Archive
+# Brilliant Move Archive
 
 ## 🗓 2025.04.23
 **Brilliant Move:** 6. Bxf7+!!

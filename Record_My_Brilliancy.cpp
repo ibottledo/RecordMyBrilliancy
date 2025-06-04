@@ -32,7 +32,7 @@ public:
     static void appendToBrilliantsMd(const string& date, const string& move, const string& postPath) {
         ofstream file("index.md", ios::app);
         if (file.is_open()) {
-            file << "## 🗓 " << date << "\n";
+            file << "## 🗓 " << date << ".\n";
             file << "**Brilliant Move:** " << move << "!!\n\n";
             file << "[→ 전체 보기](" << postPath << ")\n\n";
             file << "---\n\n";
