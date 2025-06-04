@@ -389,39 +389,35 @@ int main() {
         return 0;
     }
 
-    string titleBase = "brilliant-" + fetcher.getDate();
-    string filename = titleBase + ".md";
+    string base = "brilliant-" + date;
+    string filename = base + ".md";
     string postPath = "_posts/" + filename;
 
     // 탁월수 직전의 체스판을 텍스트 파일로 저장
-    chessBoard.saveAsTextFile("images/brilliant-" + fetcher.getDate() + ".txt");
-    string base = "brilliant-" + date;
     string txtPath = "images/" + base + ".txt";
     string pngPath = "images/" + base + ".png";
 
-    // 이미지 중복 저장 피하기
+    // 텍스트, 이미지, 마크다운 일일 중복 저장 피하기
     int suffix = 2;
     while (fs::exists(txtPath) || fs::exists(pngPath)) {
         txtPath = "images/" + base + "-" + to_string(suffix) + ".txt";
         pngPath = "images/" + base + "-" + to_string(suffix) + ".png";
+        filename = base + "-" + to_string(suffix) + ".md";
         ++suffix;
     }
-
+    if (suffix > 2) {
+        base += "-" + to_string(suffix - 1);
+    }
     chessBoard.saveAsTextFile(txtPath);
 
     // Python 명령 실행
     string cmd = "python3 txt_to_png.py " + txtPath + " " + pngPath;
     system(cmd.c_str());
 
-    // Markdown 파일 이름 중복 피하기
-    suffix = 2;
-    while (fs::exists(postPath)) {
-        filename = titleBase + "-" + to_string(suffix) + ".md";
-        postPath = "_posts/" + filename;
-        ++suffix;
-    }
+    string contentDate = fetcher.getDate();
+    if (suffix > 2) contentDate += "-" + to_string(suffix - 1);
 
-    string content = "## " + fetcher.getDate() + "\n\n"
+    string content = "## " + contentDate + "\n\n"
                + "![](/images/" + filename.substr(0, filename.size() - 3) + ".png)\n\n"
                + "**Brilliant Move:**\n\n" + pgn + "!!";
 
