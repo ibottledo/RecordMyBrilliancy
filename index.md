@@ -33,3 +33,10 @@ title: RecordMyBrilliancy
 
 ---
 
+## 🗓 2025.05.05-2
+**Brilliant Move:** 25. Rxg5!!
+
+[→ 전체 보기](_posts/brilliant-2025.05.05-2.md)
+
+---
+
