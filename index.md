@@ -3,6 +3,12 @@ layout: default
 title: Brilliant Moves
 ---
 
+# 이건 제목
+
+이건 본문입니다.
+
+---
+
 # My Brilliancy Streak
 
 ---
