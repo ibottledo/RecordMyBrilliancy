@@ -5,7 +5,7 @@ layout: post
 
 ## 2025.04.23
 
-![]({{ site.baseurl }}/images/brilliant-2025.04.23.png)
+![](/images/brilliant-2025.04.23.png)
 
 **Brilliant Move:**
 
