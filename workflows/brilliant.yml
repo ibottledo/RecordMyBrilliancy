@@ -1,0 +1,39 @@
+name: Record Brilliant Move
+
+on:
+  workflow_dispatch:
+    inputs:
+      url:
+        description: 'Brilliant Move URL (from chess.com)'
+        required: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: 📥 Checkout repository
+      uses: actions/checkout@v3
+
+    - name: 🛠️ Install dependencies (g++, curl, pip, pillow)
+      run: |
+        sudo apt update
+        sudo apt install -y g++ libcurl4-openssl-dev python3-pip
+        python3 -m pip install pillow
+
+    - name: ⚙️ Build C++ project
+      run: make
+
+    - name: 🧠 Run Record_My_Brilliancy with input URL
+      run: |
+        echo "${{ github.event.inputs.url }}" | ./Record_My_Brilliancy
+
+    - name: 📝 Commit and push results
+      env:
+        TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      run: |
+        git config --global user.name "github-actions[bot]"
+        git config --global user.email "github-actions[bot]@users.noreply.github.com"
+        git add .
+        git commit -m "Auto: brilliant move from GitHub Action" || echo "No changes to commit"
+        git push https://x-access-token:${TOKEN}@github.com/${{ github.repository }}.git HEAD:main
