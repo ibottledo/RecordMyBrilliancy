@@ -51,3 +51,10 @@ title: Brilliant Moves
 
 ---
 
+## 🗓 2025-03-24.
+**Brilliant Move:** 19... g6!!
+
+[→ 탁월수 보기](_posts/2025-03-24-brilliant.md)
+
+---
+
