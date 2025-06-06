@@ -1,5 +1,12 @@
 title: Record My Brilliancy
+author: 이병도
+email: lbd2409@snu.ac.kr
+description: >-
+  체스 탁월수 기록 블로그
+
 theme: minima
-markdown: kramdown
 plugins:
   - jekyll-feed
+  - jekyll-seo-tag
+
+markdown: kramdown
