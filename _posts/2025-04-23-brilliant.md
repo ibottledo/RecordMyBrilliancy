@@ -1,6 +1,5 @@
 ---
 title: "2025-04-23-brilliant"
-date: 2025-04-23
 layout: post
 ---
 
