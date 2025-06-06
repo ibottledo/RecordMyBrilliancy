@@ -135,3 +135,10 @@ title: Brilliant Moves
 
 ---
 
+## 🗓 2025-05-14.
+**Brilliant Move:** 25... Nf3+!!
+
+[→ 탁월수 보기](_posts/2025-05-14-brilliant.md)
+
+---
+
