@@ -16,12 +16,12 @@ namespace fs = std::filesystem;
 
 class PostManager {
 public:
-    static void writeMarkdown(const string& filename, const string& title, const string& content) {
+    static void writeMarkdown(const string& filename, const string& title, const string& content, const string& date) {
         ofstream file("_posts/" + filename);
         if (file.is_open()) {
             file << "---\n";
             file << "title: \"" << title << "\"\n";
-            file << "date: " << __DATE__ << " " << __TIME__ << "\n";
+            file << "date: " << date << "\n";
             file << "layout: post\n";
             file << "---\n\n";
             file << content << "\n";
@@ -423,10 +423,10 @@ int main() {
     if (suffix > 2) contentDate += "-" + to_string(suffix - 1);
 
     string content = "## " + contentDate + "\n\n"
-               + "![](/images/" + filename.substr(0, filename.size() - 3) + ".png)\n\n"
+               + "![](/RecordMyBrilliancy/images/" + filename.substr(0, filename.size() - 3) + ".png)\n\n"
                + "**Brilliant Move:**\n\n" + pgn + "!!";
 
-    PostManager::writeMarkdown(filename, filename.substr(0, filename.size() - 3), content);
+    PostManager::writeMarkdown(filename, filename.substr(0, filename.size() - 3), content, date);
     PostManager::appendToBrilliantsMd(contentDate, pgn, postPath);
     GitManager::pushToGitHub();
 
