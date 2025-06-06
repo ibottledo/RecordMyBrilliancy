@@ -23,3 +23,10 @@ title: Brilliant Moves
 
 ---
 
+## 🗓 2025-03-22.
+**Brilliant Move:** 11... Nxb4!!
+
+[→ 탁월수 보기](_posts/2025-03-22-brilliant.md)
+
+---
+
