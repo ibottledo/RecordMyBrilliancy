@@ -1,10 +1,15 @@
-# Makefile
 CXX = g++
 CXXFLAGS = -std=c++17 -I/usr/local/Cellar/nlohmann-json/3.12.0/include
 LDFLAGS = -lcurl -lstdc++fs
 
-TARGET = Record_My_Brilliancy
-SRC = Record_My_Brilliancy.cpp
+SRC = src/Record_My_Brilliancy.cpp
+TARGET = bin/Record_My_Brilliancy
 
-all:
-	$(CXX) $(CXXFLAGS) $(SRC) -o $(TARGET) $(LDFLAGS)
+all: $(TARGET)
+
+$(TARGET): $(SRC)
+	mkdir -p bin
+	$(CXX) $(CXXFLAGS) $< -o $@ $(LDFLAGS)
+
+clean:
+	rm -f $(TARGET)
