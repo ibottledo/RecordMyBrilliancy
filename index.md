@@ -86,3 +86,10 @@ title: Brilliant Moves
 
 ---
 
+## 🗓 2025-05-20.
+**Brilliant Move:** 20... Ng6!!
+
+[→ 탁월수 보기](_posts/2025-05-20-brilliant.md)
+
+---
+
