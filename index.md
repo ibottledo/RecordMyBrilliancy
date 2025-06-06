@@ -107,3 +107,10 @@ title: Brilliant Moves
 
 ---
 
+## 🗓 2025-05-05.
+**Brilliant Move:** 9. Bxf7+!!
+
+[→ 탁월수 보기](_posts/2025-05-05-brilliant.md)
+
+---
+
