@@ -114,3 +114,10 @@ title: Brilliant Moves
 
 ---
 
+## 🗓 2025-05-05-2.
+**Brilliant Move:** 25. Rxg5!!
+
+[→ 탁월수 보기](_posts/2025-05-05-brilliant-2.md)
+
+---
+
