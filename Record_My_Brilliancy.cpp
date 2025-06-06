@@ -360,6 +360,10 @@ public:
     string getDate() const {
         return date;
     }
+
+    pair<string, string> getUserId() {
+        return {white, black};
+    }
 };
 
 int main() {
@@ -387,6 +391,13 @@ int main() {
     date.insert(4, "-");
     date.insert(7, "-");
     cout << date << '\n';
+
+    pair<string, string> userId = fetcher.getUserId();
+    cout << "White: " << userId.first << ", Black: " << userId.second << '\n';
+    if (userId.first != "ibottledo" && userId.second != "ibottledo") {
+        cout << "이 탁월수는 ibottledo의 게임이 아닙니다.\n";
+        return 0;
+    }
 
     // publish
     if (PostManager::isAlreadyInIndex(pgn)) {
