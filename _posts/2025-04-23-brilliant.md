@@ -5,7 +5,7 @@ layout: post
 
 ## 2025.04.23
 
-![](/RecoreMyBrilliancy/images/brilliant-2025.04.23.png)
+![](/RecordMyBrilliancy/images/brilliant-2025.04.23.png)
 
 **Brilliant Move:**
 
