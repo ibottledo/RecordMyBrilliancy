@@ -128,3 +128,10 @@ title: Brilliant Moves
 
 ---
 
+## 🗓 2025-05-10.
+**Brilliant Move:** 23. Rxe6!!
+
+[→ 탁월수 보기](_posts/2025-05-10-brilliant.md)
+
+---
+
