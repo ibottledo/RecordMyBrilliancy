@@ -30,3 +30,10 @@ title: Brilliant Moves
 
 ---
 
+## 🗓 2025-03-22-2.
+**Brilliant Move:** 14. Rxa4!!
+
+[→ 탁월수 보기](_posts/2025-03-22-brilliant-2.md)
+
+---
+
