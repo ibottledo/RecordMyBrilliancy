@@ -16,3 +16,10 @@ title: Brilliant Moves
 
 ---
 
+## 🗓 2025-02-22.
+**Brilliant Move:** 38... Qf1+!!
+
+[→ 탁월수 보기](blog/2025-02-22-brilliant/)
+
+---
+
