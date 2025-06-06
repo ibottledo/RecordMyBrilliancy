@@ -389,7 +389,12 @@ int main() {
         return 0;
     }
 
-    string base = "brilliant-" + date;
+    // date가 2025.06.03일 때 2025-06-03 형식으로 변환
+    date.erase(remove(date.begin(), date.end(), '.'), date.end());
+    date.insert(4, "-");
+    date.insert(7, "-");
+
+    string base = date + "-brilliant";
     string filename = base + ".md";
 
     // 탁월수 직전의 체스판을 텍스트 파일로 저장
