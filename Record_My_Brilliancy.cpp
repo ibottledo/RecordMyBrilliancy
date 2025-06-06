@@ -381,6 +381,11 @@ int main() {
 
     cout << "Brilliant Move day:\n";
     string date = fetcher.getDate();
+
+    // date가 2025.06.03일 때 2025-06-03 형식으로 변환
+    date.erase(remove(date.begin(), date.end(), '.'), date.end());
+    date.insert(4, "-");
+    date.insert(7, "-");
     cout << date << '\n';
 
     // publish
@@ -388,11 +393,6 @@ int main() {
         cout << "이미 index.md에 포함된 brilliant입니다.\n";
         return 0;
     }
-
-    // date가 2025.06.03일 때 2025-06-03 형식으로 변환
-    date.erase(remove(date.begin(), date.end(), '.'), date.end());
-    date.insert(4, "-");
-    date.insert(7, "-");
 
     string base = date + "-brilliant";
     string filename = base + ".md";
