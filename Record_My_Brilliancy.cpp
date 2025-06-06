@@ -413,7 +413,7 @@ int main() {
         base += "-" + to_string(suffix - 1);
     }
     chessBoard.saveAsTextFile(txtPath);
-    string postPath = "blog/" + filename.substr(0, filename.size() - 3) + "/";
+    string postPath = "_posts/" + filename.substr(0, filename.size() - 3) + "/";
 
     // Python 명령 실행
     string cmd = "python3 txt_to_png.py " + txtPath + " " + pngPath;
