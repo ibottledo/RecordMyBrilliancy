@@ -121,3 +121,10 @@ title: Brilliant Moves
 
 ---
 
+## 🗓 2024-11-21.
+**Brilliant Move:** 22. axb5!!
+
+[→ 탁월수 보기](_posts/2024-11-21-brilliant.md)
+
+---
+
