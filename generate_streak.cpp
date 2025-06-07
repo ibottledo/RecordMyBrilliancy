@@ -64,7 +64,7 @@ int main() {
             << ";display:block;border-radius:3px;'></a>\n";
     }
 
-    out << "</div>\n";\
+    out << "</div>\n\n";\
 
     cout << "✅ streak.html generated successfully.\n";
     return 0;
