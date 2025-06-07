@@ -46,7 +46,7 @@ int main() {
     out << "<div style='overflow-x: auto; padding-bottom: 8px;'>\n";
     out << "<div style='display:grid; grid-template-rows: repeat(7, 14px); grid-auto-flow: column; gap: 2px; width: max-content;'>\n";
 
-    for (int i = 0; i < 365; ++i) {
+    for (int i = 0; i < 364; ++i) {
         tm current = start_tm;
         current.tm_mday += i;
         mktime(&current);  // normalize
