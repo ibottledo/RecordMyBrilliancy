@@ -170,7 +170,9 @@ title: Brilliant Moves
 
 [→ 탁월수 보기](_posts/2025-06-03-brilliant.md)
 
----## 🗓 2025-06-06.
+---
+
+## 🗓 2025-06-06.
 **Brilliant Move:** 14. Bxh6!!
 
 [→ 탁월수 보기](_posts/2025-06-06-brilliant.md)
