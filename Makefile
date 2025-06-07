@@ -1,15 +1,26 @@
 CXX = g++
-CXXFLAGS = -std=c++17 -I/usr/local/Cellar/nlohmann-json/3.12.0/include
-LDFLAGS = -lcurl -lstdc++fs
+CXXFLAGS = -std=c++17 -lstdc++fs
 
-SRC = src/Record_My_Brilliancy.cpp
-TARGET = bin/Record_My_Brilliancy
+BIN_DIR = bin
+SRC_DIR = src
 
-all: $(TARGET)
+MAIN_SRC = $(SRC_DIR)/Record_My_Brilliancy.cpp
+MAIN_BIN = $(BIN_DIR)/Record_My_Brilliancy
 
-$(TARGET): $(SRC)
-	mkdir -p bin
-	$(CXX) $(CXXFLAGS) $< -o $@ $(LDFLAGS)
+STREAK_SRC = generate_streak.cpp
+STREAK_BIN = $(BIN_DIR)/generate_streak
+
+all: $(MAIN_BIN) streak
+
+$(MAIN_BIN): $(MAIN_SRC)
+	$(CXX) $(CXXFLAGS) -lcurl -o $@ $<
+
+$(STREAK_BIN): $(STREAK_SRC)
+	$(CXX) $(CXXFLAGS) -o $@ $<
+
+streak: $(STREAK_BIN)
+	./$(STREAK_BIN)
 
 clean:
-	rm -f $(TARGET)
+	rm -f $(BIN_DIR)/*
+	rm -f _includes/streak.html
