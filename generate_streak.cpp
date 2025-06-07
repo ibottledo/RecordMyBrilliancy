@@ -12,6 +12,9 @@ using namespace chrono;
 int main() {
     set<string> brilliantDates;
 
+    // 🔧 필수: _includes 폴더 없으면 생성
+    fs::create_directories("_includes");
+
     // 1. _posts 디렉토리 순회
     for (const auto& entry : fs::directory_iterator("_posts")) {
         string filename = entry.path().filename().string();
@@ -28,10 +31,15 @@ int main() {
     // 시작일 = 1년 전
     tm start_tm = today_tm;
     start_tm.tm_mday -= 364;
-    mktime(&start_tm); // 날짜 정규화
+    mktime(&start_tm);
 
-    // index.md 또는 streak.html 생성
+    // 3. 파일 생성 (with 체크)
     ofstream out("_includes/streak.html");
+    if (!out.is_open()) {
+        cerr << "❌ Failed to open _includes/streak.html for writing.\n";
+        return 1;
+    }
+
     out << "<h2>🔥 Brilliant Move Streak</h2>\n";
     out << "<div style='display:grid; grid-template-columns: repeat(53, 14px); gap: 2px;'>\n";
 
@@ -57,5 +65,6 @@ int main() {
     out << "</div>\n";
     out << "<p style='font-size:12px;'>🟩 = brilliant move, ⬜ = no move</p>\n";
 
+    cout << "✅ streak.html generated successfully.\n";
     return 0;
 }
