@@ -5,6 +5,8 @@ title: Brilliant Moves
 
 # My Brilliancy Streak
 
+{% include streak.html %}
+
 ---
 
 # Brilliant Move Archive
