@@ -1,6 +1,6 @@
 CXX = g++
-CXXFLAGS = -std=c++17 -I. -lstdc++fs
-LDFLAGS = -lcurl
+CXXFLAGS = -std=c++17 -I.
+LDFLAGS = -lstdc++fs -lcurl
 
 BIN_DIR = bin
 SRC_DIR = src
@@ -14,10 +14,10 @@ STREAK_BIN = $(BIN_DIR)/generate_streak
 all: $(MAIN_BIN) streak
 
 $(MAIN_BIN): $(MAIN_SRC)
-	$(CXX) $(CXXFLAGS) $(LDFLAGS) -o $@ $<
+	$(CXX) $(CXXFLAGS) $< -o $@ $(LDFLAGS)
 
 $(STREAK_BIN): $(STREAK_SRC)
-	$(CXX) $(CXXFLAGS) -o $@ $<
+	$(CXX) $(CXXFLAGS) $< -o $@
 
 streak: $(STREAK_BIN)
 	./$(STREAK_BIN)
