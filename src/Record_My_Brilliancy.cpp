@@ -30,7 +30,7 @@ public:
     }
 
     static void appendToBrilliantsMd(const string& date, const string& move, const string& postPath) {
-        ofstream file("index.md", ios::app);
+        ofstream file("index.html", ios::app);
         if (file.is_open()) {
             file << "## 🗓 " << date << ".\n";
             file << "**Brilliant Move:** " << move << "!!\n\n";
@@ -59,6 +59,7 @@ public:
         system("git commit -m \"Auto: brilliant move update\"");
         system("git pull --rebase origin main");
         system("git push origin main");
+        system("./bin/generate_streak");
     }
 };
 
