@@ -10,7 +10,7 @@ title: Brilliant Moves
 
 ---
 
-# Brilliant Move Archive
+# [Brilliant Move Archive](https://github.com/ibottledo/RecordMyBrilliancy/tree/main)
 
 ## 🗓 2025-01-22.
 **Brilliant Move:** 24... Re1!!
