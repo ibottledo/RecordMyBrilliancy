@@ -3,7 +3,7 @@ layout: default
 title: Brilliant Moves
 ---
 
-<h2>🔥 Brilliant Move Streak</h2>
+<h2>Brilliant Move Streak</h2>
 <div>
   {% include streak.html %}
 </div>
