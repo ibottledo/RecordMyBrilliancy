@@ -24,11 +24,11 @@ int main() {
         }
     }
 
-    // 2. 오늘 기준 최근 365일 계산
+    // 2. 오늘 기준 최근 364일 계산
     auto today = system_clock::to_time_t(system_clock::now());
     tm today_tm = *localtime(&today);
 
-    // 시작일 = 364일 전
+    // 시작일 = 364일 전 (7의 배수)
     tm start_tm = today_tm;
     start_tm.tm_mday -= 364;
     mktime(&start_tm);  // normalize
@@ -41,7 +41,10 @@ int main() {
     }
 
     out << "<h2></h2>\n";
-    out << "<div style='display:grid; grid-template-rows: repeat(7, 14px); grid-auto-flow: column; gap: 2px;'>\n";
+
+    // 🔁 가로 스크롤 가능한 래퍼 div 추가
+    out << "<div style='overflow-x: auto; padding-bottom: 8px;'>\n";
+    out << "<div style='display:grid; grid-template-rows: repeat(7, 14px); grid-auto-flow: column; gap: 2px; width: max-content;'>\n";
 
     for (int i = 0; i < 365; ++i) {
         tm current = start_tm;
@@ -64,7 +67,7 @@ int main() {
             << ";display:block;border-radius:3px;'></a>\n";
     }
 
-    out << "</div>\n";
+    out << "</div>\n</div>\n";  // 내부 그리드 div + 스크롤 div 닫기
 
     cout << "✅ streak.html generated successfully.\n";
     return 0;
