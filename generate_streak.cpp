@@ -40,7 +40,6 @@ int main() {
         return 1;
     }
 
-    out << "<h2>🔥 Brilliant Move Streak</h2>\n";
     out << "<div style='display:grid; grid-template-columns: repeat(53, 14px); gap: 2px;'>\n";
 
     for (int i = 0; i < 365; ++i) {
