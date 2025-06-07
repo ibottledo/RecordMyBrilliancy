@@ -11,7 +11,10 @@ MAIN_BIN = $(BIN_DIR)/Record_My_Brilliancy
 STREAK_SRC = generate_streak.cpp
 STREAK_BIN = $(BIN_DIR)/generate_streak
 
-all: $(MAIN_BIN) streak
+all: $(BIN_DIR) $(MAIN_BIN) streak
+
+$(BIN_DIR):
+	mkdir -p $(BIN_DIR)
 
 $(MAIN_BIN): $(MAIN_SRC)
 	$(CXX) $(CXXFLAGS) $< -o $@ $(LDFLAGS)
