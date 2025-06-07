@@ -12,10 +12,10 @@ using namespace chrono;
 int main() {
     set<string> brilliantDates;
 
-    // 🔧 필수: _includes 폴더 없으면 생성
+    // 🔧 _includes 폴더 없으면 생성
     fs::create_directories("_includes");
 
-    // 1. _posts 디렉토리 순회
+    // 1. _posts 디렉토리에서 날짜 추출
     for (const auto& entry : fs::directory_iterator("_posts")) {
         string filename = entry.path().filename().string();
         if (filename.size() >= 10 && filename[4] == '-' && filename[7] == '-') {
@@ -24,16 +24,16 @@ int main() {
         }
     }
 
-    // 2. 오늘 기준 최근 365일 스트릭 그리기
+    // 2. 오늘 기준 최근 365일 계산
     auto today = system_clock::to_time_t(system_clock::now());
     tm today_tm = *localtime(&today);
 
-    // 시작일 = 1년 전
+    // 시작일 = 364일 전
     tm start_tm = today_tm;
     start_tm.tm_mday -= 364;
-    mktime(&start_tm);
+    mktime(&start_tm);  // normalize
 
-    // 3. 파일 생성 (with 체크)
+    // 3. streak.html 생성
     ofstream out("_includes/streak.html");
     if (!out.is_open()) {
         cerr << "❌ Failed to open _includes/streak.html for writing.\n";
@@ -41,19 +41,21 @@ int main() {
     }
 
     out << "<h2></h2>\n";
-    out << "<div style='display:grid; grid-template-columns: repeat(53, 14px); gap: 2px;'>\n";
+    out << "<div style='display:grid; grid-template-rows: repeat(7, 14px); grid-auto-flow: column; gap: 2px;'>\n";
 
     for (int i = 0; i < 365; ++i) {
         tm current = start_tm;
         current.tm_mday += i;
-        mktime(&current);
+        mktime(&current);  // normalize
 
         char buf[11];
         strftime(buf, sizeof(buf), "%Y-%m-%d", &current);
         string dateStr(buf);
 
-        string color = brilliantDates.count(dateStr) ? "#2ecc71" : "#ebedf0";
-        string link = brilliantDates.count(dateStr)
+        bool isBrilliant = brilliantDates.count(dateStr);
+        string color = isBrilliant ? "#2ecc71" : "#ebedf0";
+
+        string link = isBrilliant
             ? "/RecordMyBrilliancy/" + dateStr.substr(0,4) + "/" + dateStr.substr(5,2) + "/" + dateStr.substr(8,2) + "/brilliant/"
             : "#";
 

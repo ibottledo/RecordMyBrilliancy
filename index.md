@@ -173,3 +173,10 @@ title: Brilliant Moves
 
 ---
 
+## 🗓 2025-06-01.
+**Brilliant Move:** 24. Bxe6+!!
+
+[→ 탁월수 보기](_posts/2025-06-01-brilliant.md)
+
+---
+
