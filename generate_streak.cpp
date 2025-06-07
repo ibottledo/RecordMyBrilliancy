@@ -53,7 +53,7 @@ int main() {
         string dateStr(buf);
 
         bool isBrilliant = brilliantDates.count(dateStr);
-        string color = isBrilliant ? "#2ecc71" : "#ebedf0";
+        string color = isBrilliant ? "#3DB6A9" : "#ebedf0";
 
         string link = isBrilliant
             ? "/RecordMyBrilliancy/" + dateStr.substr(0,4) + "/" + dateStr.substr(5,2) + "/" + dateStr.substr(8,2) + "/brilliant/"
