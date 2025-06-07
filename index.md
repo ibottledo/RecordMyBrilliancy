@@ -142,34 +142,12 @@ title: Brilliant Moves
 **Brilliant Move:** 25... Nf3+!!
 
 [→ 탁월수 보기](_posts/2025-05-14-brilliant.md)
-
----
-
-## 🗓 2025-05-14-2.
-**Brilliant Move:** 25... Nf3+!!
-
-[→ 탁월수 보기](_posts/2025-05-14-brilliant-2.md)
-
----
-
-## 🗓 2025-05-14-3.
-**Brilliant Move:** 25... Nf3+!!
-
-[→ 탁월수 보기](_posts/2025-05-14-brilliant-3.md)
-
 ---
 
 ## 🗓 2025-05-17.
 **Brilliant Move:** 12. Bxh7+!!
 
 [→ 탁월수 보기](_posts/2025-05-17-brilliant.md)
-
----
-
-## 🗓 2025-06-03.
-**Brilliant Move:** 7. Bxf7+!!
-
-[→ 탁월수 보기](_posts/2025-06-03-brilliant.md)
 
 ---
 
@@ -184,6 +162,13 @@ title: Brilliant Moves
 **Brilliant Move:** 20... Ng6!!
 
 [→ 탁월수 보기](_posts/2025-05-20-brilliant.md)
+
+---
+
+## 🗓 2025-06-03.
+**Brilliant Move:** 7. Bxf7+!!
+
+[→ 탁월수 보기](_posts/2025-06-03-brilliant.md)
 
 ---
 

@@ -56,7 +56,7 @@ int main() {
         string color = isBrilliant ? "#3DB6A9" : "#ebedf0";
 
         string link = isBrilliant
-            ? "/RecordMyBrilliancy/" + dateStr.substr(0,4) + "/" + dateStr.substr(5,2) + "/" + dateStr.substr(8,2) + "/brilliant/"
+            ? "/RecordMyBrilliancy/blog/" + dateStr.substr(0,4) + "-" + dateStr.substr(5,2) + "-" + dateStr.substr(8,2) + "/brilliant/"
             : "#";
 
         out << "<a href='" << link << "' title='" << dateStr
@@ -64,8 +64,7 @@ int main() {
             << ";display:block;border-radius:3px;'></a>\n";
     }
 
-    out << "</div>\n";
-    out << "<p style='font-size:12px;'>🟩 = brilliant move, ⬜ = no move</p>\n";
+    out << "</div>\n";\
 
     cout << "✅ streak.html generated successfully.\n";
     return 0;
