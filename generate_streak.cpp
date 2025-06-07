@@ -56,7 +56,7 @@ int main() {
         string color = isBrilliant ? "#25C2A3" : "#ebedf0";
 
         string link = isBrilliant
-            ? "/RecordMyBrilliancy/blog/" + dateStr.substr(0,4) + "-" + dateStr.substr(5,2) + "-" + dateStr.substr(8,2) + "/brilliant/"
+            ? "/RecordMyBrilliancy/blog/" + dateStr.substr(0,4) + "-" + dateStr.substr(5,2) + "-" + dateStr.substr(8,2) + "-brilliant/"
             : "#";
 
         out << "<a href='" << link << "' title='" << dateStr
