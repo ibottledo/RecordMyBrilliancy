@@ -182,3 +182,10 @@ title: Brilliant Moves
 
 ---
 
+## 🗓 2025-06-07.
+**Brilliant Move:** 21... Nxc2!!
+
+[→ 탁월수 보기](_posts/2025-06-07-brilliant.md)
+
+---
+
