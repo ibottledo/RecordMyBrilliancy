@@ -49,3 +49,10 @@ ibottledo vs sydyata
 
 ---
 
+## 🗓 2025-03-23-2.
+ibottledo vs sydyata
+
+[→ 탁월수 보기](_posts/2025-03-23-brilliant-2.md)
+
+---
+
