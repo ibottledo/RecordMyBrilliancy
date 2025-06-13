@@ -28,3 +28,10 @@ title: Brilliant Moves
 
 ---
 
+## 🗓 2025-03-22.
+**Sershantt vs ibottledo**
+
+[→ 탁월수 보기](_posts/2025-03-22-brilliant.md)
+
+---
+
