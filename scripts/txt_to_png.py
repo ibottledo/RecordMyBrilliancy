@@ -39,7 +39,7 @@ def txt_to_chessboard(input_path, output_path):
             top_left = (x * square_size, y * square_size)
             bottom_right = ((x + 1) * square_size, (y + 1) * square_size)
 
-            fill = "#739552" if (x + y) % 2 == 0 else "#EAEBD0"
+            fill = "#739552" if (x + y) % 2 == 1 else "#EAEBD0"
             draw.rectangle([top_left, bottom_right], fill=fill)
 
             piece = board[y][x]
