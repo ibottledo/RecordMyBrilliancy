@@ -454,7 +454,7 @@ int main() {
     string contentDate = date;
     if (suffix > 2) contentDate += "-" + to_string(suffix - 1);
 
-    string content = "## Brilliant Move: " + pgn + " (" + White + " vs " + Black + ")" + "\n\n"
+    string content = "## " + White + " vs " + Black + "\n\n"
                + "![](/RecordMyBrilliancy/images/" + filename.substr(0, filename.size() - 3) + ".png)\n\n"
                + "**Brilliant Move:**\n\n" + pgn + "!!";
 
