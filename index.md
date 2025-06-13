@@ -84,3 +84,10 @@ Werty937 vs ibottledo
 
 ---
 
+## 🗓 2025-03-27.
+Knightlife2 vs ibottledo
+
+[→ 탁월수 보기](_posts/2025-03-27-brilliant.md)
+
+---
+
