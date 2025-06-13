@@ -55,11 +55,11 @@ public:
 class GitManager {
 public:
     static void pushToGitHub() {
+        system("./bin/generate_streak");
         system("git add .");
         system("git commit -m \"Auto: brilliant move update\"");
         system("git pull --rebase origin main");
         system("git push origin main");
-        system("./bin/generate_streak");
     }
 };
 
