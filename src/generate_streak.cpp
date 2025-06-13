@@ -1,7 +1,7 @@
 #include <filesystem>
 #include <iostream>
 #include <fstream>
-#include <set>
+#include <map>
 #include <chrono>
 #include <iomanip>
 
@@ -10,7 +10,7 @@ using namespace std;
 using namespace chrono;
 
 int main() {
-    set<string> brilliantDates;
+    map<string,int> brilliantCounts;
 
     // 🔧 _includes 폴더 없으면 생성
     fs::create_directories("_includes");
@@ -20,7 +20,7 @@ int main() {
         string filename = entry.path().filename().string();
         if (filename.size() >= 10 && filename[4] == '-' && filename[7] == '-') {
             string date = filename.substr(0, 10); // YYYY-MM-DD
-            brilliantDates.insert(date);
+            brilliantCounts[date]++;
         }
     }
 
@@ -55,15 +55,15 @@ int main() {
         strftime(buf, sizeof(buf), "%Y-%m-%d", &current);
         string dateStr(buf);
 
-        int isBrilliant = brilliantDates.count(dateStr);
-        string color = "#EBEDf0";       //#8AABBF
-        if (isBrilliant == 1) {
-            color = "#BFF3E8";          //#25C2A3
-        } else if (isBrilliant > 1) {
+        int cnt = brilliantCounts.count(dateStr);
+        string color = "#EBEDf0";       //#8AABBF (연한 파랑, 바꿔본 안탁월)
+        if (cnt == 1) {
+            color = "#BFF3E8";          //#25C2A3 (연한 초록, 원래 탁월)ㄴ
+        } else if (cnt > 1) {
             color = "#3FC1B0";
         }
 
-        string link = isBrilliant
+        string link = (cnt > 0)
             ? "/RecordMyBrilliancy/blog/" + dateStr.substr(0,4) + "-" + dateStr.substr(5,2) + "-" + dateStr.substr(8,2) + "-brilliant/"
             : "#";
 
