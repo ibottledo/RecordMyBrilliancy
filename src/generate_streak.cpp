@@ -56,7 +56,7 @@ int main() {
         string dateStr(buf);
 
         int cnt = brilliantCounts[dateStr];
-        string color = "F2F2F2";       // #8AABBF (연한 파랑, 바꿔본 안탁월), #EAEBD0
+        string color = " #BBBBBB";       // #8AABBF (연한 파랑, 바꿔본 안탁월), #EAEBD0
         if (cnt == 1) {
             color = "#95D7B9";          // #25C2A3 (연한 초록, 원래 탁월)ㄴ
         } else if (cnt > 1) {
