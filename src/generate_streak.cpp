@@ -56,7 +56,7 @@ int main() {
         string dateStr(buf);
 
         int isBrilliant = brilliantDates.count(dateStr);
-        string color = "#ebedf0";       //"#8AABBF";
+        string color = "#EBEDf0";       //#8AABBF
         if (isBrilliant == 1) {
             color = "#BFF3E8";          //#25C2A3
         } else if (isBrilliant > 1) {
