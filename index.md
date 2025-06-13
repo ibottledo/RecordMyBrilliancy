@@ -105,3 +105,10 @@ fhnhx vs ibottledo
 
 ---
 
+## 🗓 2025-03-27-4.
+ibottledo vs agsboi
+
+[→ 탁월수 보기](_posts/2025-03-27-brilliant-4.md)
+
+---
+
