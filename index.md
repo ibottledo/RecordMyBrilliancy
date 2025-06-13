@@ -21,3 +21,10 @@ Mr_Creative_69 vs ibottledo
 
 ---
 
+## 🗓 2025-02-22.
+hawynelik vs ibottledo
+
+[→ 탁월수 보기](_posts/2025-02-22-brilliant.md)
+
+---
+
