@@ -55,8 +55,13 @@ int main() {
         strftime(buf, sizeof(buf), "%Y-%m-%d", &current);
         string dateStr(buf);
 
-        bool isBrilliant = brilliantDates.count(dateStr);
-        string color = isBrilliant ? "#25C2A3" : "#ebedf0";
+        int isBrilliant = brilliantDates.count(dateStr);
+        string color = "#8AABBF";    //"#ebedf0";
+        if (isBrilliant == 1) {
+            color = "#53ADAA";
+        } else if (isBrilliant > 1) {
+            color = "#3FC1B0";
+        }
 
         string link = isBrilliant
             ? "/RecordMyBrilliancy/blog/" + dateStr.substr(0,4) + "-" + dateStr.substr(5,2) + "-" + dateStr.substr(8,2) + "-brilliant/"
