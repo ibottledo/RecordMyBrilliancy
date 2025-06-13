@@ -29,11 +29,11 @@ public:
         }
     }
 
-    static void appendToBrilliantsMd(const string& date, const string& move, const string& postPath) {
+    static void appendToBrilliantsMd(const string& date, const string& White, const string& Black, const string& postPath) {
         ofstream file("index.md", ios::app);
         if (file.is_open()) {
             file << "## 🗓 " << date << ".\n";
-            file << "**Brilliant Move:** " << move << "!!\n\n";
+            file << "**" << White << " vs " << Black << "**\n\n";
             file << "[→ 탁월수 보기](" << postPath << ")\n\n";
             file << "---\n\n";
             file.close();
@@ -365,12 +365,30 @@ public:
     pair<string, string> getUserId() {
         return {white, black};
     }
+
+    static string getURL(const string& s) { // 예시 인풋: 이 탁월한 수를 보십시오: https://www.chess.com/analysis/game/live/137689975832?move=66&tab=review (2연탁)
+        size_t pos = s.find("https");
+        if (pos == string::npos) {
+            cerr << "No valid URL found in the input string." << endl;
+            return "";
+        }
+        size_t endPos = s.find("review", pos);
+        endPos += 6; // "review" 길이만큼 이동
+        if (endPos == string::npos) {
+            endPos = s.length(); // "review"가 없으면 문자열 끝까지
+        }
+        string url = s.substr(pos, endPos - pos);
+
+        return url;
+    }
 };
 
 int main() {
     string Brilliant_url;
     cout << "Enter: Brilliant URL: ";
     getline(cin, Brilliant_url);
+
+    string url = ChessFetcher::getURL(Brilliant_url);
     int brilliantMoveIndex = ChessFetcher::getBrilliantMoveIndex(Brilliant_url);
     string gameAPI = ChessFetcher::getGameAPI(Brilliant_url);
 
@@ -394,8 +412,10 @@ int main() {
     cout << date << '\n';
 
     pair<string, string> userId = fetcher.getUserId();
-    cout << "White: " << userId.first << ", Black: " << userId.second << '\n';
-    if (userId.first != "ibottledo" && userId.second != "ibottledo") {
+    string White = userId.first;
+    string Black = userId.second;
+    cout << "White: " << White << ", Black: " << Black << '\n';
+    if (White != "ibottledo" && Black != "ibottledo") {
         cout << "이 탁월수는 ibottledo의 게임이 아닙니다.\n";
         return 0;
     }
@@ -438,8 +458,9 @@ int main() {
                + "![](/RecordMyBrilliancy/images/" + filename.substr(0, filename.size() - 3) + ".png)\n\n"
                + "**Brilliant Move:**\n\n" + pgn + "!!";
 
-    PostManager::writeMarkdown(filename, filename.substr(0, filename.size() - 3), content, date);
-    PostManager::appendToBrilliantsMd(contentDate, pgn, postPath);
+    string title = "Brilliant Move: " + pgn + " (" + White + " vs " + Black + ")";
+    PostManager::writeMarkdown(filename, title, content, date);
+    PostManager::appendToBrilliantsMd(contentDate, White, Black, postPath);
     GitManager::pushToGitHub();
 
     return 0;
