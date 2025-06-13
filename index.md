@@ -70,3 +70,10 @@ raje23456 vs ibottledo
 
 ---
 
+## 🗓 2025-03-24.
+Werty937 vs ibottledo
+
+[→ 탁월수 보기](_posts/2025-03-24-brilliant.md)
+
+---
+
