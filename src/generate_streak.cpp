@@ -28,9 +28,9 @@ int main() {
     auto today = system_clock::to_time_t(system_clock::now());
     tm today_tm = *localtime(&today);
 
-    // 시작일 = 364일 전 (7의 배수)
+    // 시작일 = 363일 전 (오늘까지 포함해야 7의 배수)
     tm start_tm = today_tm;
-    start_tm.tm_mday -= 364;
+    start_tm.tm_mday -= 363;
     mktime(&start_tm);  // normalize
 
     // 3. streak.html 생성

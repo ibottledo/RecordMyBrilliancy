@@ -8,7 +8,7 @@ SRC_DIR = src
 MAIN_SRC = $(SRC_DIR)/Record_My_Brilliancy.cpp
 MAIN_BIN = $(BIN_DIR)/Record_My_Brilliancy
 
-STREAK_SRC = generate_streak.cpp
+STREAK_SRC = $(SRC_DIR)/generate_streak.cpp
 STREAK_BIN = $(BIN_DIR)/generate_streak
 
 all: $(BIN_DIR) $(MAIN_BIN) streak

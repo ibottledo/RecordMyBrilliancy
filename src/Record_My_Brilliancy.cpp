@@ -428,7 +428,7 @@ int main() {
     string postPath = "_posts/" + filename.substr(0, filename.size() - 3) + ".md";
 
     // Python 명령 실행
-    string cmd = "python3 txt_to_png.py " + txtPath + " " + pngPath;
+    string cmd = "/scripts/python3 txt_to_png.py " + txtPath + " " + pngPath;
     system(cmd.c_str());
 
     string contentDate = date;
