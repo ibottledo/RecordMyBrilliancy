@@ -55,7 +55,7 @@ int main() {
         strftime(buf, sizeof(buf), "%Y-%m-%d", &current);
         string dateStr(buf);
 
-        int cnt = brilliantCounts.count(dateStr);
+        int cnt = brilliantCounts[dateStr];
         string color = "#EBEDf0";       //#8AABBF (연한 파랑, 바꿔본 안탁월)
         if (cnt == 1) {
             color = "#BFF3E8";          //#25C2A3 (연한 초록, 원래 탁월)ㄴ
