@@ -454,11 +454,11 @@ int main() {
     string contentDate = date;
     if (suffix > 2) contentDate += "-" + to_string(suffix - 1);
 
-    string content = "## " + contentDate + "\n\n"
+    string content = "## Brilliant Move: " + pgn + " (" + White + " vs " + Black + ")" + "\n\n"
                + "![](/RecordMyBrilliancy/images/" + filename.substr(0, filename.size() - 3) + ".png)\n\n"
                + "**Brilliant Move:**\n\n" + pgn + "!!";
 
-    string title = "Brilliant Move: " + pgn + " (" + White + " vs " + Black + ")";
+    string title = filename.substr(0, filename.size() - 3);
     PostManager::writeMarkdown(filename, title, content, date);
     PostManager::appendToBrilliantsMd(contentDate, White, Black, postPath);
     GitManager::pushToGitHub();
