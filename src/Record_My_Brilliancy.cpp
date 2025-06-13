@@ -454,8 +454,12 @@ int main() {
     string contentDate = date;
     if (suffix > 2) contentDate += "-" + to_string(suffix - 1);
 
-    string content = "## " + White + " vs " + Black + "\n\n"
-               + "![](/RecordMyBrilliancy/images/" + filename.substr(0, filename.size() - 3) + ".png)\n\n"
+    int index = ChessFetcher::getBrilliantMoveIndex(Brilliant_url);
+
+    string content = White + " vs " + Black + "\n\n"
+               + "## " + ((index % 2 == 0) ? "White" : "Black")
+               + " to move\n\n"
+               + "![](/RecordMyBrilliancy/images/" + filename.substr(0, filename.size() - 3) + ".png)\n\n.\n\n.\n\n.\n\n"
                + "**Brilliant Move:** " + pgn + "!!";
 
     string title = filename.substr(0, filename.size() - 3);
