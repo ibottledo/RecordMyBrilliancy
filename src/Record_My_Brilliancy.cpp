@@ -456,7 +456,7 @@ int main() {
 
     string content = "## " + White + " vs " + Black + "\n\n"
                + "![](/RecordMyBrilliancy/images/" + filename.substr(0, filename.size() - 3) + ".png)\n\n"
-               + "**Brilliant Move:**\n\n" + pgn + "!!";
+               + "**Brilliant Move:** " + pgn + "!!";
 
     string title = filename.substr(0, filename.size() - 3);
     PostManager::writeMarkdown(filename, title, content, date);
