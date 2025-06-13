@@ -35,3 +35,10 @@ title: Brilliant Moves
 
 ---
 
+## 🗓 2025-03-22-2.
+**ibottledo vs mertosthere**
+
+[→ 탁월수 보기](_posts/2025-03-22-brilliant-2.md)
+
+---
+
