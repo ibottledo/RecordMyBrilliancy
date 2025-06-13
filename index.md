@@ -42,3 +42,10 @@ title: Brilliant Moves
 
 ---
 
+## 🗓 2025-03-23.
+ibottledo vs sydyata
+
+[→ 탁월수 보기](_posts/2025-03-23-brilliant.md)
+
+---
+
