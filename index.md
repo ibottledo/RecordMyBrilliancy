@@ -98,3 +98,10 @@ Skit73 vs ibottledo
 
 ---
 
+## 🗓 2025-03-27-3.
+fhnhx vs ibottledo
+
+[→ 탁월수 보기](_posts/2025-03-27-brilliant-3.md)
+
+---
+
