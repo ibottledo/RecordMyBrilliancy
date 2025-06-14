@@ -33,7 +33,7 @@ public:
         ofstream file("index.md", ios::app);
         if (file.is_open()) {
             file << "## 🗓 " << date << ".\n";
-            file << White << " vs " << Black << "<span style=\"color:#FFFFFF\">" + pgn + "</span>" << "\n\n";
+            file << White << " vs " << Black << "<span style=\"color:#FFFFFF\"> " + pgn + "</span>" << "\n\n";
             file << "[→ 탁월수 보기](" << postPath << ")\n\n";
             file << "---\n\n";
             file.close();
