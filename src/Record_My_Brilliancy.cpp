@@ -16,7 +16,7 @@ namespace fs = std::filesystem;
 
 class PostManager {
 public:
-    static void writeMarkdown(const string& filename, const string& title, const string& content, const string& date) {
+    static void writeBrilliantMarkdown(const string& filename, const string& title, const string& content, const string& date) {
         ofstream file("_posts/" + filename);
         if (file.is_open()) {
             file << "---\n";
@@ -24,12 +24,12 @@ public:
             file << "date: " << date << "\n";
             file << "layout: post\n";
             file << "---\n\n";
-            file << content << "\n";
+            file << content << "\n\n";
             file.close();
         }
     }
 
-    static void appendToBrilliantsMd(const string& date, const string& White, const string& Black, const string& postPath, const string& pgn) {
+    static void appendToIndexMd(const string& date, const string& White, const string& Black, const string& postPath, const string& pgn) {
         ofstream file("index.md", ios::app);
         if (file.is_open()) {
             file << "## 🗓 " << date << ".\n";
@@ -49,6 +49,30 @@ public:
             }
         }
         return false;
+    }
+
+    static void appendToBrilliantMd(const int& suffix, const string& postPath, const string& White, const string& Black) {
+        string temp = postPath;
+        if (suffix == 2) {
+            temp = temp.substr(0, temp.size() - 5) + ".md"; // -2.md -> .md
+        } else {
+            temp = temp.substr(0, temp.size() - 5) + "-" + to_string(suffix - 1) + ".md"; // -3.md -> -2.md
+        }
+
+        ifstream file(temp);
+        string line;
+        while (getline(file, line)) {
+            if (line.find(White + " vs " + Black) == string::npos) {
+                return; // White vs Black이 다른 경우
+            }
+        }
+        file.close();
+    
+        ofstream appendFile(temp, ios::app);
+        if (appendFile.is_open()) {
+            appendFile << "[→ 다음 탁월수 보기](" << postPath << ")\n\n";
+            appendFile.close();
+        }
     }
 };
 
@@ -434,15 +458,15 @@ int main() {
     string pngPath = "images/" + base + ".png";
 
     // 텍스트, 이미지, 마크다운 일일 중복 저장 피하기
-    int suffix = 2;
+    int suffix = 1;
     while (fs::exists(txtPath) || fs::exists(pngPath)) {
+        suffix++;
         txtPath = "images/" + base + "-" + to_string(suffix) + ".txt";
         pngPath = "images/" + base + "-" + to_string(suffix) + ".png";
         filename = base + "-" + to_string(suffix) + ".md";
-        ++suffix;
     }
-    if (suffix > 2) {
-        base += "-" + to_string(suffix - 1);
+    if (suffix > 1) {
+        base += "-" + to_string(suffix);
     }
     chessBoard.saveAsTextFile(txtPath);
     string postPath = "_posts/" + filename.substr(0, filename.size() - 3) + ".md";
@@ -452,7 +476,7 @@ int main() {
     system(cmd.c_str());
 
     string contentDate = date;
-    if (suffix > 2) contentDate += "-" + to_string(suffix - 1);
+    if (suffix > 1) contentDate += "-" + to_string(suffix);
 
     int index = ChessFetcher::getBrilliantMoveIndex(Brilliant_url);
 
@@ -463,8 +487,11 @@ int main() {
                + "**Brilliant Move:** " + pgn + "!!";
 
     string title = filename.substr(0, filename.size() - 3);
-    PostManager::writeMarkdown(filename, title, content, date);
-    PostManager::appendToBrilliantsMd(contentDate, White, Black, postPath, pgn);
+    if (suffix > 1) {
+        PostManager::appendToBrilliantMd(suffix, postPath, White, Black);
+    }
+    PostManager::writeBrilliantMarkdown(filename, title, content, date);
+    PostManager::appendToIndexMd(contentDate, White, Black, postPath, pgn);
     GitManager::pushToGitHub();
 
     return 0;
