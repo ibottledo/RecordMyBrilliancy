@@ -133,3 +133,10 @@ ibottledo vs Moin_cp
 
 ---
 
+## 🗓 2025-04-23.
+ibottledo vs malaka1802<span style="color:#FFFFFF">6. Bxf7+</span>
+
+[→ 탁월수 보기](_posts/2025-04-23-brilliant.md)
+
+---
+
