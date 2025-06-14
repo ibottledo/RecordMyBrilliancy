@@ -154,3 +154,10 @@ ibottledo vs jorgo6922<span style="color:#FFFFFF"> 23. Qe8+</span>
 
 ---
 
+## 🗓 2025-05-05.
+ibottledo vs Bvc578<span style="color:#FFFFFF"> 9. Bxf7+</span>
+
+[→ 탁월수 보기](_posts/2025-05-05-brilliant.md)
+
+---
+

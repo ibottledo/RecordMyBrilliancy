@@ -56,12 +56,11 @@ int main() {
         string dateStr(buf);
 
         int cnt = brilliantCounts[dateStr];
-        string color = " #DDDDDD";       // #8AABBF (연한 파랑, 바꿔본 안탁월), #EAEBD0
-        if (cnt == 1) {
-            color = "#95D7B9";          // #25C2A3 (연한 초록, 원래 탁월)ㄴ
-        } else if (cnt > 1) {
-            color = "#0C9988";
-        }
+        string color = " #DCDFE0";       // #8AABBF (연한 파랑, 바꿔본 안탁월), #EAEBD0
+        if (cnt == 1) color = " #95D7B9";          // #25C2A3 (연한 초록, 원래 탁월)ㄴ
+        if (cnt == 2) color = " #63B7C5";
+        if (cnt == 3) color = " #3894A5";
+        if (cnt > 3) color = " #087285";
 
         string link = (cnt > 0)
             ? "/RecordMyBrilliancy/blog/" + dateStr.substr(0,4) + "-" + dateStr.substr(5,2) + "-" + dateStr.substr(8,2) + "-brilliant/"
