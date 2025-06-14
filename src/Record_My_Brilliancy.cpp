@@ -456,7 +456,7 @@ int main() {
 
     int index = ChessFetcher::getBrilliantMoveIndex(Brilliant_url);
 
-    string content = White + " vs " + Black + "\n\n"
+    string content = "[" + White + " vs " + Black + "]()" + url + ")\n\n"
                + "## " + ((index % 2 == 0) ? "White" : "Black")
                + " to move\n\n"
                + "![](/RecordMyBrilliancy/images/" + filename.substr(0, filename.size() - 3) + ".png)\n\n.\n\n.\n\n.\n\n"
