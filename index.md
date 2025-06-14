@@ -168,3 +168,10 @@ ibottledo vs Bvc578<span style="color:#FFFFFF"> 25. Rxg5</span>
 
 ---
 
+## 🗓 2025-05-06.
+kmanirudh vs ibottledo<span style="color:#FFFFFF"> 8... Bxf2+</span>
+
+[→ 탁월수 보기](_posts/2025-05-06-brilliant.md)
+
+---
+
