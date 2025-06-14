@@ -72,7 +72,7 @@ public:
         if (found) {
             ofstream appendFile(temp, ios::app);
             if (appendFile.is_open()) {
-                appendFile << "[→ 다음 탁월수 보기](" << postPath << ")\n\n";
+                appendFile << "[→ 다음 탁월수 보기](" << "../../" + postPath << ")\n\n";
                 appendFile.close();
                 cout << suffix << "번째 탁월수 추가\n";
             }
