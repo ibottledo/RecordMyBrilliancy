@@ -29,11 +29,11 @@ public:
         }
     }
 
-    static void appendToBrilliantsMd(const string& date, const string& White, const string& Black, const string& postPath) {
+    static void appendToBrilliantsMd(const string& date, const string& White, const string& Black, const string& postPath, const string& pgn) {
         ofstream file("index.md", ios::app);
         if (file.is_open()) {
             file << "## 🗓 " << date << ".\n";
-            file << White << " vs " << Black << "\n\n";
+            file << White << " vs " << Black << "<span style=\"color:#FFFFFF\">" + pgn + "</span>" << "\n\n";
             file << "[→ 탁월수 보기](" << postPath << ")\n\n";
             file << "---\n\n";
             file.close();
@@ -456,7 +456,7 @@ int main() {
 
     int index = ChessFetcher::getBrilliantMoveIndex(Brilliant_url);
 
-    string content = "[" + White + " vs " + Black + "]()" + url + ")\n\n"
+    string content = "[" + White + " vs " + Black + "](" + url + ")\n\n"
                + "## " + ((index % 2 == 0) ? "White" : "Black")
                + " to move\n\n"
                + "![](/RecordMyBrilliancy/images/" + filename.substr(0, filename.size() - 3) + ".png)\n\n.\n\n.\n\n.\n\n"
@@ -464,7 +464,7 @@ int main() {
 
     string title = filename.substr(0, filename.size() - 3);
     PostManager::writeMarkdown(filename, title, content, date);
-    PostManager::appendToBrilliantsMd(contentDate, White, Black, postPath);
+    PostManager::appendToBrilliantsMd(contentDate, White, Black, postPath, pgn);
     GitManager::pushToGitHub();
 
     return 0;
