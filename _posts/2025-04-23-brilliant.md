@@ -18,3 +18,5 @@ layout: post
 
 **Brilliant Move:** 34. Nxb3!!
 
+[→ 다음 탁월수 보기](../../_posts/2025-04-23-brilliant-2.md)
+
