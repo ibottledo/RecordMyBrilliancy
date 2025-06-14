@@ -56,3 +56,10 @@ ibottledo vs malaka1802 <span style="color:#FFFFFF">34. Nxb3</span>
 
 ---
 
+## 🗓 2025-05-05.
+ibottledo vs Bvc578 <span style="color:#FFFFFF">9. Bxf7+</span>
+
+[→ 탁월수 보기](_posts/2025-05-05-brilliant.md)
+
+---
+

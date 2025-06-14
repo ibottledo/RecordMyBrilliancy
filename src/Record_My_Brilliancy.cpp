@@ -61,17 +61,21 @@ public:
 
         ifstream file(temp);
         string line;
+        bool found = false;
         while (getline(file, line)) {
-            if (line.find(White + " vs " + Black) == string::npos) {
-                return; // White vs Black이 다른 경우
+            if (line.find(White + " vs " + Black) != string::npos) {
+                found = true;
+                break;
             }
         }
         file.close();
-    
-        ofstream appendFile(temp, ios::app);
-        if (appendFile.is_open()) {
-            appendFile << "[→ 다음 탁월수 보기](" << postPath << ")\n\n";
-            appendFile.close();
+        if (found) {
+            ofstream appendFile(temp, ios::app);
+            if (appendFile.is_open()) {
+                appendFile << "[→ 다음 탁월수 보기](" << postPath << ")\n\n";
+                appendFile.close();
+                cout << suffix << "번째 탁월수 추가\n";
+            }
         }
     }
 };
