@@ -56,3 +56,10 @@ hawynelik vs ibottledo <span style="color:#FFFFFF">38... Qf1+</span>
 
 ---
 
+## 🗓 2025-03-22.
+Sershantt vs ibottledo <span style="color:#FFFFFF">11... Nxb4</span>
+
+[→ 탁월수 보기](_posts/2025-03-22-brilliant.md)
+
+---
+
