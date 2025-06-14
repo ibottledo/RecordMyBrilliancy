@@ -51,15 +51,15 @@ public:
         return false;
     }
 
-    static void appendToBrilliantMd(const int& suffix, const string& postPath, const string& White, const string& Black) {
-        string temp = postPath;
+    static void appendToBrilliantMd(const int& suffix, const string& slug, const string& White, const string& Black) {
+        string postPath = "_posts/" + slug + ".md";
         if (suffix == 2) {
-            temp = temp.substr(0, temp.size() - 5) + ".md"; // -2.md -> .md
+            postPath = postPath.substr(0, postPath.size() - 5) + ".md"; // -2.md -> .md
         } else {
-            temp = temp.substr(0, temp.size() - 5) + "-" + to_string(suffix - 1) + ".md"; // -3.md -> -2.md
+            postPath = postPath.substr(0, postPath.size() - 5) + "-" + to_string(suffix - 1) + ".md"; // -3.md -> -2.md
         }
 
-        ifstream file(temp);
+        ifstream file(postPath);
         string line;
         bool found = false;
         while (getline(file, line)) {
@@ -69,10 +69,12 @@ public:
             }
         }
         file.close();
+
+        string permalink = "/RecordMyBrilliancy/blog/" + slug + "/";
         if (found) {
-            ofstream appendFile(temp, ios::app);
+            ofstream appendFile(postPath, ios::app);
             if (appendFile.is_open()) {
-                appendFile << "[→ 다음 탁월수 보기](" << "../../" + postPath << ")\n\n";
+                appendFile << "[→ 다음 탁월수 보기](" << permalink << ")\n\n";
                 appendFile.close();
                 cout << suffix << "번째 탁월수 추가\n";
             }
@@ -473,7 +475,8 @@ int main() {
         base += "-" + to_string(suffix);
     }
     chessBoard.saveAsTextFile(txtPath);
-    string postPath = "_posts/" + filename.substr(0, filename.size() - 3) + ".md";
+    string slug = filename.substr(0, filename.size() - 3);
+    string postPath = "_posts/" + slug + ".md";
 
     // Python 명령 실행
     string cmd = "python3 scripts/txt_to_png.py " + txtPath + " " + pngPath;
@@ -487,14 +490,13 @@ int main() {
     string content = "[" + White + " vs " + Black + "](" + url + ")\n\n"
                + "## " + ((index % 2 == 0) ? "White" : "Black")
                + " to move\n\n"
-               + "![](/RecordMyBrilliancy/images/" + filename.substr(0, filename.size() - 3) + ".png)\n\n.\n\n.\n\n.\n\n"
+               + "![](/RecordMyBrilliancy/images/" + slug + ".png)\n\n.\n\n.\n\n.\n\n"
                + "**Brilliant Move:** " + pgn + "!!";
 
-    string title = filename.substr(0, filename.size() - 3);
     if (suffix > 1) {
-        PostManager::appendToBrilliantMd(suffix, postPath, White, Black);
+        PostManager::appendToBrilliantMd(suffix, slug, White, Black);
     }
-    PostManager::writeBrilliantMarkdown(filename, title, content, date);
+    PostManager::writeBrilliantMarkdown(filename, slug, content, date);
     PostManager::appendToIndexMd(contentDate, White, Black, postPath, pgn);
     GitManager::pushToGitHub();
 
