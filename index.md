@@ -84,3 +84,10 @@ raje23456 vs ibottledo <span style="color:#FFFFFF">17... Qe1+</span>
 
 ---
 
+## 🗓 2025-03-24.
+Werty937 vs ibottledo <span style="color:#FFFFFF">19... g6</span>
+
+[→ 탁월수 보기](_posts/2025-03-24-brilliant.md)
+
+---
+
