@@ -119,3 +119,10 @@ ibottledo vs Moin_cp <span style="color:#FFFFFF">20. Nxc6</span>
 
 ---
 
+## 🗓 2025-04-27.
+ibottledo vs jorgo6922 <span style="color:#FFFFFF">23. Qe8+</span>
+
+[→ 탁월수 보기](_posts/2025-04-27-brilliant.md)
+
+---
+
