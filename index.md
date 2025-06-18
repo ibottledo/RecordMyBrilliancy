@@ -105,3 +105,10 @@ Skit73 vs ibottledo <span style="color:#FFFFFF">19... Nxh3+</span>
 
 ---
 
+## 🗓 2025-03-27-3.
+fhnhx vs ibottledo <span style="color:#FFFFFF">17... Rxd4</span>
+
+[→ 탁월수 보기](_posts/2025-03-27-brilliant-3.md)
+
+---
+
