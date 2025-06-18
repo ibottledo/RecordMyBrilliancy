@@ -91,3 +91,10 @@ Werty937 vs ibottledo <span style="color:#FFFFFF">19... g6</span>
 
 ---
 
+## 🗓 2025-03-27.
+Knightlife2 vs ibottledo <span style="color:#FFFFFF">45... Nxf3+</span>
+
+[→ 탁월수 보기](_posts/2025-03-27-brilliant.md)
+
+---
+
