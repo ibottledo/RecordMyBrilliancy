@@ -77,3 +77,10 @@ ibottledo vs sydyata <span style="color:#FFFFFF">27. Rxb7+</span>
 
 ---
 
+## 🗓 2025-03-23-2.
+raje23456 vs ibottledo <span style="color:#FFFFFF">17... Qe1+</span>
+
+[→ 탁월수 보기](_posts/2025-03-23-brilliant-2.md)
+
+---
+
