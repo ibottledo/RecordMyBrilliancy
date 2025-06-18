@@ -70,3 +70,10 @@ ibottledo vs mertosthere <span style="color:#FFFFFF">14. Rxa4</span>
 
 ---
 
+## 🗓 2025-03-23.
+ibottledo vs sydyata <span style="color:#FFFFFF">27. Rxb7+</span>
+
+[→ 탁월수 보기](_posts/2025-03-23-brilliant.md)
+
+---
+
