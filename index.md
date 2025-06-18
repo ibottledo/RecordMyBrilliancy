@@ -133,3 +133,10 @@ kmanirudh vs ibottledo <span style="color:#FFFFFF">8... Bxf2+</span>
 
 ---
 
+## 🗓 2025-05-10.
+ibottledo vs Pixel_Shader <span style="color:#FFFFFF">23. Rxe6</span>
+
+[→ 탁월수 보기](_posts/2025-05-10-brilliant.md)
+
+---
+
