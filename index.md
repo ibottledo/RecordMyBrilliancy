@@ -112,3 +112,10 @@ fhnhx vs ibottledo <span style="color:#FFFFFF">17... Rxd4</span>
 
 ---
 
+## 🗓 2025-03-28.
+ibottledo vs Moin_cp <span style="color:#FFFFFF">20. Nxc6</span>
+
+[→ 탁월수 보기](_posts/2025-03-28-brilliant.md)
+
+---
+
