@@ -84,3 +84,31 @@ raje23456 vs ibottledo <span style="color:#FFFFFF">17... Qe1+</span>
 
 ---
 
+## 🗓 2025-03-24.
+Werty937 vs ibottledo <span style="color:#FFFFFF">19... g6</span>
+
+[→ 탁월수 보기](_posts/2025-03-24-brilliant.md)
+
+---
+
+## 🗓 2025-03-27.
+Knightlife2 vs ibottledo <span style="color:#FFFFFF">45... Nxf3+</span>
+
+[→ 탁월수 보기](_posts/2025-03-27-brilliant.md)
+
+---
+
+## 🗓 2025-03-27-2.
+Skit73 vs ibottledo <span style="color:#FFFFFF">19... Nxh3+</span>
+
+[→ 탁월수 보기](_posts/2025-03-27-brilliant-2.md)
+
+---
+
+## 🗓 2025-03-27-3.
+fhnhx vs ibottledo <span style="color:#FFFFFF">17... Rxd4</span>
+
+[→ 탁월수 보기](_posts/2025-03-27-brilliant-3.md)
+
+---
+
