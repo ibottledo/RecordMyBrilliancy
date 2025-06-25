@@ -147,3 +147,10 @@ AGeamana vs ibottledo <span style="color:#FFFFFF">25... Nf3+</span>
 
 ---
 
+## 🗓 2025-05-17.
+ibottledo vs KetaRahu <span style="color:#FFFFFF">12. Bxh7+</span>
+
+[→ 탁월수 보기](_posts/2025-05-17-brilliant.md)
+
+---
+
