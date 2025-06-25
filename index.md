@@ -154,3 +154,10 @@ ibottledo vs KetaRahu <span style="color:#FFFFFF">12. Bxh7+</span>
 
 ---
 
+## 🗓 2025-05-20.
+Bim_Bam_Boom vs ibottledo <span style="color:#FFFFFF">20... Ng6</span>
+
+[→ 탁월수 보기](_posts/2025-05-20-brilliant.md)
+
+---
+
