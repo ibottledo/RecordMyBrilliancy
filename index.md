@@ -140,3 +140,10 @@ ibottledo vs Pixel_Shader <span style="color:#FFFFFF">23. Rxe6</span>
 
 ---
 
+## 🗓 2025-05-14.
+AGeamana vs ibottledo <span style="color:#FFFFFF">25... Nf3+</span>
+
+[→ 탁월수 보기](_posts/2025-05-14-brilliant.md)
+
+---
+
