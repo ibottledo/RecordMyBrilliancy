@@ -168,3 +168,10 @@ ibottledo vs NonExizt <span style="color:#FFFFFF">24. Bxe6+</span>
 
 ---
 
+## 🗓 2025-06-03.
+ibottledo vs Limaeriton <span style="color:#FFFFFF">7. Bxf7+</span>
+
+[→ 탁월수 보기](_posts/2025-06-03-brilliant.md)
+
+---
+
