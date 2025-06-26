@@ -161,3 +161,10 @@ Bim_Bam_Boom vs ibottledo <span style="color:#FFFFFF">20... Ng6</span>
 
 ---
 
+## 🗓 2025-06-01.
+ibottledo vs NonExizt <span style="color:#FFFFFF">24. Bxe6+</span>
+
+[→ 탁월수 보기](_posts/2025-06-01-brilliant.md)
+
+---
+
