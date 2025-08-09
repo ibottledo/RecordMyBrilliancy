@@ -231,3 +231,10 @@ ibottledo vs anuj6789 <span style="color:#FFFFFF">3. Nxe5</span>
 
 ---
 
+## 🗓 2025-07-17.
+ibottledo vs chernota1995 <span style="color:#FFFFFF">10. Bxh7+</span>
+
+[→ 탁월수 보기](_posts/2025-07-17-brilliant.md)
+
+---
+
