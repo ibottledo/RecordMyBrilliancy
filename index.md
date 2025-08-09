@@ -245,3 +245,10 @@ ibottledo vs mezanates2025 <span style="color:#FFFFFF">32. Re1</span>
 
 ---
 
+## 🗓 2025-07-21.
+ibottledo vs yungcashnomoney <span style="color:#FFFFFF">22. Nxc7</span>
+
+[→ 탁월수 보기](_posts/2025-07-21-brilliant.md)
+
+---
+
