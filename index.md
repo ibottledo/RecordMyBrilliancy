@@ -238,3 +238,10 @@ ibottledo vs chernota1995 <span style="color:#FFFFFF">10. Bxh7+</span>
 
 ---
 
+## 🗓 2025-07-18.
+ibottledo vs mezanates2025 <span style="color:#FFFFFF">32. Re1</span>
+
+[→ 탁월수 보기](_posts/2025-07-18-brilliant.md)
+
+---
+
