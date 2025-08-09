@@ -294,3 +294,10 @@ mos5mos vs ibottledo <span style="color:#FFFFFF">11... O-O-O</span>
 
 ---
 
+## 🗓 2025-08-02-2.
+ibottledo vs kintsugilyo <span style="color:#FFFFFF">22. Rxe7</span>
+
+[→ 탁월수 보기](_posts/2025-08-02-brilliant-2.md)
+
+---
+
