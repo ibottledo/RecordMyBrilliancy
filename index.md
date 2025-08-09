@@ -301,3 +301,10 @@ ibottledo vs kintsugilyo <span style="color:#FFFFFF">22. Rxe7</span>
 
 ---
 
+## 🗓 2025-08-06.
+ibottledo vs Sergafanio <span style="color:#FFFFFF">20. Nxe6</span>
+
+[→ 탁월수 보기](_posts/2025-08-06-brilliant.md)
+
+---
+
