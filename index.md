@@ -182,3 +182,10 @@ ibottledo vs drortev <span style="color:#FFFFFF">14. Bxh6</span>
 
 ---
 
+## 🗓 2025-06-07.
+Jice05 vs ibottledo <span style="color:#FFFFFF">21... Nxc2</span>
+
+[→ 탁월수 보기](_posts/2025-06-07-brilliant.md)
+
+---
+
