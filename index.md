@@ -196,3 +196,10 @@ ibottledo vs ccd1313 <span style="color:#FFFFFF">16. Bxh6</span>
 
 ---
 
+## 🗓 2025-06-15.
+ibottledo vs edcasutedcasut <span style="color:#FFFFFF">21. Nxd6</span>
+
+[→ 탁월수 보기](_posts/2025-06-15-brilliant.md)
+
+---
+
