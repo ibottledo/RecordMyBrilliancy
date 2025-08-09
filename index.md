@@ -280,3 +280,10 @@ MmeSoulier vs ibottledo <span style="color:#FFFFFF">18... Qxe5</span>
 
 ---
 
+## 🗓 2025-07-31.
+ibottledo vs ganjamafia420 <span style="color:#FFFFFF">19. Nf5</span>
+
+[→ 탁월수 보기](_posts/2025-07-31-brilliant.md)
+
+---
+
