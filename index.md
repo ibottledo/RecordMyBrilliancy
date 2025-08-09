@@ -217,3 +217,10 @@ denizyelo vs ibottledo <span style="color:#FFFFFF">8... exd3</span>
 
 ---
 
+## 🗓 2025-07-05.
+FauziAnwar08 vs ibottledo <span style="color:#FFFFFF">24... Nxd5</span>
+
+[→ 탁월수 보기](_posts/2025-07-05-brilliant.md)
+
+---
+
