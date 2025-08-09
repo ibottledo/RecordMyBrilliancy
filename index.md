@@ -210,3 +210,10 @@ ibottledo vs Oneday200 <span style="color:#FFFFFF">14. Bxf7+</span>
 
 ---
 
+## 🗓 2025-07-04.
+denizyelo vs ibottledo <span style="color:#FFFFFF">8... exd3</span>
+
+[→ 탁월수 보기](_posts/2025-07-04-brilliant.md)
+
+---
+
