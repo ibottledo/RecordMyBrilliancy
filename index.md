@@ -203,3 +203,10 @@ ibottledo vs edcasutedcasut <span style="color:#FFFFFF">21. Nxd6</span>
 
 ---
 
+## 🗓 2025-06-20.
+ibottledo vs Oneday200 <span style="color:#FFFFFF">14. Bxf7+</span>
+
+[→ 탁월수 보기](_posts/2025-06-20-brilliant.md)
+
+---
+
