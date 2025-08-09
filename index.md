@@ -287,3 +287,10 @@ ibottledo vs ganjamafia420 <span style="color:#FFFFFF">19. Nf5</span>
 
 ---
 
+## 🗓 2025-08-02.
+mos5mos vs ibottledo <span style="color:#FFFFFF">11... O-O-O</span>
+
+[→ 탁월수 보기](_posts/2025-08-02-brilliant.md)
+
+---
+
