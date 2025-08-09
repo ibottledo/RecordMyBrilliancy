@@ -175,3 +175,10 @@ ibottledo vs Limaeriton <span style="color:#FFFFFF">7. Bxf7+</span>
 
 ---
 
+## 🗓 2025-06-06.
+ibottledo vs drortev <span style="color:#FFFFFF">14. Bxh6</span>
+
+[→ 탁월수 보기](_posts/2025-06-06-brilliant.md)
+
+---
+
