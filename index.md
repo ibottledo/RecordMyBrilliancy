@@ -273,3 +273,10 @@ ibottledo vs HansHolbein <span style="color:#FFFFFF">9. Bxh7+</span>
 
 ---
 
+## 🗓 2025-07-29.
+MmeSoulier vs ibottledo <span style="color:#FFFFFF">18... Qxe5</span>
+
+[→ 탁월수 보기](_posts/2025-07-29-brilliant.md)
+
+---
+
