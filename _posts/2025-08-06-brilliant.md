@@ -18,3 +18,5 @@ layout: post
 
 **Brilliant Move:** 20. Nxe6!!
 
+[→ 다음 탁월수 보기](/RecordMyBrilliancy/blog/2025-08-06-brilliant-2/)
+

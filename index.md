@@ -308,3 +308,10 @@ ibottledo vs Sergafanio <span style="color:#FFFFFF">20. Nxe6</span>
 
 ---
 
+## 🗓 2025-08-06-2.
+ibottledo vs Sergafanio <span style="color:#FFFFFF">22. Qxf8+</span>
+
+[→ 탁월수 보기](_posts/2025-08-06-brilliant-2.md)
+
+---
+
