@@ -259,3 +259,10 @@ pramodgupta321 vs ibottledo <span style="color:#FFFFFF">23... Qxh3+</span>
 
 ---
 
+## 🗓 2025-07-25.
+ibottledo vs mickako2 <span style="color:#FFFFFF">13. Bxh6</span>
+
+[→ 탁월수 보기](_posts/2025-07-25-brilliant.md)
+
+---
+
