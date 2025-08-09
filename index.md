@@ -224,3 +224,10 @@ FauziAnwar08 vs ibottledo <span style="color:#FFFFFF">24... Nxd5</span>
 
 ---
 
+## 🗓 2025-07-09.
+ibottledo vs anuj6789 <span style="color:#FFFFFF">3. Nxe5</span>
+
+[→ 탁월수 보기](_posts/2025-07-09-brilliant.md)
+
+---
+
