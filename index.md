@@ -266,3 +266,10 @@ ibottledo vs mickako2 <span style="color:#FFFFFF">13. Bxh6</span>
 
 ---
 
+## 🗓 2025-07-28.
+ibottledo vs HansHolbein <span style="color:#FFFFFF">9. Bxh7+</span>
+
+[→ 탁월수 보기](_posts/2025-07-28-brilliant.md)
+
+---
+
