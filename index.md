@@ -189,3 +189,10 @@ Jice05 vs ibottledo <span style="color:#FFFFFF">21... Nxc2</span>
 
 ---
 
+## 🗓 2025-06-13.
+ibottledo vs ccd1313 <span style="color:#FFFFFF">16. Bxh6</span>
+
+[→ 탁월수 보기](_posts/2025-06-13-brilliant.md)
+
+---
+
