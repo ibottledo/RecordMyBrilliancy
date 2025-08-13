@@ -315,3 +315,10 @@ ibottledo vs Sergafanio <span style="color:#FFFFFF">22. Qxf8+</span>
 
 ---
 
+## 🗓 2025-08-10.
+Randbauer2 vs ibottledo <span style="color:#FFFFFF">27... Re6+</span>
+
+[→ 탁월수 보기](_posts/2025-08-10-brilliant.md)
+
+---
+
