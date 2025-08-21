@@ -328,6 +328,7 @@ Randbauer2 vs ibottledo <span style="color:#FFFFFF">27... Re6+</span>
 [→ 탁월수 보기](_posts/2025-08-10-brilliant.md)
 
 ---
+
 ## 🗓 2025-08-14.
 MrcioCrhist vs ibottledo <span style="color:#FFFFFF">12... Bxe4</span>
 
@@ -346,6 +347,13 @@ seungminyerr vs ibottledo <span style="color:#FFFFFF">21... Bxh3</span>
 ibottledo vs sinkobay <span style="color:#FFFFFF">24. Qxe8+</span>
 
 [→ 탁월수 보기](_posts/2025-08-14-brilliant-3.md)
+
+---
+
+## 🗓 2025-08-15.
+bobits_fisher vs ibottledo <span style="color:#FFFFFF">15... Qf5</span>
+
+[→ 탁월수 보기](_posts/2025-08-15-brilliant.md)
 
 ---
 
