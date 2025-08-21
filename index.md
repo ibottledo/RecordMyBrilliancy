@@ -357,3 +357,10 @@ bobits_fisher vs ibottledo <span style="color:#FFFFFF">15... Qf5</span>
 
 ---
 
+## 🗓 2025-08-17.
+ibottledo vs EverTico <span style="color:#FFFFFF">7. Nxf7</span>
+
+[→ 탁월수 보기](_posts/2025-08-17-brilliant.md)
+
+---
+
