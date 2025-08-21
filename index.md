@@ -335,3 +335,10 @@ MrcioCrhist vs ibottledo <span style="color:#FFFFFF">12... Bxe4</span>
 
 ---
 
+## 🗓 2025-08-14-2.
+seungminyerr vs ibottledo <span style="color:#FFFFFF">21... Bxh3</span>
+
+[→ 탁월수 보기](_posts/2025-08-14-brilliant-2.md)
+
+---
+
