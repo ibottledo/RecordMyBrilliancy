@@ -322,6 +322,13 @@ Randbauer2 vs ibottledo <span style="color:#FFFFFF">27... Re6+</span>
 
 ---
 
+## 🗓 2025-08-15.
+bobits_fisher vs ibottledo <span style="color:#FFFFFF">15... Qf5</span>
+
+[→ 탁월수 보기](_posts/2025-08-15-brilliant.md)
+
+---
+
 ## 🗓 2025-08-17.
 StandingGargoyle vs ibottledo <span style="color:#FFFFFF">22... Bxc3</span>
 
