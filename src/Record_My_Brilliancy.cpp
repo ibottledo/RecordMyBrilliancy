@@ -1,6 +1,7 @@
 // 최종 보고서로 제출할 완성 코드
 // make로 컴파일
-// ./bin/Record_My_Brilliancy 로 실행
+// 실행:
+// ./bin/Record_My_Brilliancy
 #include <iostream> 
 #include <string>
 #include <vector>
@@ -69,15 +70,6 @@ public:
             out << line << '\n';
         }
         out.close();
-
-        // ofstream file("index.md", ios::app);
-        // if (file.is_open()) {
-        //     file << "## 🗓 " << date << ".\n";
-        //     file << White << " vs " << Black << " <span style=\"color:#FFFFFF\">" + pgn + "</span>" << "\n\n";
-        //     file << "[→ 탁월수 보기](" << postPath << ")\n\n";
-        //     file << "---\n\n";
-        //     file.close();
-        // }
     }
 
     static bool isAlreadyInIndex(const string& pgn) {
