@@ -364,3 +364,10 @@ ibottledo vs EverTico <span style="color:#FFFFFF">7. Nxf7</span>
 
 ---
 
+## 🗓 2025-08-17-2.
+StandingGargoyle vs ibottledo <span style="color:#FFFFFF">22... Bxc3</span>
+
+[→ 탁월수 보기](_posts/2025-08-17-brilliant-2.md)
+
+---
+
