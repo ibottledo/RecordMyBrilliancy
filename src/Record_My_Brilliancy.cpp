@@ -29,15 +29,55 @@ public:
         }
     }
 
+    // 날짜에 맞는 위치에 삽입
     static void appendToIndexMd(const string& date, const string& White, const string& Black, const string& postPath, const string& pgn) {
-        ofstream file("index.md", ios::app);
-        if (file.is_open()) {
-            file << "## 🗓 " << date << ".\n";
-            file << White << " vs " << Black << " <span style=\"color:#FFFFFF\">" + pgn + "</span>" << "\n\n";
-            file << "[→ 탁월수 보기](" << postPath << ")\n\n";
-            file << "---\n\n";
-            file.close();
+        ifstream in("index.md");
+        if (!in.is_open()) {
+            cerr << "index.md를 열 수 없습니다.\n";
+            return;
         }
+
+        bool append = false;
+        vector<string> lines;
+        string line;
+        while (getline(in, line)) {
+            auto pos = line.find_first_of("0123456789");
+            auto end = line.find('.', pos);
+            if (!append && line.find("## 🗓") != string::npos
+                && pos != string::npos
+                && end != string::npos 
+                && line.compare(pos, end - pos, date) > 0) {
+                lines.push_back("## 🗓 " + date + ".");
+                lines.push_back(White + " vs " + Black + " <span style=\"color:#FFFFFF\">" + pgn + "</span>" + "\n");
+                lines.push_back("[→ 탁월수 보기](" + postPath + ")\n");
+                lines.push_back("---\n");
+                append = true;
+            }
+            lines.push_back(line);
+        }
+        in.close();
+
+        if (!append) {
+            lines.push_back("## 🗓 " + date + ".");
+            lines.push_back(White + " vs " + Black + " <span style=\"color:#FFFFFF\">" + pgn + "</span>" + "\n");
+            lines.push_back("[→ 탁월수 보기](" + postPath + ")\n");
+            lines.push_back("---\n");
+        }
+
+        ofstream out("index.md");
+        for (string& line : lines) {
+            out << line << '\n';
+        }
+        out.close();
+
+        // ofstream file("index.md", ios::app);
+        // if (file.is_open()) {
+        //     file << "## 🗓 " << date << ".\n";
+        //     file << White << " vs " << Black << " <span style=\"color:#FFFFFF\">" + pgn + "</span>" << "\n\n";
+        //     file << "[→ 탁월수 보기](" << postPath << ")\n\n";
+        //     file << "---\n\n";
+        //     file.close();
+        // }
     }
 
     static bool isAlreadyInIndex(const string& pgn) {
