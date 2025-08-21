@@ -342,3 +342,10 @@ seungminyerr vs ibottledo <span style="color:#FFFFFF">21... Bxh3</span>
 
 ---
 
+## 🗓 2025-08-14-3.
+ibottledo vs sinkobay <span style="color:#FFFFFF">24. Qxe8+</span>
+
+[→ 탁월수 보기](_posts/2025-08-14-brilliant-3.md)
+
+---
+
