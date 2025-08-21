@@ -14,34 +14,6 @@ title: Brilliant Moves
 
 # [Brilliant Move Archive](https://github.com/ibottledo/RecordMyBrilliancy/tree/main)
 
-## 🗓 2025-04-23.
-ibottledo vs malaka1802 <span style="color:#FFFFFF">34. Nxb3</span>
-
-[→ 탁월수 보기](_posts/2025-04-23-brilliant.md)
-
----
-
-## 🗓 2025-04-23-2.
-ibottledo vs malaka1802 <span style="color:#FFFFFF">6. Bxf7+</span>
-
-[→ 탁월수 보기](_posts/2025-04-23-brilliant-2.md)
-
----
-
-## 🗓 2025-05-05.
-ibottledo vs Bvc578 <span style="color:#FFFFFF">9. Bxf7+</span>
-
-[→ 탁월수 보기](_posts/2025-05-05-brilliant.md)
-
----
-
-## 🗓 2025-05-05-2.
-ibottledo vs Bvc578 <span style="color:#FFFFFF">25. Rxg5</span>
-
-[→ 탁월수 보기](_posts/2025-05-05-brilliant-2.md)
-
----
-
 ## 🗓 2025-01-22.
 Mr_Creative_69 vs ibottledo <span style="color:#FFFFFF">24... Re1</span>
 
@@ -119,10 +91,38 @@ ibottledo vs Moin_cp <span style="color:#FFFFFF">20. Nxc6</span>
 
 ---
 
+## 🗓 2025-04-23.
+ibottledo vs malaka1802 <span style="color:#FFFFFF">34. Nxb3</span>
+
+[→ 탁월수 보기](_posts/2025-04-23-brilliant.md)
+
+---
+
+## 🗓 2025-04-23-2.
+ibottledo vs malaka1802 <span style="color:#FFFFFF">6. Bxf7+</span>
+
+[→ 탁월수 보기](_posts/2025-04-23-brilliant-2.md)
+
+---
+
 ## 🗓 2025-04-27.
 ibottledo vs jorgo6922 <span style="color:#FFFFFF">23. Qe8+</span>
 
 [→ 탁월수 보기](_posts/2025-04-27-brilliant.md)
+
+---
+
+## 🗓 2025-05-05.
+ibottledo vs Bvc578 <span style="color:#FFFFFF">9. Bxf7+</span>
+
+[→ 탁월수 보기](_posts/2025-05-05-brilliant.md)
+
+---
+
+## 🗓 2025-05-05-2.
+ibottledo vs Bvc578 <span style="color:#FFFFFF">25. Rxg5</span>
+
+[→ 탁월수 보기](_posts/2025-05-05-brilliant-2.md)
 
 ---
 
@@ -328,3 +328,10 @@ Randbauer2 vs ibottledo <span style="color:#FFFFFF">27... Re6+</span>
 [→ 탁월수 보기](_posts/2025-08-10-brilliant.md)
 
 ---
+## 🗓 2025-08-14.
+MrcioCrhist vs ibottledo <span style="color:#FFFFFF">12... Bxe4</span>
+
+[→ 탁월수 보기](_posts/2025-08-14-brilliant.md)
+
+---
+
