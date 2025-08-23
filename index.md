@@ -371,3 +371,10 @@ StandingGargoyle vs ibottledo <span style="color:#FFFFFF">22... Bxc3</span>
 
 ---
 
+## 🗓 2025-08-21.
+ibottledo vs TheRouteOfTheKnight <span style="color:#FFFFFF">23. exf6</span>
+
+[→ 탁월수 보기](_posts/2025-08-21-brilliant.md)
+
+---
+
