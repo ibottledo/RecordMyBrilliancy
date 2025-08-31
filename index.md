@@ -413,3 +413,10 @@ ibottledo vs Colicci2002 <span style="color:#FFFFFF">21. Rxg6+</span>
 
 ---
 
+## 🗓 2025-08-30.
+ibottledo vs poker_addict <span style="color:#FFFFFF">11. Nxe6</span>
+
+[→ 탁월수 보기](_posts/2025-08-30-brilliant.md)
+
+---
+
