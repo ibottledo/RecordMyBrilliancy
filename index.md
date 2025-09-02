@@ -420,3 +420,10 @@ ibottledo vs poker_addict <span style="color:#FFFFFF">11. Nxe6</span>
 
 ---
 
+## 🗓 2025-09-02.
+ibottledo vs usedtoplay25 <span style="color:#FFFFFF">19. Rxe4</span>
+
+[→ 탁월수 보기](_posts/2025-09-02-brilliant.md)
+
+---
+
