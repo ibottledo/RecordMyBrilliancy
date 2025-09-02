@@ -18,3 +18,5 @@ layout: post
 
 **Brilliant Move:** 19. Rxe4!!
 
+[→ 다음 탁월수 보기](/RecordMyBrilliancy/blog/2025-09-02-brilliant-2/)
+
