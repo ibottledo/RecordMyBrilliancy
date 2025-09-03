@@ -427,6 +427,13 @@ Melvernzz vs ibottledo <span style="color:#FFFFFF">14... Bxh3</span>
 
 ---
 
+## 🗓 2025-09-01-2.
+Melvernzz vs ibottledo <span style="color:#FFFFFF">15... Bxg2</span>
+
+[→ 탁월수 보기](_posts/2025-09-01-brilliant-2.md)
+
+---
+
 ## 🗓 2025-09-02.
 ibottledo vs usedtoplay25 <span style="color:#FFFFFF">19. Rxe4</span>
 
