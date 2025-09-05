@@ -441,6 +441,13 @@ gdkjm vs ibottledo <span style="color:#FFFFFF">8... Rxe5</span>
 
 ---
 
+## 🗓 2025-09-01-4.
+ibottledo vs 4llthingsconsidered <span style="color:#FFFFFF">12. Nxe6</span>
+
+[→ 탁월수 보기](_posts/2025-09-01-brilliant-4.md)
+
+---
+
 ## 🗓 2025-09-02.
 ibottledo vs usedtoplay25 <span style="color:#FFFFFF">19. Rxe4</span>
 
