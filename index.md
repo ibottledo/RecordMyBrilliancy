@@ -462,3 +462,10 @@ ibottledo vs usedtoplay25 <span style="color:#FFFFFF">20. Bxg7</span>
 
 ---
 
+## 🗓 2025-09-06.
+ibottledo vs antonsoka <span style="color:#FFFFFF">9. Nxf7</span>
+
+[→ 탁월수 보기](_posts/2025-09-06-brilliant.md)
+
+---
+
