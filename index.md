@@ -469,6 +469,13 @@ ibottledo vs antonsoka <span style="color:#FFFFFF">9. Nxf7</span>
 
 ---
 
+## 🗓 2025-09-07.
+seungminyerr vs ibottledo <span style="color:#FFFFFF">8... Qxc4</span>
+
+[→ 탁월수 보기](_posts/2025-09-07-brilliant.md)
+
+---
+
 ## 🗓 2025-09-08.
 peao_atrevido vs ibottledo <span style="color:#FFFFFF">26... Nxe3</span>
 
