@@ -476,6 +476,13 @@ seungminyerr vs ibottledo <span style="color:#FFFFFF">8... Qxc4</span>
 
 ---
 
+## 🗓 2025-09-07-2.
+ibottledo vs MoazMohamed73 <span style="color:#FFFFFF">12. Nf5</span>
+
+[→ 탁월수 보기](_posts/2025-09-07-brilliant-2.md)
+
+---
+
 ## 🗓 2025-09-08.
 peao_atrevido vs ibottledo <span style="color:#FFFFFF">26... Nxe3</span>
 
