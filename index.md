@@ -504,3 +504,10 @@ peao_atrevido vs ibottledo <span style="color:#FFFFFF">31... Qf1+</span>
 
 ---
 
+## 🗓 2025-09-11.
+abbivalli vs ibottledo <span style="color:#FFFFFF">14... Re8</span>
+
+[→ 탁월수 보기](_posts/2025-09-11-brilliant.md)
+
+---
+
