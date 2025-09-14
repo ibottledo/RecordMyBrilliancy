@@ -18,3 +18,5 @@ layout: post
 
 **Brilliant Move:** 7. Bxf7+!!
 
+[→ 다음 탁월수 보기](/RecordMyBrilliancy/blog/2025-08-27-brilliant-2/)
+
