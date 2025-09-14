@@ -483,10 +483,10 @@ int main() {
     }
 
     // publish
-    if (PostManager::isAlreadyInIndex(pgn)) {
-        cout << "이미 index.md에 포함된 brilliant입니다.\n";
-        return 0;
-    }
+    // if (PostManager::isAlreadyInIndex(pgn)) {
+    //     cout << "이미 index.md에 포함된 brilliant입니다.\n";
+    //     return 0;
+    // }
 
     string base = date + "-brilliant";
     string filename = base + ".md";
