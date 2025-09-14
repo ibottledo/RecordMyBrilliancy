@@ -1,6 +1,6 @@
-CXX ?= g++
+CXX = g++-15
 CXXFLAGS = -std=c++17 -I.
-LDFLAGS = -lstdc++fs -lcurl
+LDFLAGS = -lcurl
 
 BIN_DIR = bin
 SRC_DIR = src

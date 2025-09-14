@@ -72,12 +72,17 @@ public:
         out.close();
     }
 
-    static bool isAlreadyInIndex(const string& pgn) {
+    static bool isAlreadyInIndex(const string& pgn, const string& date) {
         ifstream file("index.md");
         string line;
+        bool dateFound = false;
         while (getline(file, line)) {
-            if (line.find(pgn) != string::npos) {
+            if (dateFound && line.find(pgn) != string::npos) {
                 return true;
+            }
+            dateFound = false;
+            if (line.find(date) != string::npos) {
+                dateFound = true;
             }
         }
         return false;
@@ -483,10 +488,10 @@ int main() {
     }
 
     // publish
-    // if (PostManager::isAlreadyInIndex(pgn)) {
-    //     cout << "이미 index.md에 포함된 brilliant입니다.\n";
-    //     return 0;
-    // }
+    if (PostManager::isAlreadyInIndex(pgn, date)) {
+        cout << "이미 index.md에 포함된 brilliant입니다.\n";
+        return 0;
+    }
 
     string base = date + "-brilliant";
     string filename = base + ".md";
