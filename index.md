@@ -399,6 +399,13 @@ LRKrolow vs ibottledo <span style="color:#FFFFFF">18... Bxg4</span>
 
 ---
 
+## 🗓 2025-08-27-3.
+ibottledo vs Ichsan440 <span style="color:#FFFFFF">7. Bxf7+</span>
+
+[→ 탁월수 보기](_posts/2025-08-27-brilliant-3.md)
+
+---
+
 ## 🗓 2025-08-29.
 ibottledo vs anotherstyle15 <span style="color:#FFFFFF">14. Bxd5</span>
 
