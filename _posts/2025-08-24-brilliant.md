@@ -4,7 +4,7 @@ date: 2025-08-24
 layout: post
 ---
 
-[ibottledo vs marcuskayo](https://www.chess.com/analysis/game/live/142259919860?move=32&tab=review)
+[ibottledo vs marcuskayo](https://www.chess.com/analysis/game/live/142259919860?move=30&tab=review)
 
 ## White to move
 
@@ -16,5 +16,5 @@ layout: post
 
 .
 
-**Brilliant Move:** 17. Bxg7!!
+**Brilliant Move:** 16. Bxh6!!
 

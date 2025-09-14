@@ -385,6 +385,13 @@ ibottledo vs marcuskayo <span style="color:#FFFFFF">17. Bxg7</span>
 
 ---
 
+## 🗓 2025-08-24.
+ibottledo vs marcuskayo <span style="color:#FFFFFF">16. Bxh6</span>
+
+[→ 탁월수 보기](_posts/2025-08-24-brilliant.md)
+
+---
+
 ## 🗓 2025-08-27.
 ibottledo vs Ichsan440 <span style="color:#FFFFFF">7. Bxf7+</span>
 
