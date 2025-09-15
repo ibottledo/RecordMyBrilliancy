@@ -539,3 +539,10 @@ BigHorse42 vs ibottledo <span style="color:#FFFFFF">14... Bxh3</span>
 
 ---
 
+## 🗓 2025-09-15.
+ibottledo vs 88MLY_AHMED <span style="color:#FFFFFF">26. Nxd5</span>
+
+[→ 탁월수 보기](_posts/2025-09-15-brilliant.md)
+
+---
+
