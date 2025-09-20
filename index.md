@@ -553,3 +553,10 @@ ibottledo vs recursiveneuronnetwork <span style="color:#FFFFFF">16. Bb4</span>
 
 ---
 
+## 🗓 2025-09-20.
+cowboy-z1 vs ibottledo <span style="color:#FFFFFF">17... Bxh2+</span>
+
+[→ 탁월수 보기](_posts/2025-09-20-brilliant.md)
+
+---
+
