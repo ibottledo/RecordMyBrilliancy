@@ -560,3 +560,10 @@ cowboy-z1 vs ibottledo <span style="color:#FFFFFF">17... Bxh2+</span>
 
 ---
 
+## 🗓 2025-09-20-2.
+neutrinos2102 vs ibottledo <span style="color:#FFFFFF">19... Nd4</span>
+
+[→ 탁월수 보기](_posts/2025-09-20-brilliant-2.md)
+
+---
+
