@@ -574,3 +574,10 @@ cyberbabble1 vs ibottledo <span style="color:#FFFFFF">5... Nxd4</span>
 
 ---
 
+## 🗓 2025-09-21-2.
+cyberbabble1 vs ibottledo <span style="color:#FFFFFF">6... Nf6</span>
+
+[→ 탁월수 보기](_posts/2025-09-21-brilliant-2.md)
+
+---
+
