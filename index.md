@@ -567,3 +567,10 @@ neutrinos2102 vs ibottledo <span style="color:#FFFFFF">19... Nd4</span>
 
 ---
 
+## 🗓 2025-09-21.
+cyberbabble1 vs ibottledo <span style="color:#FFFFFF">5... Nxd4</span>
+
+[→ 탁월수 보기](_posts/2025-09-21-brilliant.md)
+
+---
+
