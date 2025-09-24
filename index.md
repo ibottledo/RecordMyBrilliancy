@@ -595,3 +595,10 @@ cyberbabble1 vs ibottledo <span style="color:#FFFFFF">7... O-O</span>
 
 ---
 
+## 🗓 2025-09-21-4.
+Batero vs ibottledo <span style="color:#FFFFFF">22... Qh4</span>
+
+[→ 탁월수 보기](_posts/2025-09-21-brilliant-4.md)
+
+---
+
