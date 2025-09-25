@@ -574,6 +574,13 @@ ibottledo vs NedoTM <span style="color:#FFFFFF">23. Bxg7</span>
 
 ---
 
+## 🗓 2025-09-20-4.
+ibottledo vs keval2122 <span style="color:#FFFFFF">15. Nd5</span>
+
+[→ 탁월수 보기](_posts/2025-09-20-brilliant-4.md)
+
+---
+
 ## 🗓 2025-09-21.
 cyberbabble1 vs ibottledo <span style="color:#FFFFFF">5... Nxd4</span>
 
