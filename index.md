@@ -609,3 +609,10 @@ Batero vs ibottledo <span style="color:#FFFFFF">22... Qh4</span>
 
 ---
 
+## 🗓 2025-09-22.
+benblumberg vs ibottledo <span style="color:#FFFFFF">5... Bxf2+</span>
+
+[→ 탁월수 보기](_posts/2025-09-22-brilliant.md)
+
+---
+
