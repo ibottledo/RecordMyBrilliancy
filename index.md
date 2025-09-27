@@ -616,3 +616,10 @@ benblumberg vs ibottledo <span style="color:#FFFFFF">5... Bxf2+</span>
 
 ---
 
+## 🗓 2025-09-22-2.
+Vivekhosteller vs ibottledo <span style="color:#FFFFFF">12... Ng3</span>
+
+[→ 탁월수 보기](_posts/2025-09-22-brilliant-2.md)
+
+---
+
