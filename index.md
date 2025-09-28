@@ -623,3 +623,10 @@ Vivekhosteller vs ibottledo <span style="color:#FFFFFF">12... Ng3</span>
 
 ---
 
+## 🗓 2025-09-22-3.
+meemee121 vs ibottledo <span style="color:#FFFFFF">22... Rxh3+</span>
+
+[→ 탁월수 보기](_posts/2025-09-22-brilliant-3.md)
+
+---
+
