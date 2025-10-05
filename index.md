@@ -644,6 +644,13 @@ ibottledo vs AntooCocon <span style="color:#FFFFFF">20. Qxf5</span>
 
 ---
 
+## 🗓 2025-09-24.
+ibottledo vs robertpintilie <span style="color:#FFFFFF">12. Bxh7+</span>
+
+[→ 탁월수 보기](_posts/2025-09-24-brilliant.md)
+
+---
+
 ## 🗓 2025-09-29.
 ibottledo vs chris432 <span style="color:#FFFFFF">20. Rd8+</span>
 
