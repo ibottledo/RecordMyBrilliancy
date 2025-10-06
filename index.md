@@ -651,6 +651,13 @@ ibottledo vs robertpintilie <span style="color:#FFFFFF">12. Bxh7+</span>
 
 ---
 
+## 🗓 2025-09-24-2.
+VDP_Albany vs ibottledo <span style="color:#FFFFFF">11... Nxe4</span>
+
+[→ 탁월수 보기](_posts/2025-09-24-brilliant-2.md)
+
+---
+
 ## 🗓 2025-09-29.
 ibottledo vs chris432 <span style="color:#FFFFFF">20. Rd8+</span>
 
