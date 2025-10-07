@@ -665,6 +665,13 @@ VDP_Albany vs ibottledo <span style="color:#FFFFFF">12... Rxe4</span>
 
 ---
 
+## 🗓 2025-09-24-4.
+ibottledo vs Maxim_Dk <span style="color:#FFFFFF">5. Nxe5</span>
+
+[→ 탁월수 보기](_posts/2025-09-24-brilliant-4.md)
+
+---
+
 ## 🗓 2025-09-29.
 ibottledo vs chris432 <span style="color:#FFFFFF">20. Rd8+</span>
 
