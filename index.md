@@ -672,6 +672,13 @@ ibottledo vs Maxim_Dk <span style="color:#FFFFFF">5. Nxe5</span>
 
 ---
 
+## 🗓 2025-09-26.
+ibottledo vs fabiuk1 <span style="color:#FFFFFF">26. Rxe7+</span>
+
+[→ 탁월수 보기](_posts/2025-09-26-brilliant.md)
+
+---
+
 ## 🗓 2025-09-29.
 ibottledo vs chris432 <span style="color:#FFFFFF">20. Rd8+</span>
 
