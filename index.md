@@ -679,6 +679,13 @@ ibottledo vs fabiuk1 <span style="color:#FFFFFF">26. Rxe7+</span>
 
 ---
 
+## 🗓 2025-09-27.
+Umid1904 vs ibottledo <span style="color:#FFFFFF">25... Qxf2</span>
+
+[→ 탁월수 보기](_posts/2025-09-27-brilliant.md)
+
+---
+
 ## 🗓 2025-09-29.
 ibottledo vs chris432 <span style="color:#FFFFFF">20. Rd8+</span>
 
