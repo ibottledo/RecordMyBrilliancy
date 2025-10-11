@@ -700,3 +700,10 @@ ibottledo vs Nieaau <span style="color:#FFFFFF">9. Nxe5</span>
 
 ---
 
+## 🗓 2025-10-11.
+ibottledo vs Stily06 <span style="color:#FFFFFF">19. Bxh6</span>
+
+[→ 탁월수 보기](_posts/2025-10-11-brilliant.md)
+
+---
+
