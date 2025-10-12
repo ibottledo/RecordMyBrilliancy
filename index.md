@@ -707,3 +707,10 @@ ibottledo vs Stily06 <span style="color:#FFFFFF">19. Bxh6</span>
 
 ---
 
+## 🗓 2025-10-12.
+ibottledo vs kaushaletchess <span style="color:#FFFFFF">7. Bxf7+</span>
+
+[→ 탁월수 보기](_posts/2025-10-12-brilliant.md)
+
+---
+
