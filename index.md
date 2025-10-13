@@ -700,6 +700,13 @@ ibottledo vs Nieaau <span style="color:#FFFFFF">9. Nxe5</span>
 
 ---
 
+## 🗓 2025-09-29-3.
+DaniloMolenarov vs ibottledo <span style="color:#FFFFFF">13... Nxe4</span>
+
+[→ 탁월수 보기](_posts/2025-09-29-brilliant-3.md)
+
+---
+
 ## 🗓 2025-10-11.
 ibottledo vs Stily06 <span style="color:#FFFFFF">19. Bxh6</span>
 
