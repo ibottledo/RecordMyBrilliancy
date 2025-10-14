@@ -735,3 +735,10 @@ gunrhaizel vs ibottledo <span style="color:#FFFFFF">7... Bxf2+</span>
 
 ---
 
+## 🗓 2025-10-14-2.
+gunrhaizel vs ibottledo <span style="color:#FFFFFF">15... f6</span>
+
+[→ 탁월수 보기](_posts/2025-10-14-brilliant-2.md)
+
+---
+
