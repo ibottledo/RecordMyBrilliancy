@@ -728,3 +728,10 @@ ibottledo vs kaushaletchess <span style="color:#FFFFFF">23. Rxd7+</span>
 
 ---
 
+## 🗓 2025-10-14.
+gunrhaizel vs ibottledo <span style="color:#FFFFFF">7... Bxf2+</span>
+
+[→ 탁월수 보기](_posts/2025-10-14-brilliant.md)
+
+---
+
