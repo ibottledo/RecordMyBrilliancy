@@ -707,6 +707,13 @@ DaniloMolenarov vs ibottledo <span style="color:#FFFFFF">13... Nxe4</span>
 
 ---
 
+## 🗓 2025-10-02.
+Willouzer vs ibottledo <span style="color:#FFFFFF">14... Qxh3</span>
+
+[→ 탁월수 보기](_posts/2025-10-02-brilliant.md)
+
+---
+
 ## 🗓 2025-10-11.
 ibottledo vs Stily06 <span style="color:#FFFFFF">19. Bxh6</span>
 
