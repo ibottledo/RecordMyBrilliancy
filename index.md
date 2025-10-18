@@ -714,6 +714,13 @@ Willouzer vs ibottledo <span style="color:#FFFFFF">14... Qxh3</span>
 
 ---
 
+## 🗓 2025-10-04.
+ibottledo vs calynkelly <span style="color:#FFFFFF">10. Rxe5</span>
+
+[→ 탁월수 보기](_posts/2025-10-04-brilliant.md)
+
+---
+
 ## 🗓 2025-10-11.
 ibottledo vs Stily06 <span style="color:#FFFFFF">19. Bxh6</span>
 
