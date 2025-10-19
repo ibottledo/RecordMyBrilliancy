@@ -721,6 +721,13 @@ ibottledo vs calynkelly <span style="color:#FFFFFF">10. Rxe5</span>
 
 ---
 
+## 🗓 2025-10-05.
+ibottledo vs exello7 <span style="color:#FFFFFF">23. Rxd4</span>
+
+[→ 탁월수 보기](_posts/2025-10-05-brilliant.md)
+
+---
+
 ## 🗓 2025-10-11.
 ibottledo vs Stily06 <span style="color:#FFFFFF">19. Bxh6</span>
 
