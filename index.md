@@ -770,3 +770,10 @@ gunrhaizel vs ibottledo <span style="color:#FFFFFF">15... f6</span>
 
 ---
 
+## 🗓 2025-10-23.
+Ivoroconnor vs ibottledo <span style="color:#FFFFFF">11... Qh4</span>
+
+[→ 탁월수 보기](_posts/2025-10-23-brilliant.md)
+
+---
+
