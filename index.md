@@ -777,3 +777,10 @@ Ivoroconnor vs ibottledo <span style="color:#FFFFFF">11... Qh4</span>
 
 ---
 
+## 🗓 2025-10-26.
+ibottledo vs Jef47 <span style="color:#FFFFFF">21. Bxb6</span>
+
+[→ 탁월수 보기](_posts/2025-10-26-brilliant.md)
+
+---
+
