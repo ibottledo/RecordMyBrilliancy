@@ -784,3 +784,10 @@ ibottledo vs Jef47 <span style="color:#FFFFFF">21. Bxb6</span>
 
 ---
 
+## 🗓 2025-10-27.
+ibottledo vs BhawaneshDixit <span style="color:#FFFFFF">28. Rxh6+</span>
+
+[→ 탁월수 보기](_posts/2025-10-27-brilliant.md)
+
+---
+
