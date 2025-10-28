@@ -791,3 +791,10 @@ ibottledo vs BhawaneshDixit <span style="color:#FFFFFF">28. Rxh6+</span>
 
 ---
 
+## 🗓 2025-10-28.
+ibottledo vs Costa_Ezra <span style="color:#FFFFFF">9. Bxh7+</span>
+
+[→ 탁월수 보기](_posts/2025-10-28-brilliant.md)
+
+---
+
