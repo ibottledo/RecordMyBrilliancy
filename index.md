@@ -805,3 +805,10 @@ ibottledo vs Costa_Ezra <span style="color:#FFFFFF">9. Bxh7+</span>
 
 ---
 
+## 🗓 2025-11-02.
+ibottledo vs Lord_Tareq <span style="color:#FFFFFF">8. Nxd5</span>
+
+[→ 탁월수 보기](_posts/2025-11-02-brilliant.md)
+
+---
+
