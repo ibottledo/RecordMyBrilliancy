@@ -819,3 +819,10 @@ ibottledo vs Paradox_05 <span style="color:#FFFFFF">8. Bxh7+</span>
 
 ---
 
+## 🗓 2025-11-14.
+ibottledo vs cacahotflu <span style="color:#FFFFFF">15. Bxh6</span>
+
+[→ 탁월수 보기](_posts/2025-11-14-brilliant.md)
+
+---
+
