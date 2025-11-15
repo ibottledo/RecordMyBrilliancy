@@ -826,3 +826,10 @@ ibottledo vs cacahotflu <span style="color:#FFFFFF">15. Bxh6</span>
 
 ---
 
+## 🗓 2025-11-14-2.
+ibottledo vs PhilbyOz <span style="color:#FFFFFF">26. Rxg5+</span>
+
+[→ 탁월수 보기](_posts/2025-11-14-brilliant-2.md)
+
+---
+
