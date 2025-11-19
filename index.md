@@ -833,3 +833,10 @@ ibottledo vs PhilbyOz <span style="color:#FFFFFF">26. Rxg5+</span>
 
 ---
 
+## 🗓 2025-11-19.
+ibottledo vs Elmunecon <span style="color:#FFFFFF">19. Rxf6</span>
+
+[→ 탁월수 보기](_posts/2025-11-19-brilliant.md)
+
+---
+
