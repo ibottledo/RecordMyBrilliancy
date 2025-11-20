@@ -840,3 +840,10 @@ ibottledo vs Elmunecon <span style="color:#FFFFFF">19. Rxf6</span>
 
 ---
 
+## 🗓 2025-11-19-2.
+ibottledo vs d_ln <span style="color:#FFFFFF">26. Ndb5+</span>
+
+[→ 탁월수 보기](_posts/2025-11-19-brilliant-2.md)
+
+---
+
