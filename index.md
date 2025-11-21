@@ -847,3 +847,10 @@ ibottledo vs d_ln <span style="color:#FFFFFF">26. Ndb5+</span>
 
 ---
 
+## 🗓 2025-11-21.
+nirakar23 vs ibottledo <span style="color:#FFFFFF">4... Nxd4</span>
+
+[→ 탁월수 보기](_posts/2025-11-21-brilliant.md)
+
+---
+
