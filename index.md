@@ -854,3 +854,10 @@ nirakar23 vs ibottledo <span style="color:#FFFFFF">4... Nxd4</span>
 
 ---
 
+## 🗓 2025-11-22.
+ibottledo vs niusha20 <span style="color:#FFFFFF">8. Nxc6</span>
+
+[→ 탁월수 보기](_posts/2025-11-22-brilliant.md)
+
+---
+
