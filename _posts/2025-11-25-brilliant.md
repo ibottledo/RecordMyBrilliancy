@@ -18,3 +18,5 @@ layout: post
 
 **Brilliant Move:** 21... Bxh3!!
 
+[→ 다음 탁월수 보기](/RecordMyBrilliancy/blog/2025-11-25-brilliant-2/)
+

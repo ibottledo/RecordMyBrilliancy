@@ -868,3 +868,10 @@ salawda vs ibottledo <span style="color:#FFFFFF">21... Bxh3</span>
 
 ---
 
+## 🗓 2025-11-25-2.
+salawda vs ibottledo <span style="color:#FFFFFF">26... Rf8+</span>
+
+[→ 탁월수 보기](_posts/2025-11-25-brilliant-2.md)
+
+---
+
