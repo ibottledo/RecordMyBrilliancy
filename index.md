@@ -875,3 +875,10 @@ salawda vs ibottledo <span style="color:#FFFFFF">26... Rf8+</span>
 
 ---
 
+## 🗓 2025-11-27.
+MrAzurite vs ibottledo <span style="color:#FFFFFF">26... Qxf1+</span>
+
+[→ 탁월수 보기](_posts/2025-11-27-brilliant.md)
+
+---
+
