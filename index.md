@@ -882,3 +882,10 @@ MrAzurite vs ibottledo <span style="color:#FFFFFF">26... Qxf1+</span>
 
 ---
 
+## 🗓 2025-11-27-2.
+Aquiles_Vaesa vs ibottledo <span style="color:#FFFFFF">20... Qe1+</span>
+
+[→ 탁월수 보기](_posts/2025-11-27-brilliant-2.md)
+
+---
+
