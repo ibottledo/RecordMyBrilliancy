@@ -889,3 +889,10 @@ Aquiles_Vaesa vs ibottledo <span style="color:#FFFFFF">20... Qe1+</span>
 
 ---
 
+## 🗓 2025-11-29.
+ayushbarai vs ibottledo <span style="color:#FFFFFF">17... Nxg4</span>
+
+[→ 탁월수 보기](_posts/2025-11-29-brilliant.md)
+
+---
+
