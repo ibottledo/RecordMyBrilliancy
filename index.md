@@ -903,3 +903,10 @@ McCakeIV vs ibottledo <span style="color:#FFFFFF">16... Rxe6</span>
 
 ---
 
+## 🗓 2025-12-02-2.
+McCakeIV vs ibottledo <span style="color:#FFFFFF">20... Bxh2+</span>
+
+[→ 탁월수 보기](_posts/2025-12-02-brilliant-2.md)
+
+---
+
