@@ -896,3 +896,10 @@ ayushbarai vs ibottledo <span style="color:#FFFFFF">17... Nxg4</span>
 
 ---
 
+## 🗓 2025-12-02.
+McCakeIV vs ibottledo <span style="color:#FFFFFF">16... Rxe6</span>
+
+[→ 탁월수 보기](_posts/2025-12-02-brilliant.md)
+
+---
+
