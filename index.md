@@ -910,3 +910,10 @@ McCakeIV vs ibottledo <span style="color:#FFFFFF">20... Bxh2+</span>
 
 ---
 
+## 🗓 2025-12-04.
+ibottledo vs Carlos8327 <span style="color:#FFFFFF">18. Nd5</span>
+
+[→ 탁월수 보기](_posts/2025-12-04-brilliant.md)
+
+---
+
