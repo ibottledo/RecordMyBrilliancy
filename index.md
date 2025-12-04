@@ -917,3 +917,10 @@ ibottledo vs Carlos8327 <span style="color:#FFFFFF">18. Nd5</span>
 
 ---
 
+## 🗓 2025-12-04-2.
+ibottledo vs Carlos8327 <span style="color:#FFFFFF">19. Bc4</span>
+
+[→ 탁월수 보기](_posts/2025-12-04-brilliant-2.md)
+
+---
+
