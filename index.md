@@ -931,3 +931,10 @@ ibottledo vs Capt416B <span style="color:#FFFFFF">8. Bxh7+</span>
 
 ---
 
+## 🗓 2025-12-10.
+ibottledo vs diegofoca <span style="color:#FFFFFF">11. Nxe6</span>
+
+[→ 탁월수 보기](_posts/2025-12-10-brilliant.md)
+
+---
+
