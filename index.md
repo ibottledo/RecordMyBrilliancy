@@ -938,3 +938,10 @@ ibottledo vs diegofoca <span style="color:#FFFFFF">11. Nxe6</span>
 
 ---
 
+## 🗓 2025-12-10-2.
+ibottledo vs willswg <span style="color:#FFFFFF">7. O-O</span>
+
+[→ 탁월수 보기](_posts/2025-12-10-brilliant-2.md)
+
+---
+
