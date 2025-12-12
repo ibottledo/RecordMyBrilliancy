@@ -18,3 +18,5 @@ layout: post
 
 **Brilliant Move:** 11. Bxa6!!
 
+[→ 다음 탁월수 보기](/RecordMyBrilliancy/blog/2025-12-11-brilliant-2/)
+
