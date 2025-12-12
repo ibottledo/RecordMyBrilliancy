@@ -959,3 +959,10 @@ ibottledo vs alzwen3535 <span style="color:#FFFFFF">15. d5</span>
 
 ---
 
+## 🗓 2025-12-12.
+Shuggy94 vs ibottledo <span style="color:#FFFFFF">25... Qf1+</span>
+
+[→ 탁월수 보기](_posts/2025-12-12-brilliant.md)
+
+---
+
