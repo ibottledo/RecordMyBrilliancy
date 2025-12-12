@@ -945,3 +945,10 @@ ibottledo vs willswg <span style="color:#FFFFFF">7. O-O</span>
 
 ---
 
+## 🗓 2025-12-11.
+ibottledo vs alzwen3535 <span style="color:#FFFFFF">11. Bxa6</span>
+
+[→ 탁월수 보기](_posts/2025-12-11-brilliant.md)
+
+---
+
