@@ -973,3 +973,10 @@ JAVAS02 vs ibottledo <span style="color:#FFFFFF">18... Rxe3</span>
 
 ---
 
+## 🗓 2025-12-17-2.
+ibottledo vs paulinhomiranda <span style="color:#FFFFFF">9. Bxh7+</span>
+
+[→ 탁월수 보기](_posts/2025-12-17-brilliant-2.md)
+
+---
+
