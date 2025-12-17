@@ -980,3 +980,10 @@ ibottledo vs paulinhomiranda <span style="color:#FFFFFF">9. Bxh7+</span>
 
 ---
 
+## 🗓 2025-12-17-3.
+ibottledo vs paulinhomiranda <span style="color:#FFFFFF">15. Nf6+</span>
+
+[→ 탁월수 보기](_posts/2025-12-17-brilliant-3.md)
+
+---
+
