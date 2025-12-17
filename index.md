@@ -966,3 +966,10 @@ Shuggy94 vs ibottledo <span style="color:#FFFFFF">25... Qf1+</span>
 
 ---
 
+## 🗓 2025-12-17.
+JAVAS02 vs ibottledo <span style="color:#FFFFFF">18... Rxe3</span>
+
+[→ 탁월수 보기](_posts/2025-12-17-brilliant.md)
+
+---
+
