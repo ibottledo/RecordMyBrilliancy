@@ -987,3 +987,10 @@ ibottledo vs paulinhomiranda <span style="color:#FFFFFF">15. Nf6+</span>
 
 ---
 
+## 🗓 2026-01-01.
+ibottledo vs iPossible <span style="color:#FFFFFF"></span>
+
+[→ 탁월수 보기](_posts/2026-01-01-brilliant.md)
+
+---
+
