@@ -994,3 +994,10 @@ ibottledo vs iPossible <span style="color:#FFFFFF"></span>
 
 ---
 
+## 🗓 2026-01-03.
+ibottledo vs suunny54 <span style="color:#FFFFFF">27. Bxb6</span>
+
+[→ 탁월수 보기](_posts/2026-01-03-brilliant.md)
+
+---
+
