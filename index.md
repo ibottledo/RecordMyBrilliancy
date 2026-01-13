@@ -1001,3 +1001,10 @@ ibottledo vs suunny54 <span style="color:#FFFFFF">27. Bxb6</span>
 
 ---
 
+## 🗓 2026-01-12.
+Nooks00 vs ibottledo <span style="color:#FFFFFF">22... Rd1+</span>
+
+[→ 탁월수 보기](_posts/2026-01-12-brilliant.md)
+
+---
+
