@@ -1008,3 +1008,10 @@ Nooks00 vs ibottledo <span style="color:#FFFFFF">22... Rd1+</span>
 
 ---
 
+## 🗓 2026-01-14.
+ibottledo vs TheOceanClub <span style="color:#FFFFFF">6. Bxf7+</span>
+
+[→ 탁월수 보기](_posts/2026-01-14-brilliant.md)
+
+---
+
