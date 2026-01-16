@@ -1029,3 +1029,10 @@ ibottledo vs TheOceanClub <span style="color:#FFFFFF">19. Ne5+</span>
 
 ---
 
+## 🗓 2026-01-14-3.
+ibottledo vs Wagnerlogan <span style="color:#FFFFFF">12. Bxb5</span>
+
+[→ 탁월수 보기](_posts/2026-01-14-brilliant-3.md)
+
+---
+
