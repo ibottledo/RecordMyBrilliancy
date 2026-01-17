@@ -1036,3 +1036,10 @@ ibottledo vs Wagnerlogan <span style="color:#FFFFFF">12. Bxb5</span>
 
 ---
 
+## 🗓 2026-01-15.
+Blunder_Muki vs ibottledo <span style="color:#FFFFFF">15... Bxh2+</span>
+
+[→ 탁월수 보기](_posts/2026-01-15-brilliant.md)
+
+---
+
