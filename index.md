@@ -1043,3 +1043,10 @@ Blunder_Muki vs ibottledo <span style="color:#FFFFFF">15... Bxh2+</span>
 
 ---
 
+## 🗓 2026-01-16.
+ibottledo vs Tooombucket <span style="color:#FFFFFF">14. Qxc7</span>
+
+[→ 탁월수 보기](_posts/2026-01-16-brilliant.md)
+
+---
+
