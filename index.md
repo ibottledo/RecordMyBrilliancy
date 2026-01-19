@@ -1064,3 +1064,10 @@ ibottledo vs Denizenofmultiworld <span style="color:#FFFFFF">24. b5</span>
 
 ---
 
+## 🗓 2026-01-16-4.
+ibottledo vs Denizenofmultiworld <span style="color:#FFFFFF">25. axb5</span>
+
+[→ 탁월수 보기](_posts/2026-01-16-brilliant-4.md)
+
+---
+
