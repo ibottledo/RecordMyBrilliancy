@@ -1057,3 +1057,10 @@ ibottledo vs Tooombucket <span style="color:#FFFFFF">16. Qd8+</span>
 
 ---
 
+## 🗓 2026-01-16-3.
+ibottledo vs Denizenofmultiworld <span style="color:#FFFFFF">24. b5</span>
+
+[→ 탁월수 보기](_posts/2026-01-16-brilliant-3.md)
+
+---
+
