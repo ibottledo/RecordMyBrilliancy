@@ -1,0 +1,45 @@
+name: Add Brilliant Move via API
+
+on:
+  workflow_dispatch:
+    inputs:
+      url:
+        description: 'Chess.com Analysis URL'
+        required: true
+
+jobs:
+  process-move:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          # We need to fetch history to be able to push
+          fetch-depth: 0
+
+      - name: Set up C++ environment and dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libcurl4-openssl-dev
+
+      - name: Build C++ executables
+        run: make
+
+      - name: Run the brilliant move recorder
+        run: echo "${{ github.event.inputs.url }}" | ./bin/Record_My_Brilliancy
+
+      - name: Commit and push new post
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          # Pull the latest changes from the remote repository
+          git pull
+          # Add only the new posts
+          git add _posts/
+          # Commit if there are changes, otherwise do nothing
+          if ! git diff --staged --quiet; then
+            git commit -m "feat: Add new brilliant move from API"
+            git push
+          else
+            echo "No new post was created, nothing to commit."
+          fi
