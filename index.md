@@ -12,6 +12,65 @@ title: Brilliant Moves
 
 ---
 
+<div id="add-move-container" style="padding: 16px; border: 1px solid #ccc; border-radius: 8px; margin-bottom: 24px;">
+  <h2>새로운 탁월수 기록하기</h2>
+  <p>Chess.com 게임 분석 URL을 입력하고 '기록하기' 버튼을 누르세요. (처리 시간 약 30초)</p>
+  <input type="text" id="chess-url" placeholder="https://www.chess.com/analysis/..." style="width: 80%; min-width: 300px; padding: 8px;">
+  <button onclick="submitBrilliantMove()" id="submit-button" style="padding: 8px 12px;">기록하기</button>
+  <p id="status-message" style="margin-top: 8px; font-weight: bold;"></p>
+</div>
+
+<script>
+  async function submitBrilliantMove() {
+    const urlInput = document.getElementById('chess-url');
+    const messageElement = document.getElementById('status-message');
+    const submitButton = document.getElementById('submit-button');
+
+    const url = urlInput.value;
+    if (!url || !url.includes('chess.com')) {
+      messageElement.textContent = '올바른 Chess.com 분석 URL을 입력해주세요.';
+      messageElement.style.color = 'red';
+      return;
+    }
+
+    messageElement.textContent = '요청 처리 중... 잠시만 기다려주세요.';
+    messageElement.style.color = 'black';
+    submitButton.disabled = true;
+    urlInput.disabled = true;
+
+    try {
+      // TODO: 'record-my-brilliancy.vercel.app'을 당신의 Vercel 프로젝트 주소로 변경하세요.
+      const apiEndpoint = 'https://record-my-brilliancy.vercel.app/api/add-move';
+      const response = await fetch(apiEndpoint, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ url: url }),
+      });
+
+      const result = await response.json();
+
+      if (response.status === 202) {
+        messageElement.textContent = '✅ 요청 성공! 약 1분 후 페이지를 새로고침하여 확인하세요.';
+        messageElement.style.color = 'green';
+        urlInput.value = '';
+      } else {
+        messageElement.textContent = `❌ 오류 발생: ${result.message}`;
+        messageElement.style.color = 'red';
+      }
+    } catch (error) {
+      messageElement.textContent = `❌ 클라이언트 오류: ${error.message}`;
+      messageElement.style.color = 'red';
+    } finally {
+      submitButton.disabled = false;
+      urlInput.disabled = false;
+    }
+  }
+</script>
+
+---
+
 # [Brilliant Move Archive](https://github.com/ibottledo/RecordMyBrilliancy/tree/main)
 
 ## 🗓 2025-01-22.
