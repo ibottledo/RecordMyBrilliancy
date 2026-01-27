@@ -19,7 +19,7 @@ title: Main Page
     font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
     max-width: 600px;
     margin: 20px auto;
-    padding: 30px 30px 0px 30px;
+    padding: 30px 30px 10px 30px;
     border-radius: 16px;
     background: #ffffff;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05); /* 부드러운 그림자 */

@@ -24,7 +24,7 @@ jobs:
       - name: Install all dependencies
         run: |
           # Install Python dependencies
-          pip install Pillow
+          pip install Pillow cairosvg
           # Install system dependencies for C++ and fonts
           sudo apt-get update
           sudo apt-get install -y libcurl4-openssl-dev fonts-dejavu-core

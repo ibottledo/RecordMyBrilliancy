@@ -1,58 +1,77 @@
 from PIL import Image, ImageDraw, ImageFont
 import sys
 import os
+import io
+import cairosvg # Added cairosvg
 
 square_size = 60
-font_size = 48
 
-# 유니코드 기물 매핑
-unicode_pieces = {
-    'K': '♔', 'Q': '♕', 'R': '♖', 'B': '♗', 'N': '♘', 'P': '♙',
-    'k': '♚', 'q': '♛', 'r': '♜', 'b': '♝', 'n': '♞', 'p': '♟',
-    '.': ' '
+# Piece asset path
+PIECE_ASSET_PATH = "assets/pieces/"
+
+# Mapping from FEN piece characters to their SVG filenames
+# User specified: lt for light, dt for dark, k, q, r, b, n, p for piece types
+# Example: Chess_klt45.svg for white King, Chess_qlt45.svg for black Queen
+PIECE_FILENAME_MAP = {
+    'K': 'Chess_klt45.svg', 'Q': 'Chess_qlt45.svg', 'R': 'Chess_rlt45.svg',
+    'B': 'Chess_blt45.svg', 'N': 'Chess_nlt45.svg', 'P': 'Chess_plt45.svg',
+    'k': 'Chess_kdt45.svg', 'q': 'Chess_qdt45.svg', 'r': 'Chess_rdt45.svg',
+    'b': 'Chess_bdt45.svg', 'n': 'Chess_ndt45.svg', 'p': 'Chess_pdt45.svg',
 }
 
-def get_font():
-    # Mac용
-    mac_font = "/System/Library/Fonts/Apple Symbols.ttf"
-    # Ubuntu용
-    linux_font = "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf"
+# Dictionary to store loaded and converted piece images
+loaded_piece_images = {}
 
-    if os.path.exists(mac_font):
-        return ImageFont.truetype(mac_font, font_size)
-    elif os.path.exists(linux_font):
-        return ImageFont.truetype(linux_font, font_size)
-    else:
-        return ImageFont.load_default()
+def load_piece_images(size):
+    """Loads SVG piece images, converts them to PNG, and resizes them."""
+    for fen_char, filename in PIECE_FILENAME_MAP.items():
+        svg_path = os.path.join(os.path.dirname(__file__), '..', PIECE_ASSET_PATH, filename)
+        if not os.path.exists(svg_path):
+            print(f"Error: Piece SVG file not found at {svg_path}")
+            sys.exit(1)
+
+        # Convert SVG to PNG bytes in memory
+        png_bytes = cairosvg.svg2png(url=svg_path, output_width=size, output_height=size)
+        
+        # Open with Pillow
+        piece_img = Image.open(io.BytesIO(png_bytes)).convert("RGBA")
+        
+        # Resize to square_size (cairosvg output_width/height should handle this, but good to be sure)
+        piece_img = piece_img.resize((size, size), Image.Resampling.LANCZOS)
+        loaded_piece_images[fen_char] = piece_img
 
 def txt_to_chessboard(input_path, output_path):
     with open(input_path, 'r') as f:
-        board = [line.strip().split() for line in f.readlines()]
+        board_data = [line.strip().split() for line in f.readlines()]
 
     image_size = square_size * 8
-    image = Image.new('RGB', (image_size, image_size), 'white')
-    draw = ImageDraw.Draw(image)
-    font = get_font()
+    board_image = Image.new('RGB', (image_size, image_size), 'white')
+    
+    # Load piece images once
+    if not loaded_piece_images: # Load only if not already loaded
+        load_piece_images(square_size)
 
-    for y in range(8):
-        for x in range(8):
-            top_left = (x * square_size, y * square_size)
-            bottom_right = ((x + 1) * square_size, (y + 1) * square_size)
+    for r in range(8):
+        for c in range(8):
+            top_left_x = c * square_size
+            top_left_y = r * square_size
+            
+            fill_color = "#739552" if (r + c) % 2 == 1 else "#EAEBD0"
+            ImageDraw.Draw(board_image).rectangle(
+                [(top_left_x, top_left_y), (top_left_x + square_size, top_left_y + square_size)],
+                fill=fill_color
+            )
 
-            fill = "#739552" if (x + y) % 2 == 1 else "#EAEBD0"
-            draw.rectangle([top_left, bottom_right], fill=fill)
+            piece_char = board_data[r][c]
+            if piece_char != '.':
+                piece_img = loaded_piece_images.get(piece_char)
+                if piece_img:
+                    # Paste piece image onto the board. Use piece_img as mask for transparency.
+                    board_image.paste(piece_img, (top_left_x, top_left_y), piece_img)
+                else:
+                    print(f"Warning: No image found for piece '{piece_char}'")
 
-            piece = board[y][x]
-            symbol = unicode_pieces.get(piece, piece)
-
-            bbox = draw.textbbox((0, 0), symbol, font=font)
-            w = bbox[2] - bbox[0]
-            h = bbox[3] - bbox[1]
-            text_x = top_left[0] + (square_size - w) / 2
-            text_y = top_left[1] + (square_size - h) / 2 - 5
-            draw.text((text_x, text_y), symbol, font=font, fill='black')
-
-    image.save(output_path)
+    board_image.save(output_path)
     print(f"Saved chessboard image to: {output_path}")
 
 if __name__ == "__main__":
