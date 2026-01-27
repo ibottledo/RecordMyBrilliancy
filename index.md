@@ -7,7 +7,7 @@ title: Main Page
   {% include streak.html %}
 </div>
 
-<div style="margin-top: 16px;"></div>
+<!-- <div style="margin-top: 16px;"></div> -->
 
 ---
 
