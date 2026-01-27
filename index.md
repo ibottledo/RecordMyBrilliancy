@@ -1130,10 +1130,3 @@ ibottledo vs Denizenofmultiworld <span style="color:#FFFFFF">25. axb5</span>
 
 ---
 
-## 🗓 2026-01-17.
-gorlammi vs ibottledo <span style="color:#FFFFFF">27... Rxa2</span>
-
-[→ 탁월수 보기](_posts/2026-01-17-brilliant.md)
-
----
-
