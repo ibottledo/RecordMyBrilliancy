@@ -12,65 +12,6 @@ title: Brilliant Moves
 
 ---
 
-<!-- <div style="margin-top: 16px;"></div>
-
-<div id="add-move-container" style="padding: 16px; border: 1px solid #ccc; border-radius: 8px; margin-bottom: 24px;">
-  <h2>새로운 탁월수 기록하기</h2>
-  <p>Chess.com 탁월한 수 URL을 입력하고 '기록하기' 버튼을 누르세요. (처리 시간 약 30초)</p>
-  <input type="text" id="chess-url" placeholder="https://www.chess.com/analysis/..." style="width: 80%; min-width: 300px; padding: 8px;">
-  <button onclick="submitBrilliantMove()" id="submit-button" style="padding: 8px 12px;">기록하기</button>
-  <p id="status-message" style="margin-top: 8px; font-weight: bold;"></p>
-</div>
-
-<script>
-  async function submitBrilliantMove() {
-    const urlInput = document.getElementById('chess-url');
-    const messageElement = document.getElementById('status-message');
-    const submitButton = document.getElementById('submit-button');
-
-    const url = urlInput.value;
-    if (!url || !url.includes('chess.com')) {
-      messageElement.textContent = 'Chess.com 탁월한 수 URL을 입력';
-      messageElement.style.color = 'red';
-      return;
-    }
-
-    messageElement.textContent = '요청 처리 중... 잠시만 기다려주세요.';
-    messageElement.style.color = 'black';
-    submitButton.disabled = true;
-    urlInput.disabled = true;
-
-    try {
-      // TODO: 'record-my-brilliancy.vercel.app'을 당신의 Vercel 프로젝트 주소로 변경하세요.
-      const apiEndpoint = 'https://record-my-brilliancy.vercel.app/api/add-move';
-      const response = await fetch(apiEndpoint, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ url: url }),
-      });
-
-      const result = await response.json();
-
-      if (response.status === 202) {
-        messageElement.textContent = '✅ 요청 성공! 약 1분 후 페이지를 새로고침하여 확인하세요.';
-        messageElement.style.color = 'green';
-        urlInput.value = '';
-      } else {
-        messageElement.textContent = `❌ 오류 발생: ${result.message}`;
-        messageElement.style.color = 'red';
-      }
-    } catch (error) {
-      messageElement.textContent = `❌ 클라이언트 오류: ${error.message}`;
-      messageElement.style.color = 'red';
-    } finally {
-      submitButton.disabled = false;
-      urlInput.disabled = false;
-    }
-  }
-</script> -->
-
 <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
 
 <style>
@@ -120,7 +61,7 @@ title: Brilliant Moves
   }
 
   #chess-url:focus {
-    border-color: #4CAF50;
+    border-color: #2ABF95;
     box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.1);
   }
 
@@ -130,7 +71,7 @@ title: Brilliant Moves
     font-size: 15px;
     font-weight: 600;
     color: white;
-    background-color: #222; /* 검정색 버튼 */
+    background-color: #2ABF95;
     border: none;
     border-radius: 8px;
     cursor: pointer;
@@ -140,7 +81,7 @@ title: Brilliant Moves
   }
 
   #submit-button:hover {
-    background-color: #444;
+    background-color: #8FD9E5;
   }
 
   #submit-button:disabled {
@@ -167,8 +108,7 @@ title: Brilliant Moves
 </style>
 
 <div class="brilliant-container">
-  <h2>🏆 새로운 탁월수(Brilliant) 기록</h2>
-  <p>Chess.com 분석 페이지 URL을 입력하세요.<br>당신의 멋진 수를 영원히 기록해 드립니다.</p>
+  <p>Chess.com 탁월한 수 URL을 입력하세요.</p>
   
   <div class="input-group">
     <input type="text" id="chess-url" placeholder="https://www.chess.com/analysis/game/..." autocomplete="off">
