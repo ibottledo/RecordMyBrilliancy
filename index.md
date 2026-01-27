@@ -1252,3 +1252,10 @@ ibottledo vs Kotik5 <span style="color:#FFFFFF">19. Nh4</span>
 
 ---
 
+## 🗓 2026-01-23.
+karaho vs ibottledo <span style="color:#FFFFFF">25... Qd5</span>
+
+[→ 탁월수 보기](_posts/2026-01-23-brilliant.md)
+
+---
+
