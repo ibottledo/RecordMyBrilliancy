@@ -7,9 +7,6 @@ on:
         description: 'Chess.com Analysis URL'
         required: true
 
-permissions:
-  contents: write
-
 jobs:
   process-move:
     runs-on: ubuntu-latest
@@ -17,13 +14,20 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          # We need to fetch history to be able to push
           fetch-depth: 0
 
-      - name: Set up C++ environment and dependencies
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+
+      - name: Install all dependencies
         run: |
+          # Install Python dependencies
+          pip install Pillow
+          # Install system dependencies for C++ and fonts
           sudo apt-get update
-          sudo apt-get install -y libcurl4-openssl-dev
+          sudo apt-get install -y libcurl4-openssl-dev fonts-dejavu-core
 
       - name: Build C++ executables
         run: make
@@ -35,11 +39,8 @@ jobs:
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          # Pull the latest changes from the remote repository
           git pull
-          # Add only the new posts
-          git add _posts/
-          # Commit if there are changes, otherwise do nothing
+          git add _posts/ images/
           if ! git diff --staged --quiet; then
             git commit -m "feat: Add new brilliant move from API"
             git push
