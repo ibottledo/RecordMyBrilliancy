@@ -1245,3 +1245,10 @@ ibottledo vs erdemix <span style="color:#FFFFFF">20. Rxf8</span>
 
 ---
 
+## 🗓 2026-01-22.
+ibottledo vs Kotik5 <span style="color:#FFFFFF">19. Nh4</span>
+
+[→ 탁월수 보기](_posts/2026-01-22-brilliant.md)
+
+---
+
