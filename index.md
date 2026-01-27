@@ -1238,3 +1238,10 @@ gorlammi vs ibottledo <span style="color:#FFFFFF">27... Rxa2</span>
 
 ---
 
+## 🗓 2026-01-20.
+ibottledo vs erdemix <span style="color:#FFFFFF">20. Rxf8</span>
+
+[→ 탁월수 보기](_posts/2026-01-20-brilliant.md)
+
+---
+
