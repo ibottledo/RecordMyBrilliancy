@@ -61,7 +61,7 @@ title: Brilliant Moves
   }
 
   #chess-url:focus {
-    border-color: #2ABF95;
+    border-color: #8FD9E5;
     box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.1);
   }
 
@@ -71,7 +71,7 @@ title: Brilliant Moves
     font-size: 15px;
     font-weight: 600;
     color: white;
-    background-color: #2ABF95;
+    background-color: #3894A5;
     border: none;
     border-radius: 8px;
     cursor: pointer;
