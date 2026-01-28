@@ -8,7 +8,7 @@ layout: post
 
 ## Black to move
 
-![](/RecordMyBrilliancy/images/2025-10-23-brilliant.png)
+![]({{ site.baseurl }}/images/2025-10-23-brilliant.png)
 
 .
 
@@ -17,4 +17,3 @@ layout: post
 .
 
 **Brilliant Move:** 11... Qh4!!
-

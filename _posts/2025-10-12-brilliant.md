@@ -8,7 +8,7 @@ layout: post
 
 ## White to move
 
-![](/RecordMyBrilliancy/images/2025-10-12-brilliant.png)
+![]({{ site.baseurl }}/images/2025-10-12-brilliant.png)
 
 .
 
@@ -18,5 +18,4 @@ layout: post
 
 **Brilliant Move:** 7. Bxf7+!!
 
-[→ 다음 탁월수 보기](/RecordMyBrilliancy/blog/2025-10-12-brilliant-2/)
-
+[→ 다음 탁월수 보기]({{ site.baseurl }}/blog/2025-10-12-brilliant-2/)

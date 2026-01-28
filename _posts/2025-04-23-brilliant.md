@@ -8,7 +8,7 @@ layout: post
 
 ## White to move
 
-![](/RecordMyBrilliancy/images/2025-04-23-brilliant.png)
+![]({{ site.baseurl }}/images/2025-04-23-brilliant.png)
 
 .
 
@@ -18,5 +18,4 @@ layout: post
 
 **Brilliant Move:** 34. Nxb3!!
 
-[→ 다음 탁월수 보기](../../blog/2025-04-23-brilliant-2)
-
+[→ 다음 탁월수 보기]({{ site.baseurl }}/blog/2025-04-23-brilliant-2)

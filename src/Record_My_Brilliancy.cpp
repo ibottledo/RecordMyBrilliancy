@@ -17,6 +17,7 @@ namespace fs = std::filesystem;
 
 class PostManager {
 public:
+    // 마크다운 파일 작성
     static void writeBrilliantMarkdown(const string& filename, const string& title, const string& content, const string& date) {
         ofstream file("_posts/" + filename);
         if (file.is_open()) {
@@ -30,7 +31,7 @@ public:
         }
     }
 
-    // 날짜에 맞는 위치에 삽입
+    // index.md에서 날짜에 맞는 위치에 삽입
     static void appendToIndexMd(const string& date, const string& White, const string& Black, const string& postPath, const string& pgn) {
         ifstream in("index.md");
         if (!in.is_open()) {
@@ -72,6 +73,8 @@ public:
         out.close();
     }
 
+    // index.md에 이미 포함된 탁월수인지 확인
+    // 같은 날짜에 같은 pgn이 있는지 확인
     static bool isAlreadyInIndex(const string& pgn, const string& date) {
         ifstream file("index.md");
         string line;
@@ -88,6 +91,7 @@ public:
         return false;
     }
 
+    // 2연탁 이상일 때 이전 마크다운 파일에 '다음 탁월수 보기' 링크 추가
     static void appendToBrilliantMd(const int& suffix, const string& slug, const string& White, const string& Black) {
         string postPath = "_posts/" + slug + ".md";
         if (suffix == 2) {
@@ -107,7 +111,7 @@ public:
         }
         file.close();
 
-        string permalink = "/RecordMyBrilliancy/blog/" + slug + "/";
+        string permalink = "/blog/" + slug + "/";
         if (found) {
             ofstream appendFile(postPath, ios::app);
             if (appendFile.is_open()) {
@@ -121,6 +125,7 @@ public:
 
 class GitManager {
 public:
+    // 새로운 탁월수 추가 후 GitHub에 푸시
     static void pushToGitHub() {
         system("./bin/generate_streak");
         system("git add .");
@@ -138,6 +143,7 @@ static size_t WriteCallback(void* contents, size_t size, size_t nmemb, string* o
 }
 
 // moveList decoder
+// 체스닷컴의 moveList 인코딩 방식을 디코딩
 class MoveDecoder {
 private:
     const string T = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!?{~}(^)[_]@#$,./&-*++=";
@@ -147,6 +153,8 @@ public:
     struct Move {
         string from, to, promotion, drop;
     };
+
+    // moveList의 2글자 코드를 Move 구조체로 디코딩 (예: "aB" -> e2e4)
     Move decodeMove(const string& code) {
         Move move;
         if (code.size() != 2) return move;
@@ -171,7 +179,7 @@ public:
     }
 };
 
-// decode한 move를 바탕으로 체스판을 출력(탁월수 직전 모습)
+// decode한 move를 바탕으로 탁월수 직전의 체스판을 출력
 class ChessBoard {
 private:
     pair<int, int> coord(const string& pos) {
@@ -225,7 +233,7 @@ private:
         }
     }
 public:
-    // Brilliant Move 직전의 보드를 출력
+    // Brilliant Move 직전의 보드를 출력 (디버깅용)
     void printChessBoard(const string& moveList, const int& brilliantMoveIndex) {
         for (int i = 0; i < brilliantMoveIndex; ++i) {
             string code = moveList.substr(i * 2, 2);
@@ -235,6 +243,7 @@ public:
         printBoard();
     }
 
+    // 체스판을 텍스트 파일로 저장
     void saveAsTextFile(const string& filename) const {
         ofstream out(filename);
         if (!out.is_open()) return;
@@ -329,7 +338,7 @@ public:
         return stoi(s.substr(pos, end - pos)); // move= 뒤의 숫자를 정수로 변환
     }
 
-    // daily, live 둘 다 가능
+    // daily, live 둘 다 가능하도록
     static string getGameAPI(const string& s) {
         size_t start = s.find("live/");
         if (start != string::npos)  {
@@ -353,7 +362,7 @@ public:
 
     // string을 https://api.chess.com/pub/player/ibottledo/games/2025/05 같은 API 형식으로
     string getMonthGameAPI(const int& brilliantMoveIndex) {
-        userId = (brilliantMoveIndex % 2 == 0) ? white : black; // 왜인지 모르겠는데 탁월수를 띄운 사람의 API로 접근해야 PGN을 가져올 수 있음
+        userId = (brilliantMoveIndex % 2 == 0) ? white : black; // 탁월수를 띄운 사람의 API로 접근해야 PGN을 가져올 수 있음 / 아니면 분석을 한 사람의 api로 접근해야 하는 걸지도
         return "https://api.chess.com/pub/player/" + userId + "/games/" + date.substr(0, 4) + "/" + date.substr(5, 2);
     }
 
@@ -451,6 +460,17 @@ public:
 };
 
 int main() {
+    // 사용자 정보를 config.json에서 읽어오기
+    ifstream configFile("config.json");
+    if (!configFile.is_open()) {
+        cerr << "Error: config.json not found. Please run the setup script." << endl;
+        return 1;
+    }
+    json config;
+    configFile >> config;
+    const string chessUsername = config["chess_username"];
+
+    // Brilliant URL 입력 받기
     string Brilliant_url;
     cout << "Enter: Brilliant URL: ";
     getline(cin, Brilliant_url);
@@ -482,8 +502,8 @@ int main() {
     string White = userId.first;
     string Black = userId.second;
     cout << "White: " << White << ", Black: " << Black << '\n';
-    if (White != "ibottledo" && Black != "ibottledo") {
-        cout << "이 탁월수는 ibottledo의 게임이 아닙니다.\n";
+    if (White != chessUsername && Black != chessUsername) {
+        cout << "이 탁월수는 " << chessUsername << "의 게임이 아닙니다.\n";
         return 0;
     }
 
@@ -500,7 +520,7 @@ int main() {
     string txtPath = "images/" + base + ".txt";
     string pngPath = "images/" + base + ".png";
 
-    // 텍스트, 이미지, 마크다운 일일 중복 저장 피하기
+    // 텍스트, 이미지, 마크다운 이름 중복 저장 피하기
     int suffix = 1;
     while (fs::exists(txtPath) || fs::exists(pngPath)) {
         suffix++;
@@ -516,6 +536,7 @@ int main() {
     string postPath = "_posts/" + slug + ".md";
 
     // Python 명령 실행
+    // txt_to_png.py 스크립트를 사용하여 PNG 이미지 생성
     string cmd = "python3 scripts/txt_to_png.py " + txtPath + " " + pngPath;
     system(cmd.c_str());
 
@@ -527,9 +548,10 @@ int main() {
     string content = "[" + White + " vs " + Black + "](" + url + ")\n\n"
                + "## " + ((index % 2 == 0) ? "White" : "Black")
                + " to move\n\n"
-               + "![](/RecordMyBrilliancy/images/" + slug + ".png)\n\n.\n\n.\n\n.\n\n"
+               + "![](/images/" + slug + ".png)\n\n.\n\n.\n\n.\n\n"
                + "**Brilliant Move:** " + pgn + "!!";
 
+    // 마크다운 파일 작성 및 index.md, streak.html 업데이트
     if (suffix > 1) {
         PostManager::appendToBrilliantMd(suffix, slug, White, Black);
     }

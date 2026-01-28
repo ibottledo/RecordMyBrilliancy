@@ -8,7 +8,7 @@ layout: post
 
 ## White to move
 
-![](/RecordMyBrilliancy/images/2026-01-20-brilliant.png)
+![]({{ site.baseurl }}/images/2026-01-20-brilliant.png)
 
 .
 
@@ -17,4 +17,3 @@ layout: post
 .
 
 **Brilliant Move:** 20. Rxf8!!
-

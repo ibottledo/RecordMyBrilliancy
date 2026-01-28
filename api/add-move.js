@@ -1,7 +1,7 @@
 module.exports = async (req, res) => {
   // 1. CORS 허용 헤더 설정
   res.setHeader('Access-Control-Allow-Credentials', true);
-  res.setHeader('Access-Control-Allow-Origin', '*'); // 특정 도메인만 허용하려면 'https://ibottledo.github.io' 를 입력하세요.
+  res.setHeader('Access-Control-Allow-Origin', '*'); // 특정 도메인만 허용하려면 'https://<YOUR_DOMAIN>.github.io' 를 입력하세요.
   res.setHeader('Access-Control-Allow-Methods', 'GET,OPTIONS,PATCH,DELETE,POST,PUT');
   res.setHeader('Access-Control-Allow-Headers', 'X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version');
 
@@ -22,20 +22,21 @@ module.exports = async (req, res) => {
     return res.status(400).json({ message: 'URL is required' });
   }
 
-  const githubToken = process.env.GITHUB_PAT;
-  if (!githubToken) {
-    return res.status(500).json({ message: 'Server configuration error: GitHub token not set.' });
+  const { GITHUB_PAT, GITHUB_OWNER, GITHUB_REPO } = process.env;
+
+  if (!GITHUB_PAT || !GITHUB_OWNER || !GITHUB_REPO) {
+    return res.status(500).json({ message: 'Server configuration error: Required environment variables (GITHUB_PAT, GITHUB_OWNER, GITHUB_REPO) are not set.' });
   }
 
-  const owner = 'ibottledo';
-  const repo = 'RecordMyBrilliancy';
+  const owner = GITHUB_OWNER;
+  const repo = GITHUB_REPO;
   const workflow_id = 'add_move.yml';
 
   try {
     const response = await fetch(`https://api.github.com/repos/${owner}/${repo}/actions/workflows/${workflow_id}/dispatches`, {
       method: 'POST',
       headers: {
-        'Authorization': `token ${githubToken}`,
+        'Authorization': `token ${GITHUB_PAT}`,
         'Accept': 'application/vnd.github.v3+json',
         'Content-Type': 'application/json',
       },

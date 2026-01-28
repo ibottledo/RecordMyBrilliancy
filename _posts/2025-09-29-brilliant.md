@@ -8,7 +8,7 @@ layout: post
 
 ## White to move
 
-![](/RecordMyBrilliancy/images/2025-09-29-brilliant.png)
+![]({{ site.baseurl }}/images/2025-09-29-brilliant.png)
 
 .
 
@@ -17,4 +17,3 @@ layout: post
 .
 
 **Brilliant Move:** 20. Rd8+!!
-

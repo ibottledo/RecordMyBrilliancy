@@ -1,4 +1,4 @@
-title: Record My Brilliancy
+title: RecordMyBrilliancy
 author: 이병도
 email: lbd2409@snu.ac.kr
 description: >-
@@ -10,4 +10,4 @@ plugins:
   - jekyll-seo-tag
 
 markdown: kramdown
-permalink: /blog/:year-:month-:day-:title/
+permalink: /blog/:year-:month-:day-:title/baseurl: "/RecordMyBrilliancy"

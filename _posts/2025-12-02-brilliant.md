@@ -8,7 +8,7 @@ layout: post
 
 ## Black to move
 
-![](/RecordMyBrilliancy/images/2025-12-02-brilliant.png)
+![]({{ site.baseurl }}/images/2025-12-02-brilliant.png)
 
 .
 
@@ -18,5 +18,4 @@ layout: post
 
 **Brilliant Move:** 16... Rxe6!!
 
-[→ 다음 탁월수 보기](/RecordMyBrilliancy/blog/2025-12-02-brilliant-2/)
-
+[→ 다음 탁월수 보기]({{ site.baseurl }}/blog/2025-12-02-brilliant-2/)
