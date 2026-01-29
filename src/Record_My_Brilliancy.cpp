@@ -469,6 +469,7 @@ int main() {
     json config;
     configFile >> config;
     const string chessUsername = config["chess_username"];
+    const string repoName = config["github_repo"];
 
     // Brilliant URL 입력 받기
     string Brilliant_url;
@@ -549,7 +550,7 @@ int main() {
     string content = "[" + White + " vs " + Black + "](" + url + ")\n\n"
                + "## " + ((index % 2 == 0) ? "White" : "Black")
                + " to move\n\n"
-               + "![](/images/" + slug + ".png)\n\n.\n\n.\n\n.\n\n"
+               + "![](" + repoName + "/images/" + slug + ".png)\n\n.\n\n.\n\n.\n\n"
                + "**Brilliant Move:** " + pgn + "!!";
 
     // 마크다운 파일 작성 및 index.md, streak.html 업데이트
