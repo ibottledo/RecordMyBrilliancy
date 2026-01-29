@@ -55,4 +55,4 @@ To make your blog live:
 4.  Save your settings. Your blog will be live at `https://<your-username>.github.io/<repo-name>/` in a few minutes.
 
 ## Languages Used
-[![Languages](https://skillicons.dev/icons?i=cpp,python)](https://skillicons.dev)ㄴ
+[![Languages](https://skillicons.dev/icons?i=cpp,python)](https://skillicons.dev)
