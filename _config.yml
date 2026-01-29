@@ -10,4 +10,5 @@ plugins:
   - jekyll-seo-tag
 
 markdown: kramdown
-permalink: /blog/:year-:month-:day-:title/baseurl: "/RecordMyBrilliancy"
+permalink: /blog/:year-:month-:day-:title/
+baseurl: "/RecordMyBrilliancy"

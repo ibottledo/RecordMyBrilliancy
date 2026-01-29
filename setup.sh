@@ -50,6 +50,8 @@ sed -i '' "s/^email: .*/email: $author_email/" _config.yml
 if grep -q "^baseurl:" _config.yml; then
     sed -i '' "s|^baseurl:.*|baseurl: \"/$github_repo\"|" _config.yml
 else
+    # Ensure _config.yml ends with a newline before appending
+    [[ -n "$(tail -c 1 "_config.yml")" ]] && echo >> "_config.yml"
     echo "baseurl: \"/$github_repo\"" >> _config.yml
 fi
 
