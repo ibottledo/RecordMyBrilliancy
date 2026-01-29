@@ -4,9 +4,9 @@ RecordMyBrilliancy is a tool designed for chess players to archive and showcase 
 [Live Demo](https://ibottledo.github.io/RecordMyBrilliancy/)
 
 ## Feature
-**- Streak UI:** Visualizes your consistency with a built-in streak tracking system.
-**- PNG Rendering:** Renders the chess board state just before the move into a PNG image.
-**- Automated Posting:** Generates Markdown posts and publishes them to your GitHub Pages blog automatically.
+- **Streak UI:** Visualizes your consistency with a built-in streak tracking system.
+- **PNG Rendering:** Renders the chess board state just before the move into a PNG image.
+- **Automated Posting:** Generates Markdown posts and publishes them to your GitHub Pages blog automatically.
 
 ## Setup for Your Own Brilliant Moves Blog
 
