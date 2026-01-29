@@ -46,10 +46,11 @@ The Vercel API acts as a bridge to trigger the recording process via a URL.
 - `GITHUB_PAT`: Your GitHub Personal Access Token.
 - `GITHUB_OWNER`: Your GitHub username.
 - `GITHUB_REPO`: Your repository name (e.g., `RecordMyBrilliancy`).
+then deploy your Vercel project for the changes to take effect.
 
 ### 5. Activate GitHub Pages
 
-To make your blog live:
+To make your blog live: 
 
 1.  Go to repository `Settings` -> `Pages`.
 2.  Set `Source` to `Deploy from a branch`.
