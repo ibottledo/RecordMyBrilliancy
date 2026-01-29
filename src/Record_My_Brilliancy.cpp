@@ -545,6 +545,7 @@ int main() {
 
     int index = ChessFetcher::getBrilliantMoveIndex(Brilliant_url);
 
+    // post content 작성
     string content = "[" + White + " vs " + Black + "](" + url + ")\n\n"
                + "## " + ((index % 2 == 0) ? "White" : "Black")
                + " to move\n\n"
