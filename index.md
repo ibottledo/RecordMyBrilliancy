@@ -1273,3 +1273,10 @@ ibottledo vs manuelswelt <span style="color:#FFFFFF">18. Rxa5</span>
 
 ---
 
+## 🗓 2026-01-24.
+ibottledo vs tinputin <span style="color:#FFFFFF">22. Qxh7</span>
+
+[→ 탁월수 보기](_posts/2026-01-24-brilliant.md)
+
+---
+
