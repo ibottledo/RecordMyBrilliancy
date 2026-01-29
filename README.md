@@ -27,13 +27,13 @@ chmod +x setup.sh
 ./setup.sh
 ```
 
-### 3. GitHub Personal Access Token (PAT) 설정
+### 3. GitHub Personal Access Token (PAT) Setting
 
 To allow GitHub Actions to push changes to your repository, you need to set up a Personal Access Token.
 
-1.  Generate a PAT: Go to GitHub `Settings` -> `Developer settings` -> `Personal access tokens` -> `Tokens (classic)` -> `Generate new token`
+**1.  Generate a PAT**: Go to GitHub `Settings` -> `Developer settings` -> `Personal access tokens` -> `Tokens (classic)` -> `Generate new token`
     *   Scope: Ensure you check the `repo` and `workflow` scopes.
-2.  Add Secret: Go to your forked repository's `Settings` -> `Secrets and variables` -> `Actions` -> `New repository secret`
+**2.  Add Secret**: Go to your forked repository's `Settings` -> `Secrets and variables` -> `Actions` -> `New repository secret`
     * Name: `GITHUB_PAT`
     * Value: Paste your generated token here.
 
@@ -41,13 +41,13 @@ To allow GitHub Actions to push changes to your repository, you need to set up a
 
 The Vercel API acts as a bridge to trigger the recording process via a URL.
 
-1.  Deploy to Vercel: Create a Vercel account and connect your GitHub repository to deploy the `api/add-move.js` file.
-2.  Set Environment Variables: In your Vercel project settings, add the following variables:
+**1.  Deploy to Vercel**: Create a Vercel account and connect your GitHub repository to deploy the `api/add-move.js` file.
+**2.  Set Environment Variables**: In your Vercel project settings, add the following variables:
     *   `GITHUB_PAT`: Your GitHub Personal Access Token.
     *   `GITHUB_OWNER`: Your GitHub username.
     *   `GITHUB_REPO`: Your repository name (e.g., `RecordMyBrilliancy`).
 
-### 5. GitHub Pages 활성화
+### 5. Activate GitHub Pages
 
 To make your blog live:
 
