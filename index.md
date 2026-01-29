@@ -1266,10 +1266,3 @@ ibottledo vs BobyA <span style="color:#FFFFFF">11. Nxf7</span>
 
 ---
 
-## 🗓 2026-01-23-3.
-ibottledo vs manuelswelt <span style="color:#FFFFFF">18. Rxa5</span>
-
-[→ 탁월수 보기](_posts/2026-01-23-brilliant-3.md)
-
----
-
