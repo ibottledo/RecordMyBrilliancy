@@ -18,64 +18,74 @@ namespace fs = std::filesystem;
 class PostManager {
 public:
     // 마크다운 파일 작성
-    static void writeBrilliantMarkdown(const string& filename, const string& title, const string& content, const string& date, const string& white_player, const string& black_player, const string& pgn, const string& game_url, int move_number) {
+    static void writeBrilliantMarkdown(const string& filename, const string& title, const string& content, const string& date) {
         ofstream file("_posts/" + filename);
         if (file.is_open()) {
             file << "---\n";
             file << "title: \"" << title << "\"\n";
             file << "date: " << date << "\n";
             file << "layout: post\n";
-            file << "white_player: \"" << white_player << "\"\n";
-            file << "black_player: \"" << black_player << "\"\n";
-            file << "pgn: \"" << pgn << "\"\n";
-            file << "game_url: \"" << game_url << "\"\n";
-            file << "move_number: " << move_number << "\n";
             file << "---\n\n";
             file << content << "\n\n";
             file.close();
         }
     }
 
-    // 중복 포스트 확인
-    static bool isDuplicate(const string& gameUrl, int moveNumber) {
-        if (!fs::exists("_posts")) return false;
-        for (const auto& entry : fs::directory_iterator("_posts")) {
-            ifstream file(entry.path());
-            if (!file.is_open()) continue;
+    // index.md에서 날짜에 맞는 위치에 삽입
+    static void appendToIndexMd(const string& date, const string& White, const string& Black, const string& postPath, const string& pgn) {
+        ifstream in("index.md");
+        if (!in.is_open()) {
+            cerr << "index.md를 열 수 없습니다.\n";
+            return;
+        }
 
-            string line;
-            string fileGameUrl;
-            int fileMoveNumber = -1;
-            bool inFrontMatter = false;
-
-            while (getline(file, line)) {
-                if (line.rfind("---", 0) == 0) {
-                    if (inFrontMatter) break; // End of front matter
-                    inFrontMatter = true;
-                    continue;
-                }
-                if (!inFrontMatter) continue;
-
-                size_t urlPos = line.find("game_url: \"");
-                if (urlPos != string::npos) {
-                    fileGameUrl = line.substr(urlPos + 12);
-                    if (!fileGameUrl.empty() && fileGameUrl.back() == '"') {
-                        fileGameUrl.pop_back();
-                    }
-                }
-
-                size_t movePos = line.find("move_number: ");
-                if (movePos != string::npos) {
-                    try {
-                        fileMoveNumber = stoi(line.substr(movePos + 13));
-                    } catch (const std::invalid_argument& ia) {
-                        // ignore invalid format
-                    }
-                }
+        bool append = false;
+        vector<string> lines;
+        string line;
+        while (getline(in, line)) {
+            auto pos = line.find_first_of("0123456789");
+            auto end = line.find('.', pos);
+            if (!append && line.find("## \U0001F4C6") != string::npos
+                && pos != string::npos
+                && end != string::npos 
+                && line.compare(pos, end - pos, date) > 0) {
+                lines.push_back("## \U0001F4C6 " + date + ".");
+                lines.push_back(White + " vs " + Black + " <span style=\"color:#FFFFFF\">" + pgn + "</span>" + "\n");
+                lines.push_back("[\u2192 탁월수 보기](" + postPath + ")\n");
+                lines.push_back("---\n");
+                append = true;
             }
+            lines.push_back(line);
+        }
+        in.close();
 
-            if (!fileGameUrl.empty() && fileMoveNumber != -1 && fileGameUrl == gameUrl && fileMoveNumber == moveNumber) {
+        if (!append) {
+            lines.push_back("## \U0001F4C6 " + date + ".");
+            lines.push_back(White + " vs " + Black + " <span style=\"color:#FFFFFF\">" + pgn + "</span>" + "\n");
+            lines.push_back("[\u2192 탁월수 보기](" + postPath + ")\n");
+            lines.push_back("---\n");
+        }
+
+        ofstream out("index.md");
+        for (string& line : lines) {
+            out << line << '\n';
+        }
+        out.close();
+    }
+
+    // index.md에 이미 포함된 탁월수인지 확인
+    // 같은 날짜에 같은 pgn이 있는지 확인
+    static bool isAlreadyInIndex(const string& pgn, const string& date) {
+        ifstream file("index.md");
+        string line;
+        bool dateFound = false;
+        while (getline(file, line)) {
+            if (dateFound && line.find(pgn) != string::npos) {
                 return true;
+            }
+            dateFound = false;
+            if (line.find(date) != string::npos) {
+                dateFound = true;
             }
         }
         return false;
