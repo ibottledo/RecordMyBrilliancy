@@ -45,13 +45,13 @@ public:
         while (getline(in, line)) {
             auto pos = line.find_first_of("0123456789");
             auto end = line.find('.', pos);
-            if (!append && line.find("## 🗓") != string::npos
+            if (!append && line.find("## \ud83d\udcc6") != string::npos
                 && pos != string::npos
                 && end != string::npos 
                 && line.compare(pos, end - pos, date) > 0) {
-                lines.push_back("## 🗓 " + date + ".");
+                lines.push_back("## \ud83d\udcc6 " + date + ".");
                 lines.push_back(White + " vs " + Black + " <span style=\"color:#FFFFFF\">" + pgn + "</span>" + "\n");
-                lines.push_back("[→ 탁월수 보기](" + postPath + ")\n");
+                lines.push_back("[\u2192 탁월수 보기](" + postPath + ")\n");
                 lines.push_back("---\n");
                 append = true;
             }
@@ -60,9 +60,9 @@ public:
         in.close();
 
         if (!append) {
-            lines.push_back("## 🗓 " + date + ".");
+            lines.push_back("## \ud83d\udcc6 " + date + ".");
             lines.push_back(White + " vs " + Black + " <span style=\"color:#FFFFFF\">" + pgn + "</span>" + "\n");
-            lines.push_back("[→ 탁월수 보기](" + postPath + ")\n");
+            lines.push_back("[\u2192 탁월수 보기](" + postPath + ")\n");
             lines.push_back("---\n");
         }
 
@@ -115,7 +115,7 @@ public:
         if (found) {
             ofstream appendFile(postPath, ios::app);
             if (appendFile.is_open()) {
-                appendFile << "[→ 다음 탁월수 보기](" << permalink << ")\n\n";
+                appendFile << "[\u2192 다음 탁월수 보기](" << permalink << ")\n\n";
                 appendFile.close();
                 cout << suffix << "번째 탁월수 추가\n";
             }
@@ -127,11 +127,25 @@ class GitManager {
 public:
     // 새로운 탁월수 추가 후 GitHub에 푸시
     static void pushToGitHub() {
-        system("./bin/generate_streak");
-        system("git add .");
-        system("git commit -m \"Auto: brilliant move update\"");
-        system("git pull --rebase origin main");
-        system("git push origin main");
+        if (system("./bin/generate_streak") != 0) {
+            cerr << "Failed to generate streak.\n";
+            return;
+        }
+        if (system("git add .") != 0) {
+            cerr << "Failed to git add.\n";
+            return;
+        }
+        if (system("git commit -m \"feat: Add new brilliant move\"") != 0) {
+            cout << "Nothing to commit or commit failed.\n";
+        }
+        if (system("git pull --rebase origin main") != 0) {
+            cerr << "Failed to git pull.\n";
+            return;
+        }
+        if (system("git push origin main") != 0) {
+            cerr << "Failed to git push.\n";
+            return;
+        }
     }
 };
 
@@ -488,6 +502,10 @@ int main() {
 
     cout << "Brilliant Move:\n";
     string pgn = fetcher.getBrilliantPGN(Brilliant_url);
+    if (pgn.empty()) {
+        cerr << "Error: Could not retrieve PGN. Aborting." << endl;
+        return 1;
+    }
     cout << pgn << "!!" << '\n';
 
     cout << "Brilliant Move day:\n";
@@ -550,7 +568,7 @@ int main() {
     string content = "[" + White + " vs " + Black + "](" + url + ")\n\n"
                + "## " + ((index % 2 == 0) ? "White" : "Black")
                + " to move\n\n"
-               + "![](/" + repoName + "/images/" + slug + ".png)\n\n.\n\n.\n\n.\n\n"
+               + "![board]({{ site.baseurl }}/images/" + slug + ".png)\n\n.\n\n.\n\n.\n\n"
                + "**Brilliant Move:** " + pgn + "!!";
 
     // 마크다운 파일 작성 및 index.md, streak.html 업데이트

@@ -16,4 +16,4 @@ layout: post
 
 .
 
-**Brilliant Move:** !!
+**Brilliant Move:** 24. Rxd4!!

@@ -18,12 +18,18 @@ First, Fork this repository to your GitHub account and Clone it to your local ma
 
 ### 2. Run the Setup Script
 
-Execute the `setup.sh` script in the root directory. This script will prompt you for your Chess.com username and GitHub details to automatically configure `config.json` and `_config.yml`.
+This project includes two setup scripts to configure your `config.json` and `_config.yml` files automatically.
 
-```bash
-chmod +x setup.sh
-./setup.sh
-```
+-   **For macOS/Linux users:**
+    ```bash
+    chmod +x setup.sh
+    ./setup.sh
+    ```
+-   **For Windows users (or if you prefer Python):**
+    ```bash
+    python3 setup.py
+    ```
+Both scripts will prompt you for your Chess.com username and GitHub details.
 
 ### 3. GitHub Personal Access Token (PAT) Setting
 
@@ -46,7 +52,20 @@ The Vercel API acts as a bridge to trigger the recording process via a URL.
 - `GITHUB_PAT`: Your GitHub Personal Access Token.
 - `GITHUB_OWNER`: Your GitHub username.
 - `GITHUB_REPO`: Your repository name (e.g., `RecordMyBrilliancy`).
-then deploy your Vercel project for the changes to take effect.
+Then, deploy your Vercel project for the changes to take effect.
+
+**3. Secure Your Vercel API (Recommended):**
+For better security, it's recommended to allow requests only from your GitHub Pages blog.
+1.  Open the `api/add-move.js` file.
+2.  Find the line:
+    ```javascript
+    res.setHeader('Access-Control-Allow-Origin', '*');
+    ```
+3.  Replace `*` with your GitHub Pages URL, like this:
+    ```javascript
+    res.setHeader('Access-Control-Allow-Origin', 'https://<your-username>.github.io');
+    ```
+4.  Commit the change and redeploy your Vercel project.
 
 ### 5. Activate GitHub Pages
 

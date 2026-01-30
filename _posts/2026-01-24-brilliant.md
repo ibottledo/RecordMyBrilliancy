@@ -8,7 +8,7 @@ layout: post
 
 ## White to move
 
-![](/RecordMyBrilliancy/images/2026-01-24-brilliant.png)
+![board]({{ site.baseurl }}/images/2026-01-24-brilliant.png)
 
 .
 
