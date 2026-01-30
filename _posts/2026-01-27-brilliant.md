@@ -18,3 +18,5 @@ layout: post
 
 **Brilliant Move:** 9. Bxh7+!!
 
+[→ 다음 탁월수 보기](/blog/2026-01-27-brilliant-2/)
+

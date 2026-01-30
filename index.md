@@ -194,3 +194,10 @@ ibottledo vs iglesiasleo <span style="color:#FFFFFF">9. Bxh7+</span>
 
 ---
 
+## 📆 2026-01-27-2.
+ibottledo vs iglesiasleo <span style="color:#FFFFFF">11. Qh5</span>
+
+[→ 탁월수 보기](_posts/2026-01-27-brilliant-2.md)
+
+---
+
