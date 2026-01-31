@@ -3,7 +3,7 @@
 # chmod +x run_links.sh 권한부여
 
 # 실행 간격 (초)
-DELAY=180
+DELAY=60
 
 # URL 목록 (원하면 여기에 쭉 추가)
 URLS=(
