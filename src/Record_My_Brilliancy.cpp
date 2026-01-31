@@ -85,11 +85,7 @@ public:
     // 2연탁 이상일 때 이전 마크다운 파일에 '다음 탁월수 보기' 링크 추가
     static void appendToBrilliantMd(const int& suffix, const string& slug, const string& White, const string& Black) {
         string postPath = "_posts/" + slug + ".md";
-        if (suffix == 2) {
-            postPath = postPath.substr(0, postPath.size() - 5) + ".md"; // -2.md -> .md
-        } else {
-            postPath = postPath.substr(0, postPath.size() - 5) + "-" + to_string(suffix - 1) + ".md"; // -3.md -> -2.md
-        }
+        postPath = postPath.substr(0, postPath.size() - 5) + "-" + to_string(suffix - 1) + ".md"; // -2.md -> -1.md
 
         ifstream file(postPath);
         string line;
