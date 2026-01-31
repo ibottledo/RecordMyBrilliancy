@@ -173,7 +173,8 @@ title: Main Page
 </script>
 
 ---
-{% for post in site.posts reversed %}
+{% assign sorted_posts = site.posts | sort: 'path' | reverse %}
+{% for post in sorted_posts %}
 ---
 
 ## 🗓 {{ post.date | date: "%Y-%m-%d" }}.

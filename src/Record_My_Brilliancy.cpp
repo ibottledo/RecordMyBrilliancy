@@ -522,24 +522,24 @@ int main() {
         return 0;
     }
 
-    string base = date + "-brilliant";
-    string filename = base + ".md";
-
-    // 탁월수 직전의 체스판을 텍스트 파일로 저장
-    string txtPath = "images/" + base + ".txt";
-    string pngPath = "images/" + base + ".png";
-
-    // 텍스트, 이미지, 마크다운 이름 중복 저장 피하기
+    string base_date = date + "-brilliant";
     int suffix = 1;
-    while (fs::exists(txtPath) || fs::exists(pngPath)) {
+    string base;
+    string filename;
+    string txtPath;
+    string pngPath;
+
+    while (true) {
+        base = base_date + "-" + to_string(suffix);
+        filename = base + ".md";
+        txtPath = "images/" + base + ".txt";
+        pngPath = "images/" + base + ".png";
+        if (!fs::exists(txtPath) && !fs::exists(pngPath)) {
+            break;
+        }
         suffix++;
-        txtPath = "images/" + base + "-" + to_string(suffix) + ".txt";
-        pngPath = "images/" + base + "-" + to_string(suffix) + ".png";
-        filename = base + "-" + to_string(suffix) + ".md";
     }
-    if (suffix > 1) {
-        base += "-" + to_string(suffix);
-    }
+
     chessBoard.saveAsTextFile(txtPath);
     string slug = filename.substr(0, filename.size() - 3);
 
