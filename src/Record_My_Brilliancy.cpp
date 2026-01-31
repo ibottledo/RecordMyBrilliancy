@@ -18,17 +18,68 @@ namespace fs = std::filesystem;
 class PostManager {
 public:
     // 마크다운 파일 작성
-    static void writeBrilliantMarkdown(const string& filename, const string& title, const string& content, const string& date) {
+    static void writeBrilliantMarkdown(const string& filename, const string& title, const string& content, const string& date, const string& white, const string& black, const string& pgn) {
         ofstream file("_posts/" + filename);
         if (file.is_open()) {
             file << "---\n";
             file << "title: \"" << title << "\"\n";
             file << "date: " << date << "\n";
             file << "layout: post\n";
+            file << "white_player: \"" << white << "\"\n";
+            file << "black_player: \"" << black << "\"\n";
+            file << "pgn: \"" << pgn << "\"\n";
             file << "---\n\n";
             file << content << "\n\n";
             file.close();
         }
+    }
+
+    // _posts 폴더를 순회하며 중복된 탁월수인지 확인
+    static bool isDuplicate(const string& pgn, const string& date) {
+        if (!fs::exists("_posts")) {
+            return false;
+        }
+        for (const auto& entry : fs::directory_iterator("_posts")) {
+            if (entry.path().extension() == ".md") {
+                ifstream file(entry.path());
+                string line;
+                string file_date;
+                string file_pgn;
+                bool in_front_matter = false;
+                int dashes = 0;
+
+                while (getline(file, line)) {
+                    if (line.rfind("---", 0) == 0) {
+                        dashes++;
+                        if (dashes == 1) {
+                            in_front_matter = true;
+                            continue;
+                        }
+                        if (dashes == 2) {
+                            break; // End of front matter
+                        }
+                    }
+
+                    if (in_front_matter) {
+                        if (line.rfind("date:", 0) == 0) {
+                            file_date = line.substr(line.find(':') + 1);
+                            file_date.erase(0, file_date.find_first_not_of(" \t\""));
+                            file_date.erase(file_date.find_last_not_of(" \t\"") + 1);
+                        }
+                        if (line.rfind("pgn:", 0) == 0) {
+                            file_pgn = line.substr(line.find(':') + 1);
+                            file_pgn.erase(0, file_pgn.find_first_not_of(" \t\""));
+                            file_pgn.erase(file_pgn.find_last_not_of(" \t\"") + 1);
+                        }
+                    }
+                }
+
+                if (file_date.rfind(date, 0) == 0 && file_pgn == pgn) {
+                    return true;
+                }
+            }
+        }
+        return false;
     }
 
     // 2연탁 이상일 때 이전 마크다운 파일에 '다음 탁월수 보기' 링크 추가
@@ -51,11 +102,11 @@ public:
         }
         file.close();
 
-        string permalink = "/{{ site.baseurl }}/blog/" + slug + "/";
+        string permalink = "{{ site.baseurl }}/blog/" + slug + "/";
         if (found) {
             ofstream appendFile(postPath, ios::app);
             if (appendFile.is_open()) {
-                appendFile << "[\u2192 다음 탁월수 보기](" << permalink << ")\n\n";
+                appendFile << "\n[\u2192 다음 탁월수 보기](" << permalink << ")\n";
                 appendFile.close();
                 cout << suffix << "번째 탁월수 추가\n";
             }
@@ -466,6 +517,11 @@ int main() {
         return 0;
     }
 
+    if (PostManager::isDuplicate(pgn, date)) {
+        cout << "이미 기록된 탁월수입니다.\n";
+        return 0;
+    }
+
     string base = date + "-brilliant";
     string filename = base + ".md";
 
@@ -486,15 +542,11 @@ int main() {
     }
     chessBoard.saveAsTextFile(txtPath);
     string slug = filename.substr(0, filename.size() - 3);
-    string postPath = "_posts/" + slug + ".md";
 
     // Python 명령 실행
     // txt_to_png.py 스크립트를 사용하여 PNG 이미지 생성
     string cmd = "python3 scripts/txt_to_png.py " + txtPath + " " + pngPath;
     system(cmd.c_str());
-
-    string contentDate = date;
-    if (suffix > 1) contentDate += "-" + to_string(suffix);
 
     int index = ChessFetcher::getBrilliantMoveIndex(Brilliant_url);
 
@@ -505,11 +557,11 @@ int main() {
                + "![board]({{ site.baseurl }}/images/" + slug + ".png)\n\n.\n\n.\n\n.\n\n"
                + "**Brilliant Move:** " + pgn + "!!";
 
-    // 마크다운 파일 작성 및 index.md, streak.html 업데이트
+    // 마크다운 파일 작성 및 streak.html 업데이트
     if (suffix > 1) {
         PostManager::appendToBrilliantMd(suffix, slug, White, Black);
     }
-    PostManager::writeBrilliantMarkdown(filename, slug, content, date);
+    PostManager::writeBrilliantMarkdown(filename, slug, content, date, White, Black, pgn);
     GitManager::pushToGitHub();
 
     return 0;
