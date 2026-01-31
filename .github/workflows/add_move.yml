@@ -44,7 +44,7 @@ jobs:
           git config --global user.name "github-actions[bot]"
           git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git pull
-          git add _posts/ images/
+          git add _posts/ images/ _includes/streak.html
           if ! git diff --staged --quiet; then
             git commit -m "feat: Add new brilliant move from API"
             git push
