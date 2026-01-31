@@ -31,66 +31,6 @@ public:
         }
     }
 
-    // index.md에서 날짜에 맞는 위치에 삽입
-    static void appendToIndexMd(const string& date, const string& White, const string& Black, const string& postPath, const string& pgn) {
-        ifstream in("index.md");
-        if (!in.is_open()) {
-            cerr << "index.md를 열 수 없습니다.\n";
-            return;
-        }
-
-        bool append = false;
-        vector<string> lines;
-        string line;
-        while (getline(in, line)) {
-            auto pos = line.find_first_of("0123456789");
-            auto end = line.find('.', pos);
-            if (!append && line.find("## \U0001F4C6") != string::npos
-                && pos != string::npos
-                && end != string::npos 
-                && line.compare(pos, end - pos, date) > 0) {
-                lines.push_back("## \U0001F4C6 " + date + ".");
-                lines.push_back(White + " vs " + Black + " <span style=\"color:#FFFFFF\">" + pgn + "</span>" + "\n");
-                lines.push_back("[\u2192 탁월수 보기](" + postPath + ")\n");
-                lines.push_back("---\n");
-                append = true;
-            }
-            lines.push_back(line);
-        }
-        in.close();
-
-        if (!append) {
-            lines.push_back("## \U0001F4C6 " + date + ".");
-            lines.push_back(White + " vs " + Black + " <span style=\"color:#FFFFFF\">" + pgn + "</span>" + "\n");
-            lines.push_back("[\u2192 탁월수 보기](" + postPath + ")\n");
-            lines.push_back("---\n");
-        }
-
-        ofstream out("index.md");
-        for (string& line : lines) {
-            out << line << '\n';
-        }
-        out.close();
-    }
-
-    // index.md에 이미 포함된 탁월수인지 확인
-    // 같은 날짜에 같은 pgn이 있는지 확인
-    static bool isAlreadyInIndex(const string& pgn, const string& date) {
-        ifstream file("index.md");
-        string line;
-        bool dateFound = false;
-        while (getline(file, line)) {
-            if (dateFound && line.find(pgn) != string::npos) {
-                return true;
-            }
-            dateFound = false;
-            if (line.find(date) != string::npos) {
-                dateFound = true;
-            }
-        }
-        return false;
-    }
-
     // 2연탁 이상일 때 이전 마크다운 파일에 '다음 탁월수 보기' 링크 추가
     static void appendToBrilliantMd(const int& suffix, const string& slug, const string& White, const string& Black) {
         string postPath = "_posts/" + slug + ".md";
@@ -526,12 +466,6 @@ int main() {
         return 0;
     }
 
-    // publish
-    if (PostManager::isAlreadyInIndex(pgn, date)) {
-        cout << "이미 index.md에 포함된 brilliant입니다.\n";
-        return 0;
-    }
-
     string base = date + "-brilliant";
     string filename = base + ".md";
 
@@ -576,7 +510,6 @@ int main() {
         PostManager::appendToBrilliantMd(suffix, slug, White, Black);
     }
     PostManager::writeBrilliantMarkdown(filename, slug, content, date);
-    PostManager::appendToIndexMd(contentDate, White, Black, postPath, pgn);
     GitManager::pushToGitHub();
 
     return 0;
