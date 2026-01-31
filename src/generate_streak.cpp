@@ -63,7 +63,7 @@ int main() {
         if (cnt > 3) color = " #087285";
 
         string link = (cnt > 0)
-            ? "{{ site.baseurl }}/blog/" + dateStr.substr(0,4) + "-" + dateStr.substr(5,2) + "-" + dateStr.substr(8,2) + "-brilliant/"
+            ? "{{ site.baseurl }}/blog/" + dateStr.substr(0,4) + "-" + dateStr.substr(5,2) + "-" + dateStr.substr(8,2) + "-brilliant-1/"
             : "#";
 
         out << "<a href='" << link << "' title='" << dateStr
