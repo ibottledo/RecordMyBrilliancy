@@ -36,14 +36,21 @@ jobs:
       - name: Build C++ executables
         run: make
 
-      - name: Run the brilliant move recorder
-        run: echo "${{ github.event.inputs.url }}" | ./bin/Record_My_Brilliancy
-
-      - name: Commit and push new post
+      - name: Generate Post and Push
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git pull
+          
+          # 1. 최신 변경사항을 먼저 가져옵니다.
+          git pull --rebase
+          
+          # 2. C++ 프로그램을 실행하여 게시물 파일을 생성합니다.
+          echo "${{ github.event.inputs.url }}" | ./bin/Record_My_Brilliancy
+          
+          # 3. 새 게시물 포함하여 스트릭 파일을 다시 생성합니다.
+          ./bin/generate_streak
+          
+          # 4. 생성된 모든 파일들을 Add, Commit, Push 합니다.
           git add _posts/ images/ _includes/streak.html
           if ! git diff --staged --quiet; then
             git commit -m "feat: Add new brilliant move from API"

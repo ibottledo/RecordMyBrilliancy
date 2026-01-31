@@ -110,31 +110,7 @@ public:
     }
 };
 
-class GitManager {
-public:
-    // 새로운 탁월수 추가 후 GitHub에 푸시
-    static void pushToGitHub() {
-        if (system("./bin/generate_streak") != 0) {
-            cerr << "Failed to generate streak.\n";
-            return;
-        }
-        if (system("git add .") != 0) {
-            cerr << "Failed to git add.\n";
-            return;
-        }
-        if (system("git commit -m \"feat: Add new brilliant move\"") != 0) {
-            cout << "Nothing to commit or commit failed.\n";
-        }
-        if (system("git pull --rebase origin main") != 0) {
-            cerr << "Failed to git pull.\n";
-            return;
-        }
-        if (system("git push origin main") != 0) {
-            cerr << "Failed to git push.\n";
-            return;
-        }
-    }
-};
+
 
 // 콜백 함수: 서버 응답을 문자열로 저장
 static size_t WriteCallback(void* contents, size_t size, size_t nmemb, string* output) {
@@ -558,7 +534,6 @@ int main() {
         PostManager::appendToBrilliantMd(suffix, slug, White, Black);
     }
     PostManager::writeBrilliantMarkdown(filename, slug, content, date, White, Black, pgn);
-    GitManager::pushToGitHub();
 
     return 0;
 }

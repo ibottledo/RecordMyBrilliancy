@@ -11,7 +11,7 @@ MAIN_BIN = $(BIN_DIR)/Record_My_Brilliancy
 STREAK_SRC = $(SRC_DIR)/generate_streak.cpp
 STREAK_BIN = $(BIN_DIR)/generate_streak
 
-all: $(BIN_DIR) $(MAIN_BIN) streak
+all: $(BIN_DIR) $(MAIN_BIN) $(STREAK_BIN)
 
 $(BIN_DIR):
 	mkdir -p $(BIN_DIR)
