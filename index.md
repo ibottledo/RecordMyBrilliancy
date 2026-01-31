@@ -177,12 +177,12 @@ title: Main Page
 ---
 
 ## 🗓 {{ post.date | date: "%Y-%m-%d" }}.
-{% if post.white_player and post.black_player and post.pgn %}
-{{ post.white_player }} vs {{ post.black_player }} <span style="color:#FFFFFF">{{ post.pgn }}</span>
+
+{% if post.white_player and post.black_player %}
+{{ post.white_player }} vs {{ post.black_player }}
 {% else %}
-{%- assign first_line = post.content | strip_newlines | split: '\n' | first -%}
-{%- assign players = first_line | remove: '[' | split: ']' | first -%}
-{{ players }}
+{%- assign first_p = post.content | split: '</p>' | first -%}
+{{ first_p | strip_html | strip }}
 {% endif %}
 
 [→ 탁월수 보기]({{ site.baseurl }}{{ post.url }})
