@@ -111,7 +111,7 @@ public:
         }
         file.close();
 
-        string permalink = "/blog/" + slug + "/";
+        string permalink = "/{{ site.baseurl }}/blog/" + slug + "/";
         if (found) {
             ofstream appendFile(postPath, ios::app);
             if (appendFile.is_open()) {
