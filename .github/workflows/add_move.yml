@@ -7,6 +7,10 @@ on:
         description: 'Chess.com Analysis URL'
         required: true
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: false
+
 jobs:
   process-move:
     runs-on: ubuntu-latest
