@@ -172,7 +172,6 @@ title: Main Page
   }
 </script>
 
----
 {% assign sorted_posts = site.posts | sort: 'path' | reverse %}
 {% for post in sorted_posts %}
 ---
@@ -182,8 +181,7 @@ title: Main Page
 {% if post.white_player and post.black_player %}
 {{ post.white_player }} vs {{ post.black_player }}
 {% else %}
-{%- assign first_p = post.content | split: '</p>' | first -%}
-{{ first_p | strip_html | strip }}
+{{ post.excerpt | strip_html | strip }}
 {% endif %}
 
 [→ 탁월수 보기]({{ site.baseurl }}{{ post.url }})
